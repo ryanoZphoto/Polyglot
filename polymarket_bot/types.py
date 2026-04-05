@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+from datetime import datetime, timezone
 from typing import List
 
 
@@ -70,6 +71,24 @@ class ExecutionResult:
     ok: bool
     mode: str
     message: str
+    trade_id: str | None = None
+    submitted_orders: List["LegExecutionResult"] | None = None
+    errors: List[str] | None = None
+
+
+@dataclass(frozen=True)
+class LegExecutionResult:
+    token_id: str
+    market_slug: str
+    status: str
+    order_id: str | None = None
+    error: str | None = None
+
+
+@dataclass(frozen=True)
+class RiskDecision:
+    allowed: bool
+    reason: str | None = None
 
 
 @dataclass
@@ -81,3 +100,13 @@ class MarketLeg:
     outcome_name: str
     price: float
     liquidity: float
+
+
+@dataclass(frozen=True)
+class OpportunityContext:
+    detected_at: str
+    source: str = "scanner"
+
+
+def utc_now_iso() -> str:
+    return datetime.now(timezone.utc).isoformat()

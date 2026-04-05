@@ -1,0 +1,180 @@
+{
+  "generated_at": "2026-04-05T11:58:12.022348+00:00",
+  "user_input": "@sovereign2013",
+  "resolved_wallet": "0xee613b3fc183ee44f9da9c05f53e2da107e3debf",
+  "profile": {
+    "createdAt": "2025-07-25T12:23:17.069359Z",
+    "proxyWallet": "0xee613b3fc183ee44f9da9c05f53e2da107e3debf",
+    "displayUsernamePublic": true,
+    "pseudonym": "Ultimate-Locality",
+    "name": "sovereign2013",
+    "users": [
+      {
+        "id": "3218863",
+        "creator": false,
+        "mod": false,
+        "communityMod": false
+      }
+    ],
+    "verifiedBadge": false
+  },
+  "analysis": {
+    "activity_count": 200,
+    "side_distribution": {
+      "BUY": 192,
+      "": 8
+    },
+    "price_band_distribution": {
+      "0.20-0.39": 58,
+      "0.40-0.59": 36,
+      "0.60-0.79": 47,
+      ">=0.80": 15,
+      "<0.20": 44
+    },
+    "top_traded_titles": [
+      [
+        "Bucharest Open: Mariano Navone vs Daniel Merida Aguilar",
+        68
+      ],
+      [
+        "Rolex Monte Carlo Masters, Qualification: David Goffin vs Emilio Nava",
+        41
+      ],
+      [
+        "Rolex Monte Carlo Masters, Qualification: Ethan Quinn vs Francisco Comesana",
+        30
+      ],
+      [
+        "Rolex Monte Carlo Masters, Qualification: Damir Dzumhur vs Alexander Blockx",
+        20
+      ],
+      [
+        "Rolex Monte Carlo Masters, Qualification: Alexander Shevchenko vs Roberto Bautista Agut",
+        9
+      ],
+      [
+        "Rolex Monte Carlo Masters: Cameron Norrie vs Miomir Kecmanovic",
+        6
+      ],
+      [
+        "Upper Austria Ladies Linz, Qualification: Tamara Korpatsch vs Jule Niemeier",
+        5
+      ],
+      [
+        "Upper Austria Ladies Linz, Qualification: Madison Brengle vs Dominika Salkova",
+        4
+      ],
+      [
+        "Tulsa Golden Hurricane vs. Auburn Tigers: O/U 161.5",
+        4
+      ],
+      [
+        "Lakers vs. Mavericks: O/U 233.5",
+        4
+      ],
+      [
+        "Lakers vs. Mavericks: O/U 232.5",
+        3
+      ],
+      [
+        "Spread: Los Angeles Dodgers (-1.5)",
+        1
+      ],
+      [
+        "Menorca: Alex Martinez vs Raul Brancaccio",
+        1
+      ],
+      [
+        "Suns vs. Bulls",
+        1
+      ],
+      [
+        "Spread: Bucks (-5.5)",
+        1
+      ]
+    ],
+    "top_active_hours": [
+      [
+        "unknown",
+        200
+      ]
+    ],
+    "ladder_markets": [
+      {
+        "market": "atp-navone-aguilar-2026-04-05",
+        "buy_count": 67,
+        "avg_buy_price": 0.2567164315404146,
+        "total_notional_usd": 7346.106079
+      },
+      {
+        "market": "atp-goffin-nava-2026-04-05",
+        "buy_count": 40,
+        "avg_buy_price": 0.5333965594591457,
+        "total_notional_usd": 12933.225833
+      },
+      {
+        "market": "atp-quinn-comesan-2026-04-05",
+        "buy_count": 29,
+        "avg_buy_price": 0.4428776628838433,
+        "total_notional_usd": 7137.601193
+      },
+      {
+        "market": "atp-dzumhur-blockx-2026-04-05",
+        "buy_count": 20,
+        "avg_buy_price": 0.6010001029656089,
+        "total_notional_usd": 1777.179075
+      },
+      {
+        "market": "atp-shevche-agut-2026-04-05",
+        "buy_count": 8,
+        "avg_buy_price": 0.4737500017398993,
+        "total_notional_usd": 944.0216220000001
+      },
+      {
+        "market": "atp-norrie-kecmano-2026-04-06",
+        "buy_count": 6,
+        "avg_buy_price": 0.4700000125886749,
+        "total_notional_usd": 1160.903772
+      },
+      {
+        "market": "cbb-tulsa-aubrn-2026-04-05-total-161pt5",
+        "buy_count": 4,
+        "avg_buy_price": 0.5025000703211717,
+        "total_notional_usd": 17.624392
+      },
+      {
+        "market": "nba-lal-dal-2026-04-05-total-233pt5",
+        "buy_count": 4,
+        "avg_buy_price": 0.47500000275000015,
+        "total_notional_usd": 30.133126999999998
+      },
+      {
+        "market": "wta-korpats-niemeie-2026-04-05",
+        "buy_count": 4,
+        "avg_buy_price": 0.91,
+        "total_notional_usd": 1101.2421
+      },
+      {
+        "market": "nba-lal-dal-2026-04-05-total-232pt5",
+        "buy_count": 3,
+        "avg_buy_price": 0.4966667270405334,
+        "total_notional_usd": 7.718139000000001
+      },
+      {
+        "market": "wta-brengle-salkova-2026-04-05",
+        "buy_count": 3,
+        "avg_buy_price": 0.92,
+        "total_notional_usd": 3425.6016
+      }
+    ],
+    "likely_strategy_modes": [
+      "Net-long momentum/conviction bias (buy-heavy flow)",
+      "Laddered entries / scaling into positions"
+    ]
+  },
+  "meta": {
+    "activity_limit": 200,
+    "activity_offset": 0,
+    "position_limit": 200
+  }
+}

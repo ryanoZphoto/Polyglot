@@ -1,0 +1,201 @@
+timestamp,title,market_slug,event_slug,outcome,side,price,size,notional_usd
+1775390281,"Rolex Monte Carlo Masters, Qualification: Ethan Quinn vs Francisco Comesana",atp-quinn-comesan-2026-04-05,atp-quinn-comesan-2026-04-05,Ethan Quinn,BUY,0.2,12.5,2.5
+1775390275,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.26,12.0,3.12
+1775390273,"Rolex Monte Carlo Masters, Qualification: Damir Dzumhur vs Alexander Blockx",atp-dzumhur-blockx-2026-04-05,atp-dzumhur-blockx-2026-04-05,Damir Dzumhur,BUY,0.28000000144000003,138.888885,38.888888
+1775390271,"Rolex Monte Carlo Masters, Qualification: Ethan Quinn vs Francisco Comesana",atp-quinn-comesan-2026-04-05,atp-quinn-comesan-2026-04-05,Ethan Quinn,BUY,0.2,378.688,77.6
+1775390261,"Rolex Monte Carlo Masters, Qualification: Damir Dzumhur vs Alexander Blockx",atp-dzumhur-blockx-2026-04-05,atp-dzumhur-blockx-2026-04-05,Damir Dzumhur,BUY,0.28,13.0,3.64
+1775390225,Lakers vs. Mavericks: O/U 232.5,nba-lal-dal-2026-04-05-total-232pt5,nba-lal-dal-2026-04-05,Under,BUY,0.49000018112160026,2.098038,1.028039
+1775390217,Lakers vs. Mavericks: O/U 232.5,nba-lal-dal-2026-04-05-total-232pt5,nba-lal-dal-2026-04-05,Over,BUY,0.49,9.847,4.9
+1775390213,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.2300000069683352,2.870126,0.660129
+1775390213,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.23000005102412374,2.155843,0.495844
+1775390211,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.23000001232000472,6.493504,1.493506
+1775390211,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.23000001232000472,6.493504,1.493506
+1775390211,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.23000000526495767,30.389608,6.98961
+1775390211,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.23,41.0,9.43
+1775390209,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.23,5.0,1.15
+1775390209,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.2300001033559683,1.93506,0.445064
+1775390209,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.23000002792748905,2.506491,0.576493
+1775390209,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.23000009753358105,1.948047,0.448051
+1775390209,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.2300000228996446,3.493504,0.803506
+1775390209,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.2300000142389776,9.129869,2.09987
+1775390209,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.23000007171578507,2.649347,0.60935
+1775390209,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.2300000153720533,7.155843,1.645844
+1775390207,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.23000005992222095,3.33766,0.767662
+1775390207,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.23,5.0,1.15
+1775390207,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.23000001232000472,6.493504,1.493506
+1775390205,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Mariano Navone,BUY,0.7400000002917918,2193.344614,1623.075015
+1775390205,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.23000001232000472,6.493504,1.493506
+1775390205,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.23000001232000472,6.493504,1.493506
+1775390203,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.23,2.84,0.6532
+1775390203,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.23,4.03,0.9269
+1775390201,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.23,5.0,1.15
+1775390199,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.23,11.8961,2.736103
+1775390185,"Upper Austria Ladies Linz, Qualification: Madison Brengle vs Dominika Salkova",wta-brengle-salkova-2026-04-05,wta-brengle-salkova-2026-04-05,Dominika Salkova,BUY,0.92,4.988,4.6
+1775390181,Spread: Los Angeles Dodgers (-1.5),mlb-lad-wsh-2026-04-05-spread-away-1pt5,mlb-lad-wsh-2026-04-05,Los Angeles Dodgers,BUY,0.5300000349142882,14.893616,7.893617
+1775390179,Rolex Monte Carlo Masters: Cameron Norrie vs Miomir Kecmanovic,atp-norrie-kecmano-2026-04-06,atp-norrie-kecmano-2026-04-06,Miomir Kecmanovic,BUY,0.28,25.0,7.0
+1775390175,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Mariano Navone,BUY,0.79,2674.99,2113.2421
+1775390173,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Mariano Navone,BUY,0.7900000001771282,3782.571427,2988.231428
+1775390171,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Mariano Navone,BUY,0.79,30.0,23.7
+1775390171,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Mariano Navone,BUY,0.79,158.0,124.82
+1775390159,"Rolex Monte Carlo Masters, Qualification: Damir Dzumhur vs Alexander Blockx",atp-dzumhur-blockx-2026-04-05,atp-dzumhur-blockx-2026-04-05,Alexander Blockx,BUY,0.6600000007294181,658.058822,434.318823
+1775390159,"Rolex Monte Carlo Masters, Qualification: Damir Dzumhur vs Alexander Blockx",atp-dzumhur-blockx-2026-04-05,atp-dzumhur-blockx-2026-04-05,Alexander Blockx,BUY,0.6600000010659978,562.85294,371.482941
+1775390159,"Rolex Monte Carlo Masters, Qualification: Damir Dzumhur vs Alexander Blockx",atp-dzumhur-blockx-2026-04-05,atp-dzumhur-blockx-2026-04-05,Alexander Blockx,BUY,0.6600000010422574,460.538822,303.955623
+1775390159,"Rolex Monte Carlo Masters, Qualification: Damir Dzumhur vs Alexander Blockx",atp-dzumhur-blockx-2026-04-05,atp-dzumhur-blockx-2026-04-05,Alexander Blockx,BUY,0.6600000007294181,658.058822,434.318823
+1775390151,"Rolex Monte Carlo Masters, Qualification: Ethan Quinn vs Francisco Comesana",atp-quinn-comesan-2026-04-05,atp-quinn-comesan-2026-04-05,Francisco Comesana,BUY,0.75,45.6292,34.2219
+1775390115,Rolex Monte Carlo Masters: Cameron Norrie vs Miomir Kecmanovic,atp-norrie-kecmano-2026-04-06,atp-norrie-kecmano-2026-04-06,Cameron Norrie,BUY,0.6900000670270487,5.96774,4.117741
+1775390113,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.1700000033200013,12.048188,2.048192
+1775390097,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.17,5.0,0.85
+1775390095,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.17,5.0,0.85
+1775390095,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.17,5.0,0.85
+1775390095,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.17,5.0,0.85
+1775390095,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.17,67.0,11.39
+1775390095,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.17,5.0,0.85
+1775390093,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.17,5.0,0.85
+1775390091,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.17,104.0,17.68
+1775390091,Tulsa Golden Hurricane vs. Auburn Tigers: O/U 161.5,cbb-tulsa-aubrn-2026-04-05-total-161pt5,cbb-tulsa-aubrn-2026-04-05,Under,BUY,0.5200000494845565,4.041665,2.101666
+1775390091,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.17000000157794737,6.337347,1.077349
+1775390089,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.17,100.0,17.0
+1775390087,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.17000000157794737,6.337347,1.077349
+1775390085,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.17000000157794737,6.337347,1.077349
+1775390077,Lakers vs. Mavericks: O/U 233.5,nba-lal-dal-2026-04-05-total-233pt5,nba-lal-dal-2026-04-05,Over,BUY,0.46,10.0,4.6
+1775390075,"Rolex Monte Carlo Masters, Qualification: Ethan Quinn vs Francisco Comesana",atp-quinn-comesan-2026-04-05,atp-quinn-comesan-2026-04-05,Ethan Quinn,BUY,0.23,1.84,0.4232
+1775390075,Lakers vs. Mavericks: O/U 233.5,nba-lal-dal-2026-04-05-total-233pt5,nba-lal-dal-2026-04-05,Over,BUY,0.46,9.09032,4.2504
+1775390071,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.1700000207500306,2.409635,0.409638
+1775390065,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.17,5.0,0.85
+1775390063,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.17,5.0,0.85
+1775390063,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.17,5.0,0.85
+1775390063,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.17,5.0,0.85
+1775390063,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.17,5.0,0.85
+1775390061,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.17,5.0,0.85
+1775390061,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.17,5.0,0.85
+1775390061,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.17,5.0,0.85
+1775390059,Rolex Monte Carlo Masters: Cameron Norrie vs Miomir Kecmanovic,atp-norrie-kecmano-2026-04-06,atp-norrie-kecmano-2026-04-06,Cameron Norrie,BUY,0.72,1434.8452,1041.84
+1775390057,"Rolex Monte Carlo Masters, Qualification: Alexander Shevchenko vs Roberto Bautista Agut",atp-shevche-agut-2026-04-05,atp-shevche-agut-2026-04-05,Alexander Shevchenko,BUY,0.47,80.35,37.7645
+1775390057,"Rolex Monte Carlo Masters, Qualification: Ethan Quinn vs Francisco Comesana",atp-quinn-comesan-2026-04-05,atp-quinn-comesan-2026-04-05,Ethan Quinn,BUY,0.24,35.53,8.5272
+1775390055,"Rolex Monte Carlo Masters, Qualification: Ethan Quinn vs Francisco Comesana",atp-quinn-comesan-2026-04-05,atp-quinn-comesan-2026-04-05,Ethan Quinn,BUY,0.24,5.0,1.2
+1775390055,"Rolex Monte Carlo Masters, Qualification: Ethan Quinn vs Francisco Comesana",atp-quinn-comesan-2026-04-05,atp-quinn-comesan-2026-04-05,Ethan Quinn,BUY,0.24,42.0,10.08
+1775390053,"Rolex Monte Carlo Masters, Qualification: Ethan Quinn vs Francisco Comesana",atp-quinn-comesan-2026-04-05,atp-quinn-comesan-2026-04-05,Ethan Quinn,BUY,0.24,209.0,50.16
+1775390053,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.17000009130017255,1.204817,0.204819
+1775390053,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.1700000207500306,2.409635,0.409638
+1775390053,"Rolex Monte Carlo Masters, Qualification: Ethan Quinn vs Francisco Comesana",atp-quinn-comesan-2026-04-05,atp-quinn-comesan-2026-04-05,Ethan Quinn,BUY,0.24,11.0,2.64
+1775390053,"Rolex Monte Carlo Masters, Qualification: Ethan Quinn vs Francisco Comesana",atp-quinn-comesan-2026-04-05,atp-quinn-comesan-2026-04-05,Ethan Quinn,BUY,0.24,209.0,50.16
+1775390043,"Rolex Monte Carlo Masters, Qualification: Damir Dzumhur vs Alexander Blockx",atp-dzumhur-blockx-2026-04-05,atp-dzumhur-blockx-2026-04-05,Alexander Blockx,BUY,0.6300001850000669,3.135134,1.975135
+1775390043,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.1700000207500306,2.409635,0.409638
+1775390041,"Rolex Monte Carlo Masters, Qualification: Damir Dzumhur vs Alexander Blockx",atp-dzumhur-blockx-2026-04-05,atp-dzumhur-blockx-2026-04-05,Alexander Blockx,BUY,0.6300001850000669,3.135134,1.975135
+1775390041,"Rolex Monte Carlo Masters, Qualification: Damir Dzumhur vs Alexander Blockx",atp-dzumhur-blockx-2026-04-05,atp-dzumhur-blockx-2026-04-05,Alexander Blockx,BUY,0.6300001850000669,3.135134,1.975135
+1775390039,"Rolex Monte Carlo Masters, Qualification: Damir Dzumhur vs Alexander Blockx",atp-dzumhur-blockx-2026-04-05,atp-dzumhur-blockx-2026-04-05,Alexander Blockx,BUY,0.6300001850000669,3.135134,1.975135
+1775390039,"Rolex Monte Carlo Masters, Qualification: Damir Dzumhur vs Alexander Blockx",atp-dzumhur-blockx-2026-04-05,atp-dzumhur-blockx-2026-04-05,Alexander Blockx,BUY,0.6300001850000669,3.135134,1.975135
+1775390039,"Rolex Monte Carlo Masters, Qualification: Damir Dzumhur vs Alexander Blockx",atp-dzumhur-blockx-2026-04-05,atp-dzumhur-blockx-2026-04-05,Alexander Blockx,BUY,0.6300001850000669,3.135134,1.975135
+1775390037,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.1700000207500306,2.409635,0.409638
+1775390037,"Rolex Monte Carlo Masters, Qualification: Damir Dzumhur vs Alexander Blockx",atp-dzumhur-blockx-2026-04-05,atp-dzumhur-blockx-2026-04-05,Alexander Blockx,BUY,0.6300001850000669,3.135134,1.975135
+1775390033,"Rolex Monte Carlo Masters, Qualification: Damir Dzumhur vs Alexander Blockx",atp-dzumhur-blockx-2026-04-05,atp-dzumhur-blockx-2026-04-05,Alexander Blockx,BUY,0.6300001898261547,3.108107,1.958108
+1775390033,"Rolex Monte Carlo Masters, Qualification: Damir Dzumhur vs Alexander Blockx",atp-dzumhur-blockx-2026-04-05,atp-dzumhur-blockx-2026-04-05,Alexander Blockx,BUY,0.6300001898261547,3.108107,1.958108
+1775390033,"Rolex Monte Carlo Masters, Qualification: Damir Dzumhur vs Alexander Blockx",atp-dzumhur-blockx-2026-04-05,atp-dzumhur-blockx-2026-04-05,Alexander Blockx,BUY,0.6300001898261547,3.108107,1.958108
+1775390033,"Rolex Monte Carlo Masters, Qualification: Damir Dzumhur vs Alexander Blockx",atp-dzumhur-blockx-2026-04-05,atp-dzumhur-blockx-2026-04-05,Alexander Blockx,BUY,0.6300001898261547,3.108107,1.958108
+1775390033,"Rolex Monte Carlo Masters, Qualification: Damir Dzumhur vs Alexander Blockx",atp-dzumhur-blockx-2026-04-05,atp-dzumhur-blockx-2026-04-05,Alexander Blockx,BUY,0.63,5.0,3.15
+1775390031,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.1700000212325823,5.180717,0.880722
+1775390031,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.1700000212325823,5.180717,0.880722
+1775390031,"Rolex Monte Carlo Masters, Qualification: Damir Dzumhur vs Alexander Blockx",atp-dzumhur-blockx-2026-04-05,atp-dzumhur-blockx-2026-04-05,Alexander Blockx,BUY,0.63,2.33,1.4679
+1775390031,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.1700000236660064,5.915658,1.005662
+1775390029,Lakers vs. Mavericks: O/U 233.5,nba-lal-dal-2026-04-05-total-233pt5,nba-lal-dal-2026-04-05,Under,BUY,0.53,16.7603,9.01
+1775390029,Lakers vs. Mavericks: O/U 232.5,nba-lal-dal-2026-04-05-total-232pt5,nba-lal-dal-2026-04-05,Under,BUY,0.51,3.4584099999999998,1.7901
+1775390029,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.1700000212325823,5.180717,0.880722
+1775390029,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.1700000212325823,5.180717,0.880722
+1775390029,Lakers vs. Mavericks: O/U 233.5,nba-lal-dal-2026-04-05-total-233pt5,nba-lal-dal-2026-04-05,Over,BUY,0.45000001100000053,27.272726,12.272727
+1775390029,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.1700000212325823,5.180717,0.880722
+1775390029,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.1700000212325823,5.180717,0.880722
+1775390025,"Rolex Monte Carlo Masters, Qualification: Damir Dzumhur vs Alexander Blockx",atp-dzumhur-blockx-2026-04-05,atp-dzumhur-blockx-2026-04-05,Alexander Blockx,BUY,0.63,257.89524,164.2977
+1775390025,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.1700000207500306,2.409635,0.409638
+1775390025,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.1700000207500306,2.409635,0.409638
+1775390015,"Rolex Monte Carlo Masters, Qualification: Ethan Quinn vs Francisco Comesana",atp-quinn-comesan-2026-04-05,atp-quinn-comesan-2026-04-05,,,0.0,10718.0,10718.0
+1775390015,Menorca: Alex Martinez vs Raul Brancaccio,atp-alexmar-brancac-2026-04-05,atp-alexmar-brancac-2026-04-05,,,0.0,21030.0,21030.0
+1775390015,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,,,0.0,1637.0,1637.0
+1775390015,"Rolex Monte Carlo Masters, Qualification: David Goffin vs Emilio Nava",atp-goffin-nava-2026-04-05,atp-goffin-nava-2026-04-05,,,0.0,22345.0,22345.0
+1775390015,"Rolex Monte Carlo Masters, Qualification: Alexander Shevchenko vs Roberto Bautista Agut",atp-shevche-agut-2026-04-05,atp-shevche-agut-2026-04-05,,,0.0,6265.0,6265.0
+1775390015,Suns vs. Bulls,nba-phx-chi-2026-04-05,nba-phx-chi-2026-04-05,,,0.0,545.0,545.0
+1775390015,"Upper Austria Ladies Linz, Qualification: Tamara Korpatsch vs Jule Niemeier",wta-korpats-niemeie-2026-04-05,wta-korpats-niemeie-2026-04-05,,,0.0,5509.0,5509.0
+1775390015,"Upper Austria Ladies Linz, Qualification: Madison Brengle vs Dominika Salkova",wta-brengle-salkova-2026-04-05,wta-brengle-salkova-2026-04-05,,,0.0,3192.0,3192.0
+1775389907,"Rolex Monte Carlo Masters, Qualification: Ethan Quinn vs Francisco Comesana",atp-quinn-comesan-2026-04-05,atp-quinn-comesan-2026-04-05,Ethan Quinn,BUY,0.26,825.0,214.5
+1775389905,"Rolex Monte Carlo Masters, Qualification: Ethan Quinn vs Francisco Comesana",atp-quinn-comesan-2026-04-05,atp-quinn-comesan-2026-04-05,Ethan Quinn,BUY,0.26,205.0,53.3
+1775389905,"Rolex Monte Carlo Masters, Qualification: Ethan Quinn vs Francisco Comesana",atp-quinn-comesan-2026-04-05,atp-quinn-comesan-2026-04-05,Ethan Quinn,BUY,0.26,132.0,34.32
+1775389873,"Rolex Monte Carlo Masters, Qualification: Ethan Quinn vs Francisco Comesana",atp-quinn-comesan-2026-04-05,atp-quinn-comesan-2026-04-05,Ethan Quinn,BUY,0.26,1.35135,0.351351
+1775389865,Rolex Monte Carlo Masters: Cameron Norrie vs Miomir Kecmanovic,atp-norrie-kecmano-2026-04-06,atp-norrie-kecmano-2026-04-06,Miomir Kecmanovic,BUY,0.35,263.7545,94.15
+1775389861,Spread: Bucks (-5.5),nba-mem-mil-2026-04-05-spread-home-5pt5,nba-mem-mil-2026-04-05,Bucks,BUY,0.5,15.0,7.5
+1775389861,"Rolex Monte Carlo Masters, Qualification: Ethan Quinn vs Francisco Comesana",atp-quinn-comesan-2026-04-05,atp-quinn-comesan-2026-04-05,Ethan Quinn,BUY,0.26,189.6932,50.44
+1775389803,"Rolex Monte Carlo Masters, Qualification: Ethan Quinn vs Francisco Comesana",atp-quinn-comesan-2026-04-05,atp-quinn-comesan-2026-04-05,Ethan Quinn,BUY,0.23000009753358105,1.948047,0.448051
+1775389801,"Rolex Monte Carlo Masters, Qualification: Ethan Quinn vs Francisco Comesana",atp-quinn-comesan-2026-04-05,atp-quinn-comesan-2026-04-05,Ethan Quinn,BUY,0.23000009753358105,1.948047,0.448051
+1775389801,"Rolex Monte Carlo Masters, Qualification: Alexander Shevchenko vs Roberto Bautista Agut",atp-shevche-agut-2026-04-05,atp-shevche-agut-2026-04-05,Roberto Bautista Agut,BUY,0.45,7.0,3.15
+1775389797,"Rolex Monte Carlo Masters, Qualification: Alexander Shevchenko vs Roberto Bautista Agut",atp-shevche-agut-2026-04-05,atp-shevche-agut-2026-04-05,Roberto Bautista Agut,BUY,0.45,7.868,3.6
+1775389735,"Upper Austria Ladies Linz, Qualification: Tamara Korpatsch vs Jule Niemeier",wta-korpats-niemeie-2026-04-05,wta-korpats-niemeie-2026-04-05,Tamara Korpatsch,BUY,0.94,10.47112,9.8606
+1775389735,"Rolex Monte Carlo Masters, Qualification: David Goffin vs Emilio Nava",atp-goffin-nava-2026-04-05,atp-goffin-nava-2026-04-05,Emilio Nava,BUY,0.87,9.40319,8.2128
+1775389691,"Rolex Monte Carlo Masters, Qualification: David Goffin vs Emilio Nava",atp-goffin-nava-2026-04-05,atp-goffin-nava-2026-04-05,Emilio Nava,BUY,0.8500000112500002,66.666665,56.666666
+1775389685,"Rolex Monte Carlo Masters, Qualification: David Goffin vs Emilio Nava",atp-goffin-nava-2026-04-05,atp-goffin-nava-2026-04-05,Emilio Nava,BUY,0.85,6.27,5.3295
+1775389683,"Rolex Monte Carlo Masters, Qualification: David Goffin vs Emilio Nava",atp-goffin-nava-2026-04-05,atp-goffin-nava-2026-04-05,Emilio Nava,BUY,0.85,10.0,8.5
+1775389681,"Rolex Monte Carlo Masters, Qualification: David Goffin vs Emilio Nava",atp-goffin-nava-2026-04-05,atp-goffin-nava-2026-04-05,Emilio Nava,BUY,0.85,29.865,25.5
+1775389681,"Rolex Monte Carlo Masters, Qualification: David Goffin vs Emilio Nava",atp-goffin-nava-2026-04-05,atp-goffin-nava-2026-04-05,Emilio Nava,BUY,0.85,10.0,8.5
+1775389679,"Rolex Monte Carlo Masters, Qualification: Ethan Quinn vs Francisco Comesana",atp-quinn-comesan-2026-04-05,atp-quinn-comesan-2026-04-05,Francisco Comesana,BUY,0.78,3917.95,3056.001
+1775389665,"Rolex Monte Carlo Masters, Qualification: David Goffin vs Emilio Nava",atp-goffin-nava-2026-04-05,atp-goffin-nava-2026-04-05,Emilio Nava,BUY,0.7700001725000432,4.347825,3.347826
+1775389665,"Rolex Monte Carlo Masters, Qualification: David Goffin vs Emilio Nava",atp-goffin-nava-2026-04-05,atp-goffin-nava-2026-04-05,Emilio Nava,BUY,0.77,23.8344,18.48
+1775389663,"Rolex Monte Carlo Masters, Qualification: Alexander Shevchenko vs Roberto Bautista Agut",atp-shevche-agut-2026-04-05,atp-shevche-agut-2026-04-05,Roberto Bautista Agut,BUY,0.44,30.0,13.2
+1775389663,"Rolex Monte Carlo Masters, Qualification: Alexander Shevchenko vs Roberto Bautista Agut",atp-shevche-agut-2026-04-05,atp-shevche-agut-2026-04-05,Roberto Bautista Agut,BUY,0.44,30.0,13.2
+1775389653,"Rolex Monte Carlo Masters, Qualification: David Goffin vs Emilio Nava",atp-goffin-nava-2026-04-05,atp-goffin-nava-2026-04-05,David Goffin,BUY,0.3,3073.33,921.999
+1775389617,"Rolex Monte Carlo Masters, Qualification: David Goffin vs Emilio Nava",atp-goffin-nava-2026-04-05,atp-goffin-nava-2026-04-05,Emilio Nava,BUY,0.6600000632558206,10.117646,6.677647
+1775389563,Spread: Boston Red Sox (-1.5),mlb-sd-bos-2026-04-05-spread-home-1pt5,mlb-sd-bos-2026-04-05,Boston Red Sox,BUY,0.41,211.86,86.8626
+1775389543,"Rolex Monte Carlo Masters, Qualification: David Goffin vs Emilio Nava",atp-goffin-nava-2026-04-05,atp-goffin-nava-2026-04-05,David Goffin,BUY,0.38000014880011307,1.612902,0.612903
+1775389543,"Rolex Monte Carlo Masters, Qualification: David Goffin vs Emilio Nava",atp-goffin-nava-2026-04-05,atp-goffin-nava-2026-04-05,David Goffin,BUY,0.380000005690684,35.14516,13.355161
+1775389537,"Rolex Monte Carlo Masters, Qualification: David Goffin vs Emilio Nava",atp-goffin-nava-2026-04-05,atp-goffin-nava-2026-04-05,David Goffin,BUY,0.38,280.14,106.4532
+1775389533,"Rolex Monte Carlo Masters, Qualification: David Goffin vs Emilio Nava",atp-goffin-nava-2026-04-05,atp-goffin-nava-2026-04-05,David Goffin,BUY,0.38,6.58,2.5004
+1775389533,"Rolex Monte Carlo Masters, Qualification: David Goffin vs Emilio Nava",atp-goffin-nava-2026-04-05,atp-goffin-nava-2026-04-05,David Goffin,BUY,0.3800000023028572,112.903223,42.903225
+1775389531,Rolex Monte Carlo Masters: Cameron Norrie vs Miomir Kecmanovic,atp-norrie-kecmano-2026-04-06,atp-norrie-kecmano-2026-04-06,Miomir Kecmanovic,BUY,0.37000000850500075,31.746029,11.746031
+1775389529,"Rolex Monte Carlo Masters, Qualification: David Goffin vs Emilio Nava",atp-goffin-nava-2026-04-05,atp-goffin-nava-2026-04-05,David Goffin,BUY,0.38000003100001395,3.225805,1.225806
+1775389511,Tulsa Golden Hurricane vs. Auburn Tigers: O/U 161.5,cbb-tulsa-aubrn-2026-04-05-total-161pt5,cbb-tulsa-aubrn-2026-04-05,Under,BUY,0.5200001728001106,2.083332,1.083333
+1775389501,"Rolex Monte Carlo Masters, Qualification: Alexander Shevchenko vs Roberto Bautista Agut",atp-shevche-agut-2026-04-05,atp-shevche-agut-2026-04-05,Roberto Bautista Agut,BUY,0.4700000139191944,9.339621,4.389622
+1775389493,"Rolex Monte Carlo Masters, Qualification: David Goffin vs Emilio Nava",atp-goffin-nava-2026-04-05,atp-goffin-nava-2026-04-05,Emilio Nava,BUY,0.56,2735.81419,1552.5496
+1775389487,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Mariano Navone,BUY,0.85,30.0,25.5
+1775389487,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Mariano Navone,BUY,0.85,387.07,329.0095
+1775389481,Rolex Monte Carlo Masters: Cameron Norrie vs Miomir Kecmanovic,atp-norrie-kecmano-2026-04-06,atp-norrie-kecmano-2026-04-06,Miomir Kecmanovic,BUY,0.41,5.0,2.05
+1775389471,"Rolex Monte Carlo Masters, Qualification: Alexander Shevchenko vs Roberto Bautista Agut",atp-shevche-agut-2026-04-05,atp-shevche-agut-2026-04-05,Roberto Bautista Agut,BUY,0.47,20.25,9.5175
+1775389459,"Rolex Monte Carlo Masters, Qualification: David Goffin vs Emilio Nava",atp-goffin-nava-2026-04-05,atp-goffin-nava-2026-04-05,David Goffin,BUY,0.4,0.07,0.028
+1775389451,"Rolex Monte Carlo Masters, Qualification: David Goffin vs Emilio Nava",atp-goffin-nava-2026-04-05,atp-goffin-nava-2026-04-05,David Goffin,BUY,0.41,4.0,1.64
+1775389451,"Rolex Monte Carlo Masters, Qualification: David Goffin vs Emilio Nava",atp-goffin-nava-2026-04-05,atp-goffin-nava-2026-04-05,David Goffin,BUY,0.4100001199451624,3.084743,1.264745
+1775389449,Tulsa Golden Hurricane vs. Auburn Tigers: O/U 161.5,cbb-tulsa-aubrn-2026-04-05-total-161pt5,cbb-tulsa-aubrn-2026-04-05,Over,BUY,0.45000001100000053,27.272726,12.272727
+1775389449,"Rolex Monte Carlo Masters, Qualification: David Goffin vs Emilio Nava",atp-goffin-nava-2026-04-05,atp-goffin-nava-2026-04-05,David Goffin,BUY,0.41,10.0,4.1
+1775389449,"Rolex Monte Carlo Masters, Qualification: David Goffin vs Emilio Nava",atp-goffin-nava-2026-04-05,atp-goffin-nava-2026-04-05,David Goffin,BUY,0.41,57.0,23.37
+1775389449,"Rolex Monte Carlo Masters, Qualification: David Goffin vs Emilio Nava",atp-goffin-nava-2026-04-05,atp-goffin-nava-2026-04-05,David Goffin,BUY,0.41,5.0,2.05
+1775389449,"Upper Austria Ladies Linz, Qualification: Tamara Korpatsch vs Jule Niemeier",wta-korpats-niemeie-2026-04-05,wta-korpats-niemeie-2026-04-05,Tamara Korpatsch,BUY,0.92,1125.0,1035.0
+1775389449,Tulsa Golden Hurricane vs. Auburn Tigers: O/U 161.5,cbb-tulsa-aubrn-2026-04-05-total-161pt5,cbb-tulsa-aubrn-2026-04-05,Under,BUY,0.5200000480000192,4.166665,2.166666
+1775389449,"Rolex Monte Carlo Masters, Qualification: David Goffin vs Emilio Nava",atp-goffin-nava-2026-04-05,atp-goffin-nava-2026-04-05,David Goffin,BUY,0.41,8.0,3.28
+1775389447,"Rolex Monte Carlo Masters, Qualification: David Goffin vs Emilio Nava",atp-goffin-nava-2026-04-05,atp-goffin-nava-2026-04-05,David Goffin,BUY,0.41,88.54453,36.9574
+1775389447,"Rolex Monte Carlo Masters, Qualification: David Goffin vs Emilio Nava",atp-goffin-nava-2026-04-05,atp-goffin-nava-2026-04-05,David Goffin,BUY,0.41000007162943003,5.305082,2.175084
+1775389445,"Rolex Monte Carlo Masters, Qualification: David Goffin vs Emilio Nava",atp-goffin-nava-2026-04-05,atp-goffin-nava-2026-04-05,David Goffin,BUY,0.4,10.0,4.0
+1775389445,"Rolex Monte Carlo Masters, Qualification: David Goffin vs Emilio Nava",atp-goffin-nava-2026-04-05,atp-goffin-nava-2026-04-05,David Goffin,BUY,0.4,10.0,4.0
+1775389443,"Rolex Monte Carlo Masters, Qualification: David Goffin vs Emilio Nava",atp-goffin-nava-2026-04-05,atp-goffin-nava-2026-04-05,Emilio Nava,BUY,0.619660646645896,3058.81554,1917.3044
+1775389443,"Rolex Monte Carlo Masters, Qualification: David Goffin vs Emilio Nava",atp-goffin-nava-2026-04-05,atp-goffin-nava-2026-04-05,David Goffin,BUY,0.4,39.28,16.0
+1775389437,"Upper Austria Ladies Linz, Qualification: Tamara Korpatsch vs Jule Niemeier",wta-korpats-niemeie-2026-04-05,wta-korpats-niemeie-2026-04-05,Tamara Korpatsch,BUY,0.89,50.02,44.5178
+1775389437,"Upper Austria Ladies Linz, Qualification: Tamara Korpatsch vs Jule Niemeier",wta-korpats-niemeie-2026-04-05,wta-korpats-niemeie-2026-04-05,Tamara Korpatsch,BUY,0.89,13.33,11.8637
+1775389417,"Rolex Monte Carlo Masters, Qualification: David Goffin vs Emilio Nava",atp-goffin-nava-2026-04-05,atp-goffin-nava-2026-04-05,David Goffin,BUY,0.32000000118764327,134.720587,43.110588
+1775389415,Spread: Clippers (-11.5),nba-lac-sac-2026-04-05-spread-away-11pt5,nba-lac-sac-2026-04-05,Kings,BUY,0.45000004400000526,9.090908,4.090909
+1775389413,"Rolex Monte Carlo Masters, Qualification: David Goffin vs Emilio Nava",atp-goffin-nava-2026-04-05,atp-goffin-nava-2026-04-05,David Goffin,BUY,0.32,0.82,0.2624
+1775389411,"Rolex Monte Carlo Masters, Qualification: David Goffin vs Emilio Nava",atp-goffin-nava-2026-04-05,atp-goffin-nava-2026-04-05,David Goffin,BUY,0.32,6.41,2.0512
+1775389407,"Rolex Monte Carlo Masters, Qualification: David Goffin vs Emilio Nava",atp-goffin-nava-2026-04-05,atp-goffin-nava-2026-04-05,David Goffin,BUY,0.3200000054400005,14.705881,4.705882
+1775389403,"Upper Austria Ladies Linz, Qualification: Madison Brengle vs Dominika Salkova",wta-brengle-salkova-2026-04-05,wta-brengle-salkova-2026-04-05,Dominika Salkova,BUY,0.92,1778.3317399999999,1640.0012
+1775389403,"Rolex Monte Carlo Masters, Qualification: David Goffin vs Emilio Nava",atp-goffin-nava-2026-04-05,atp-goffin-nava-2026-04-05,David Goffin,BUY,0.32620109871816216,176.56725,58.7847
+1775389387,"Rolex Monte Carlo Masters, Qualification: David Goffin vs Emilio Nava",atp-goffin-nava-2026-04-05,atp-goffin-nava-2026-04-05,Emilio Nava,BUY,0.75,1964.67,1473.5025
+1775389387,"Rolex Monte Carlo Masters, Qualification: David Goffin vs Emilio Nava",atp-goffin-nava-2026-04-05,atp-goffin-nava-2026-04-05,Emilio Nava,BUY,0.75,1800.0,1350.0
+1775389387,"Rolex Monte Carlo Masters, Qualification: David Goffin vs Emilio Nava",atp-goffin-nava-2026-04-05,atp-goffin-nava-2026-04-05,Emilio Nava,BUY,0.75,10.0,7.5
+1775389387,"Rolex Monte Carlo Masters, Qualification: David Goffin vs Emilio Nava",atp-goffin-nava-2026-04-05,atp-goffin-nava-2026-04-05,Emilio Nava,BUY,0.74,3651.35,2701.999
+1775389373,"Upper Austria Ladies Linz, Qualification: Madison Brengle vs Dominika Salkova",wta-brengle-salkova-2026-04-05,wta-brengle-salkova-2026-04-05,Dominika Salkova,BUY,0.92,1931.22392,1781.0004
+1775389359,"Rolex Monte Carlo Masters, Qualification: Ethan Quinn vs Francisco Comesana",atp-quinn-comesan-2026-04-05,atp-quinn-comesan-2026-04-05,Francisco Comesana,BUY,0.7200001337313792,4.785713,3.445714
+1775389359,"Rolex Monte Carlo Masters, Qualification: Ethan Quinn vs Francisco Comesana",atp-quinn-comesan-2026-04-05,atp-quinn-comesan-2026-04-05,Francisco Comesana,BUY,0.7200000008195264,683.321427,491.991428
+1775389359,"Rolex Monte Carlo Masters, Qualification: Ethan Quinn vs Francisco Comesana",atp-quinn-comesan-2026-04-05,atp-quinn-comesan-2026-04-05,Francisco Comesana,BUY,0.7200000008195264,683.321427,491.991428
+1775389359,"Rolex Monte Carlo Masters, Qualification: Ethan Quinn vs Francisco Comesana",atp-quinn-comesan-2026-04-05,atp-quinn-comesan-2026-04-05,Francisco Comesana,BUY,0.7200000008195264,683.321427,491.991428
+1775389359,"Rolex Monte Carlo Masters, Qualification: Ethan Quinn vs Francisco Comesana",atp-quinn-comesan-2026-04-05,atp-quinn-comesan-2026-04-05,Francisco Comesana,BUY,0.72,11.81,8.5032
+1775389359,"Rolex Monte Carlo Masters, Qualification: Ethan Quinn vs Francisco Comesana",atp-quinn-comesan-2026-04-05,atp-quinn-comesan-2026-04-05,Francisco Comesana,BUY,0.7200000013329599,510.142856,367.302857
+1775389359,"Rolex Monte Carlo Masters, Qualification: Ethan Quinn vs Francisco Comesana",atp-quinn-comesan-2026-04-05,atp-quinn-comesan-2026-04-05,Francisco Comesana,BUY,0.7200000013329599,510.142856,367.302857
+1775389359,"Rolex Monte Carlo Masters, Qualification: Ethan Quinn vs Francisco Comesana",atp-quinn-comesan-2026-04-05,atp-quinn-comesan-2026-04-05,Francisco Comesana,BUY,0.7200000008195264,683.321427,491.991428
+1775389355,"Rolex Monte Carlo Masters, Qualification: Ethan Quinn vs Francisco Comesana",atp-quinn-comesan-2026-04-05,atp-quinn-comesan-2026-04-05,Francisco Comesana,BUY,0.72,4.5,3.24
+1775389353,"Rolex Monte Carlo Masters, Qualification: David Goffin vs Emilio Nava",atp-goffin-nava-2026-04-05,atp-goffin-nava-2026-04-05,Emilio Nava,BUY,0.78,3174.20109,2492.3262
+1775389353,"Rolex Monte Carlo Masters, Qualification: Ethan Quinn vs Francisco Comesana",atp-quinn-comesan-2026-04-05,atp-quinn-comesan-2026-04-05,Francisco Comesana,BUY,0.72,10.0,7.2
+1775389351,"Rolex Monte Carlo Masters, Qualification: Ethan Quinn vs Francisco Comesana",atp-quinn-comesan-2026-04-05,atp-quinn-comesan-2026-04-05,Ethan Quinn,BUY,0.2834518888888889,2641.95961,765.3201
+1775389351,Bucharest Open: Mariano Navone vs Daniel Merida Aguilar,atp-navone-aguilar-2026-04-05,atp-navone-aguilar-2026-04-05,Daniel Merida Aguilar,BUY,0.1,29.19,3.0
+1775389349,"Rolex Monte Carlo Masters, Qualification: Alexander Shevchenko vs Roberto Bautista Agut",atp-shevche-agut-2026-04-05,atp-shevche-agut-2026-04-05,Alexander Shevchenko,BUY,0.6,1432.0,859.2

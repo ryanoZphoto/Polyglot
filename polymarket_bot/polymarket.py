@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import time
 from dataclasses import dataclass
 from typing import Any, Dict, List
 
@@ -26,6 +27,20 @@ def _as_float(value: Any, default: float = 0.0) -> float:
         return float(value)
     except (TypeError, ValueError):
         return default
+
+
+def _as_bool(value: Any, default: bool) -> bool:
+    if isinstance(value, bool):
+        return value
+    if value is None:
+        return default
+    if isinstance(value, str):
+        lowered = value.strip().lower()
+        if lowered in {"1", "true", "yes", "on"}:
+            return True
+        if lowered in {"0", "false", "no", "off"}:
+            return False
+    return bool(value)
 
 
 def _event_title(raw: Dict[str, Any]) -> str | None:
@@ -114,6 +129,8 @@ def parse_market(raw: Dict[str, Any]) -> ParsedMarket | None:
         active=bool(raw.get("active", False)),
         closed=bool(raw.get("closed", True)),
         accepting_orders=bool(raw.get("acceptingOrders", False)),
+        enable_orderbook=_as_bool(raw.get("enableOrderBook", raw.get("enable_orderbook")), True),
+        neg_risk=_as_bool(raw.get("negRisk", raw.get("neg_risk")), False),
         outcomes=outcomes,
         token_ids=token_ids,
         event_title=event_title,
@@ -129,23 +146,28 @@ class PolymarketDataClient:
     gamma_host: str
     clob_host: str
     timeout_seconds: float = 10.0
+    max_retries: int = 2
+    retry_backoff_seconds: float = 0.35
 
     def _get(self, url: str, params: dict[str, Any] | None = None) -> Any:
-        response = requests.get(url, params=params, timeout=self.timeout_seconds)
-        response.raise_for_status()
-        return response.json()
+        for attempt in range(self.max_retries + 1):
+            try:
+                response = requests.get(url, params=params, timeout=self.timeout_seconds)
+                response.raise_for_status()
+                return response.json()
+            except requests.RequestException:
+                if attempt >= self.max_retries:
+                    raise
+                time.sleep(self.retry_backoff_seconds * (attempt + 1))
 
     def fetch_markets(self, limit: int) -> List[ParsedMarket]:
         return self.fetch_active_markets(limit)
 
     def fetch_active_markets(self, limit: int) -> List[ParsedMarket]:
-        response = requests.get(
+        payload = self._get(
             f"{self.gamma_host}/markets",
             params={"active": "true", "closed": "false", "limit": str(limit)},
-            timeout=self.timeout_seconds,
         )
-        response.raise_for_status()
-        payload = response.json()
         if not isinstance(payload, list):
             return []
         markets: List[ParsedMarket] = []
@@ -159,13 +181,10 @@ class PolymarketDataClient:
         return markets
 
     def get_best_ask(self, token_id: str) -> float | None:
-        response = requests.get(
+        payload = self._get(
             f"{self.clob_host}/book",
             params={"token_id": token_id},
-            timeout=self.timeout_seconds,
         )
-        response.raise_for_status()
-        payload = response.json()
         if not isinstance(payload, dict):
             return None
         asks = payload.get("asks", [])
