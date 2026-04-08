@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import time
 from dataclasses import dataclass
+from concurrent.futures import ThreadPoolExecutor
 
 from .config import BotConfig
 from .data_client import ResilientDataClient
@@ -72,53 +73,79 @@ class OpportunityScanner:
         self.config = config
         self.client = client
 
-    def scan(self, last_trade_at: dict[str, float]) -> ScanResult:
+    def scan(self, last_trade_at: dict[str, float]) -> tuple[ScanResult, list[ParsedMarket]]:
+        """
+        Returns (ScanResult, fetched_markets) so the caller can reuse the market list
+        for other strategies (e.g. leader-follow) without a second API fetch (Issue F fix).
+        """
         markets = self.client.fetch_active_markets(self.config.scan_limit)
+
+        eligible = [m for m in markets if _market_is_eligible(m, self.config, last_trade_at)]
+
+        # Issue #2 fix: Collect ALL tokens across all active strategies to fetch in one parallel pass.
+        tokens_to_fetch: set[str] = set()
+        for m in eligible:
+            if self.config.enable_no_basket_strategy:
+                nq = extract_no_quote(m)
+                if nq:
+                    tokens_to_fetch.add(nq.token_id)
+
+            if self.config.enable_binary_pair_strategy and len(m.token_ids) == 2:
+                tokens_to_fetch.update(m.token_ids)
+
+            if self.config.enable_multi_outcome_strategy and len(m.token_ids) >= 3:
+                tokens_to_fetch.update(m.token_ids)
+
+        quotes_map: dict[str, float] = {}
+        if tokens_to_fetch:
+            with ThreadPoolExecutor(max_workers=self.config.max_workers) as executor:
+                results = list(executor.map(self.client.fetch_best_ask, tokens_to_fetch))
+                for q in results:
+                    if q.best_ask is not None:
+                        quotes_map[q.token_id] = q.best_ask
+
+        legs_with_quotes: list[MarketLeg] = []
+        # Build a fast lookup from market_id → market for grouping step.
+        market_by_id: dict[str, ParsedMarket] = {m.market_id: m for m in eligible}
+        for m in eligible:
+            nq = extract_no_quote(m)
+            if nq and nq.token_id in quotes_map:
+                legs_with_quotes.append(MarketLeg(
+                    market_id=m.market_id,
+                    market_slug=m.slug,
+                    market_question=m.question,
+                    token_id=nq.token_id,
+                    outcome_name=nq.name,
+                    price=quotes_map[nq.token_id],
+                    liquidity=m.liquidity,
+                ))
+
         grouped: dict[str, list[MarketLeg]] = {}
+        for leg in legs_with_quotes:
+            m_orig = market_by_id.get(leg.market_id)
+            if m_orig is None:
+                continue
+            key = _group_key(m_orig)
+            if key:
+                grouped.setdefault(key, []).append(leg)
+
         diagnostics: dict[str, int] = {
-            "eligible_markets": 0,
-            "groups_total": 0,
+            "eligible_markets": len(eligible),
+            "groups_total": len(grouped),
             "groups_below_min_size": 0,
             "no_basket_evaluated": 0,
             "no_basket_found": 0,
-            "pair_evaluated": 0,
-            "pair_found": 0,
-            "multi_evaluated": 0,
-            "multi_found": 0,
             "no_basket_best_edge_ppm": -1000000,
             "no_basket_best_profit_cents": -1000000,
+            "pair_evaluated": 0,
+            "pair_found": 0,
             "pair_best_edge_ppm": -1000000,
             "pair_best_profit_cents": -1000000,
+            "multi_evaluated": 0,
+            "multi_found": 0,
             "multi_best_edge_ppm": -1000000,
             "multi_best_profit_cents": -1000000,
         }
-
-        for market in markets:
-            if not _market_is_eligible(market, self.config, last_trade_at):
-                continue
-            diagnostics["eligible_markets"] += 1
-            no_quote = extract_no_quote(market)
-            if no_quote is None:
-                continue
-            best = self.client.fetch_best_ask(no_quote.token_id)
-            if best.best_ask is None:
-                continue
-
-            key = _group_key(market)
-            if not key:
-                continue
-
-            grouped.setdefault(key, []).append(
-                MarketLeg(
-                    market_id=market.market_id,
-                    market_slug=market.slug,
-                    market_question=market.question,
-                    token_id=no_quote.token_id,
-                    outcome_name=no_quote.name,
-                    price=best.best_ask,
-                    liquidity=market.liquidity,
-                )
-            )
 
         opportunities: list[Opportunity] = []
         near_misses: list[NearMissCandidate] = []
@@ -167,7 +194,7 @@ class OpportunityScanner:
                 pair_found,
                 pair_best_edge,
                 pair_best_profit,
-            ) = self._scan_binary_pair_opportunities(markets, last_trade_at)
+            ) = self._scan_binary_pair_opportunities(eligible, quotes_map)
             opportunities.extend(pair_opps)
             near_misses.extend(pair_near_misses)
             diagnostics["pair_evaluated"] += pair_eval
@@ -188,7 +215,7 @@ class OpportunityScanner:
                 multi_found,
                 multi_best_edge,
                 multi_best_profit,
-            ) = self._scan_multi_outcome_opportunities(markets, last_trade_at)
+            ) = self._scan_multi_outcome_opportunities(eligible, quotes_map)
             opportunities.extend(multi_opps)
             near_misses.extend(multi_near_misses)
             diagnostics["multi_evaluated"] += multi_eval
@@ -204,15 +231,22 @@ class OpportunityScanner:
 
         opportunities.sort(key=lambda x: x.expected_profit_usd, reverse=True)
         near_misses.sort(key=lambda x: (x.edge_gap + x.profit_gap_usd, x.sum_ask))
-        return ScanResult(
+        result = ScanResult(
             scanned_markets=len(markets),
             grouped_candidates=len(grouped),
             opportunities=opportunities[: self.config.max_opportunities_per_cycle],
             near_misses=near_misses[:8],
             diagnostics=diagnostics,
         )
+        return result, markets
 
     def _best_no_basket_signal(self, legs: list[MarketLeg]) -> tuple[float, float] | None:
+        """
+        For a NO-basket of n mutually exclusive markets:
+          guaranteed payout per share = (n - 1)  [n-1 NOs resolve winning, 1 loses]
+          edge = (n-1) - sum_of_n_NO_asks
+        We try all valid n from min_group_size up to max_group_size, taking the cheapest legs first.
+        """
         sorted_legs = sorted(legs, key=lambda leg: leg.price)
         max_n = min(self.config.max_group_size, len(sorted_legs))
         if max_n < self.config.min_group_size:
@@ -240,7 +274,7 @@ class OpportunityScanner:
         return best_edge, best_profit
 
     def _scan_binary_pair_opportunities(
-        self, markets: list[ParsedMarket], last_trade_at: dict[str, float]
+        self, markets: list[ParsedMarket], quotes_map: dict[str, float]
     ) -> tuple[list[Opportunity], list[NearMissCandidate], int, int, float, float]:
         opportunities: list[Opportunity] = []
         near_misses: list[NearMissCandidate] = []
@@ -249,8 +283,6 @@ class OpportunityScanner:
         best_edge = float("-inf")
         best_profit = float("-inf")
         for market in markets:
-            if not _market_is_eligible(market, self.config, last_trade_at):
-                continue
             if len(market.outcomes) != 2 or len(market.token_ids) != 2:
                 continue
 
@@ -266,13 +298,11 @@ class OpportunityScanner:
                 continue
 
             evaluated += 1
-            yes_quote = self.client.fetch_best_ask(market.token_ids[yes_idx])
-            no_quote = self.client.fetch_best_ask(market.token_ids[no_idx])
-            if yes_quote.best_ask is None or no_quote.best_ask is None:
+            yes_ask = quotes_map.get(market.token_ids[yes_idx])
+            no_ask = quotes_map.get(market.token_ids[no_idx])
+            if yes_ask is None or no_ask is None:
                 continue
 
-            yes_ask = yes_quote.best_ask
-            no_ask = no_quote.best_ask
             sum_ask = yes_ask + no_ask
             payout = 1.0
             edge = payout - sum_ask
@@ -344,7 +374,7 @@ class OpportunityScanner:
         return opportunities, near_misses[:6], evaluated, found, best_edge, best_profit
 
     def _scan_multi_outcome_opportunities(
-        self, markets: list[ParsedMarket], last_trade_at: dict[str, float]
+        self, markets: list[ParsedMarket], quotes_map: dict[str, float]
     ) -> tuple[list[Opportunity], list[NearMissCandidate], int, int, float, float]:
         opportunities: list[Opportunity] = []
         near_misses: list[NearMissCandidate] = []
@@ -354,8 +384,6 @@ class OpportunityScanner:
         best_profit = float("-inf")
 
         for market in markets:
-            if not _market_is_eligible(market, self.config, last_trade_at):
-                continue
             if len(market.token_ids) < 3:
                 continue
             evaluated += 1
@@ -364,11 +392,10 @@ class OpportunityScanner:
             sum_ask = 0.0
             invalid = False
             for token_id, outcome in zip(market.token_ids, market.outcomes):
-                quote = self.client.fetch_best_ask(token_id)
-                if quote.best_ask is None:
+                ask = quotes_map.get(token_id)
+                if ask is None:
                     invalid = True
                     break
-                ask = quote.best_ask
                 sum_ask += ask
                 legs.append(
                     MarketLeg(
@@ -454,7 +481,7 @@ class OpportunityScanner:
             bundle_shares = min(self.config.max_bundle_shares, max_shares_by_capital)
             if bundle_shares <= 0:
                 continue
-            estimated_profit = (edge * bundle_shares)
+            estimated_profit = edge * bundle_shares
             edge_gap = max(0.0, self.config.min_edge - edge)
             profit_gap = max(0.0, self.config.min_profit_usd - estimated_profit)
             candidate = NearMissCandidate(

@@ -56,7 +56,12 @@ def _start_bot() -> None:
         return
 
     env = os.environ.copy()
-    # Default to non-debug runtime so the log remains readable for non-technical users.
+    
+    # Basic log maintenance: Prevent unbounded growth on start (Issue #11)
+    if LOG_PATH.exists() and LOG_PATH.stat().st_size > 10 * 1024 * 1024: # 10MB limit
+        with open(LOG_PATH, "w", encoding="utf-8") as f:
+            f.write(f"[{_now_utc()}] Log rotated by dashboard (exceeded 10MB)\n")
+
     cmd = [sys.executable, "-m", "polymarket_bot.main"]
     log_file = open(LOG_PATH, "a", encoding="utf-8")
     log_file.write(f"\n[{_now_utc()}] Starting bot from dashboard\n")
@@ -133,6 +138,8 @@ def _load_dashboard_data() -> dict[str, Any]:
         "pnl_history": [],
         "order_status_counts": {},
         "error_orders_count": 0,
+        "simulated_pnl": 0.0,
+        "simulated_performance": [],
         "latest_near_misses": [],
         "latest_cycle_diagnostics": {},
     }
@@ -160,7 +167,7 @@ def _load_dashboard_data() -> dict[str, Any]:
         recent_trades = _fetch_all(
             conn,
             """
-            SELECT trade_id, group_key, status, cost_usd, expected_profit_usd, created_at
+            SELECT trade_id, group_key, mode, status, cost_usd, expected_profit_usd, created_at
             FROM trades
             ORDER BY created_at DESC
             LIMIT 12
@@ -169,7 +176,7 @@ def _load_dashboard_data() -> dict[str, Any]:
         recent_orders = _fetch_all(
             conn,
             """
-            SELECT trade_id, market_slug, token_id, status, order_id, error, created_at
+            SELECT trade_id, market_slug, token_id, mode, status, order_id, error, created_at
             FROM orders
             ORDER BY created_at DESC
             LIMIT 20
@@ -237,6 +244,22 @@ def _load_dashboard_data() -> dict[str, Any]:
             LIMIT 1
             """,
         )
+        sim_pnl_row = _fetch_one(
+            conn,
+            """
+            SELECT COALESCE(SUM((current_sum_ask - entry_sum_ask) * shares), 0) AS unrealized_pnl 
+            FROM simulated_performance
+            """
+        )
+        sim_perf = _fetch_all(
+            conn,
+            """
+            SELECT trade_id, group_key, entry_sum_ask, current_sum_ask, (current_sum_ask - entry_sum_ask) * shares AS pnl, updated_at
+            FROM simulated_performance
+            ORDER BY updated_at DESC
+            LIMIT 10
+            """
+        )
 
         data["open_exposure"] = float(open_row["open_exposure"]) if open_row else 0.0
         data["daily_pnl"] = float(pnl_row["pnl"]) if pnl_row else 0.0
@@ -246,6 +269,8 @@ def _load_dashboard_data() -> dict[str, Any]:
         data["total_orders"] = int(orders_count["c"]) if orders_count else 0
         data["recent_trades"] = [dict(r) for r in recent_trades]
         data["recent_orders"] = [dict(r) for r in recent_orders]
+        data["simulated_performance"] = [dict(r) for r in sim_perf]
+        data["simulated_pnl"] = float(sim_pnl_row["unrealized_pnl"]) if sim_pnl_row else 0.0
         data["cycle_history"] = [dict(r) for r in reversed(cycle_history)]
         data["pnl_history"] = [dict(r) for r in pnl_history]
         data["order_status_counts"] = {str(r["status"]): int(r["c"]) for r in order_status}
@@ -733,9 +758,9 @@ def main() -> None:
     m1, m2, m3, m4, m5 = st.columns(5)
     m1.metric("Open Exposure (USD)", f"{data['open_exposure']:.2f}")
     m2.metric("Daily Realized PnL (USD)", f"{data['daily_pnl']:.2f}")
-    m3.metric("Total Cycles Completed", f"{data['total_cycles']}")
+    m3.metric("Simulated MtM PnL (USD)", f"{data['simulated_pnl']:.2f}")
     m4.metric("Total Trades Recorded", f"{data['total_trades']}")
-    m5.metric("Total Orders Recorded", f"{data['total_orders']}")
+    m5.metric("Total Cycles", f"{data['total_cycles']}")
 
     outlook_label, outlook_detail, outlook_level = _compute_outlook(data, latest_report)
     st.subheader("Live Outlook")
@@ -841,6 +866,12 @@ def main() -> None:
                 st.json(counters_only)
         else:
             st.write("No cycle diagnostics recorded yet.")
+
+        st.subheader("Simulated Performance Tracking (Issue #14)")
+        if data["simulated_performance"]:
+            st.dataframe(data["simulated_performance"], width="stretch", hide_index=True)
+        else:
+            st.write("No simulated trades tracked yet.")
 
         tcol, ocol = st.columns(2)
         with tcol:

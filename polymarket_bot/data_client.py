@@ -26,6 +26,13 @@ class ResilientDataClient:
     def __init__(self, config: BotConfig):
         self.config = config
         self.session = requests.Session()
+        # Issue G fix: configure connection pool large enough to support max_workers concurrent requests.
+        adapter = requests.adapters.HTTPAdapter(
+            pool_connections=max(10, config.max_workers),
+            pool_maxsize=max(20, config.max_workers * 2),
+        )
+        self.session.mount("https://", adapter)
+        self.session.mount("http://", adapter)
 
     def _request_json(self, url: str, params: dict[str, Any] | None = None) -> Any:
         last_error: Exception | None = None

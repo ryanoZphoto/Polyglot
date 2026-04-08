@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import logging
 import time
 from dataclasses import dataclass
 from typing import Any, Dict, List
@@ -149,14 +150,24 @@ class PolymarketDataClient:
     max_retries: int = 2
     retry_backoff_seconds: float = 0.35
 
+    def __post_init__(self) -> None:
+        # Use a session to enable connection pooling, significantly reducing latency 
+        # for sequential requests (Issue #2).
+        self._session = requests.Session()
+        # Increase pool size to support high concurrency in the parallel scanner.
+        adapter = requests.adapters.HTTPAdapter(pool_connections=50, pool_maxsize=50)
+        self._session.mount("https://", adapter)
+        self._session.mount("http://", adapter)
+
     def _get(self, url: str, params: dict[str, Any] | None = None) -> Any:
         for attempt in range(self.max_retries + 1):
             try:
-                response = requests.get(url, params=params, timeout=self.timeout_seconds)
+                response = self._session.get(url, params=params, timeout=self.timeout_seconds)
                 response.raise_for_status()
                 return response.json()
-            except requests.RequestException:
+            except requests.RequestException as e:
                 if attempt >= self.max_retries:
+                    logging.error(f"Request failed after {self.max_retries} retries: {e}")
                     raise
                 time.sleep(self.retry_backoff_seconds * (attempt + 1))
 

@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import logging
+from concurrent.futures import ThreadPoolExecutor
 import time
 import uuid
 from dataclasses import dataclass
@@ -20,7 +21,7 @@ from .risk import RiskEngine
 from .scanner import NearMissCandidate, OpportunityScanner, ScanResult
 from .state import StateStore
 from .strategy_allocator import StrategyAllocator
-from .types import ExecutionResult, Opportunity
+from .types import ExecutionResult, Opportunity, ParsedMarket
 
 logger = logging.getLogger(__name__)
 
@@ -45,7 +46,7 @@ def _write_cycle_report(
 ) -> None:
     path = Path(config.analysis_log_path)
     record = {
-        "ts": datetime.now(timezone.utc).isoformat(),
+        "ts": datetime.now(timezone.utc).strftime("%Y-%m-%d %I:%M:%S %p %Z"),
         "cycle_id": summary.cycle_id,
         "mode": config.mode,
         "scan_limit": config.scan_limit,
@@ -138,7 +139,11 @@ def _executor_from_config(config: BotConfig) -> OrderExecutor:
     )
 
 
-def run_bot_once(config: BotConfig, last_trade_at: dict[str, float] | None = None) -> RunSummary:
+def run_bot_once(
+    config: BotConfig,
+    last_trade_at: dict[str, float] | None = None,
+    prefetched_markets: list[ParsedMarket] | None = None,
+) -> RunSummary:
     if last_trade_at is None:
         last_trade_at = {}
 
@@ -156,7 +161,8 @@ def run_bot_once(config: BotConfig, last_trade_at: dict[str, float] | None = Non
         cycle_started = time.time()
         if config.enable_arb_scanner:
             scanner_started = time.time()
-            scan = scanner.scan(last_trade_at=last_trade_at)
+            # scan() now returns the fetched markets list too so leader_follow can reuse it.
+            scan, fetched_markets = scanner.scan(last_trade_at=last_trade_at)
             scanner_ms = int((time.time() - scanner_started) * 1000)
         else:
             scan = ScanResult(
@@ -166,10 +172,15 @@ def run_bot_once(config: BotConfig, last_trade_at: dict[str, float] | None = Non
                 near_misses=[],
                 diagnostics={"scanner_disabled": 1},
             )
+            fetched_markets = prefetched_markets or []
             scanner_ms = 0
 
+        # Issue F fix: pass already-fetched markets to leader_follow to avoid a second full fetch.
         leader_started = time.time()
-        leader_result = leader_follow.build_opportunities(last_trade_at=last_trade_at)
+        leader_result = leader_follow.build_opportunities(
+            last_trade_at=last_trade_at,
+            cached_markets=fetched_markets if fetched_markets else None,
+        )
         leader_ms = int((time.time() - leader_started) * 1000)
         if leader_result.opportunities:
             logger.info("Leader-follow candidates=%s", len(leader_result.opportunities))
@@ -220,6 +231,14 @@ def run_bot_once(config: BotConfig, last_trade_at: dict[str, float] | None = Non
         )
         state.record_near_misses(cycle_id=cycle_id, near_misses=scan.near_misses)
         state.record_cycle_diagnostics(cycle_id=cycle_id, diagnostics=scan.diagnostics)
+
+        # Performance Calibration Layer (Issue #14): Update marks for previous dry runs.
+        if config.dry_run:
+            try:
+                calibrate_dry_runs(config, state, data_client)
+            except Exception as exc:
+                logger.warning("calibrate_dry_runs failed (non-fatal): %s", exc)
+
         summary = RunSummary(
             cycle_id=cycle_id,
             scanned_markets=scan.scanned_markets,
@@ -253,6 +272,46 @@ def run_bot_once(config: BotConfig, last_trade_at: dict[str, float] | None = Non
         state.close()
 
 
+def calibrate_dry_runs(config: BotConfig, state: StateStore, data_client: ResilientDataClient) -> None:
+    """
+    Tracks subsequent price movement for dry_run trades to verify profitability (Issue #14).
+    """
+    active = state.get_active_simulated_performance()
+    if not active:
+        return
+
+    # Group tokens by trade_id
+    trades: dict[str, dict] = {}
+    for row in active:
+        tid = row["trade_id"]
+        if tid not in trades:
+            trades[tid] = {"tokens": []}
+        trades[tid]["tokens"].append(row["token_id"])
+
+    # Collect unique tokens to fetch prices efficiently
+    all_tokens = list({t for tdata in trades.values() for t in tdata["tokens"]})
+
+    prices: dict[str, float] = {}
+    with ThreadPoolExecutor(max_workers=min(config.max_workers, len(all_tokens) or 1)) as executor:
+        results = list(executor.map(data_client.fetch_best_ask, all_tokens))
+        for quote in results:
+            if quote.best_ask is not None:
+                prices[quote.token_id] = quote.best_ask
+
+    for tid, tdata in trades.items():
+        current_sum = 0.0
+        valid = True
+        for token in tdata["tokens"]:
+            p = prices.get(token)
+            if p is None:
+                valid = False
+                break
+            current_sum += p
+
+        if valid:
+            state.update_simulated_mark(tid, current_sum)
+
+
 def run_bot_loop(config: BotConfig) -> None:
     logger.info(
         "Starting polymarket bot mode=%s min_group=%s max_group=%s sports_only=%s "
@@ -274,7 +333,15 @@ def run_bot_loop(config: BotConfig) -> None:
     last_trade_at: dict[str, float] = {}
     while True:
         started = time.time()
-        summary = run_bot_once(current_config, last_trade_at=last_trade_at)
+        try:
+            summary = run_bot_once(current_config, last_trade_at=last_trade_at)
+        except Exception as e:
+            # Critical Safety Guard (Issue #3): prevent the loop from terminating on transient errors.
+            logger.error("Cycle failed with unhandled exception: %s", e, exc_info=True)
+            # Bounded backoff before retrying to avoid hammering a failing endpoint.
+            time.sleep(current_config.poll_interval_seconds * 2)
+            continue
+
         decision = tuner.tune(current_config, summary)
         if decision.changed:
             logger.info(
@@ -295,4 +362,5 @@ def run_bot_loop(config: BotConfig) -> None:
             summary.diagnostics,
         )
         elapsed = time.time() - started
-        time.sleep(max(0.05, config.poll_interval_seconds - elapsed))
+        # Bug 5 fix: use current_config (which may have been updated by auto-tuner), not the original config.
+        time.sleep(max(0.05, current_config.poll_interval_seconds - elapsed))

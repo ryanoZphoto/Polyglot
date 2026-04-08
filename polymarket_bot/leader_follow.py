@@ -36,7 +36,11 @@ class LeaderFollowStrategy:
         self.data_client = data_client
         self.session = requests.Session()
 
-    def build_opportunities(self, last_trade_at: dict[str, float]) -> LeaderFollowResult:
+    def build_opportunities(
+        self,
+        last_trade_at: dict[str, float],
+        cached_markets: list[ParsedMarket] | None = None,
+    ) -> LeaderFollowResult:
         diagnostics: dict[str, int] = {
             "activity_rows": 0,
             "signals_after_filters": 0,
@@ -64,13 +68,21 @@ class LeaderFollowStrategy:
         if not signals:
             return LeaderFollowResult(opportunities=[], diagnostics=diagnostics)
 
-        markets = self.data_client.fetch_active_markets(self.config.scan_limit)
+        # Issue F fix: reuse the market list already fetched by the scanner if available.
+        if cached_markets is not None:
+            markets = cached_markets
+        else:
+            markets = self.data_client.fetch_active_markets(self.config.scan_limit)
         diagnostics["markets_loaded"] = len(markets)
-        by_slug = {m.slug: m for m in markets if m.slug}
+        # Fix (Issue #5): Index by token_id first for precise mapping, fallback to slug.
+        # Also normalize slugs to handle trailing/leading whitespace and case differences.
+        by_token = {tid: m for m in markets for tid in m.token_ids}
+        by_slug = {m.slug.strip().lower(): m for m in markets if m.slug}
+
         opportunities: list[Opportunity] = []
 
         for sig in signals:
-            market = by_slug.get(sig.slug)
+            market = by_token.get(sig.token_id) or by_slug.get(sig.slug)
             if market is None:
                 diagnostics["signal_market_miss"] += 1
                 continue

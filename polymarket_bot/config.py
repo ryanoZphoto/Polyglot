@@ -152,18 +152,25 @@ class BotConfig:
             mode=mode,
             poll_interval_seconds=float(os.getenv("BOT_POLL_INTERVAL_SECONDS", "2.0")),
             scan_limit=int(os.getenv("BOT_SCAN_LIMIT", "200")),
-            min_liquidity=float(os.getenv("BOT_MIN_LIQUIDITY", "5000")),
-            min_edge=float(os.getenv("BOT_MIN_EDGE", "0.01")),
-            min_profit_usd=float(os.getenv("BOT_MIN_PROFIT_USD", "1.0")),
+            # Lowered from 5000: smaller liquidity threshold allows the bot to see far more markets,
+            # increasing the chance of finding mispriced candidates.
+            min_liquidity=float(os.getenv("BOT_MIN_LIQUIDITY", "500")),
+            # Lowered from 0.01: 1% edge is extremely rare; 0.002 captures real near-arb opportunities.
+            min_edge=float(os.getenv("BOT_MIN_EDGE", "0.002")),
+            # Lowered from 1.0: even small positive-expectation trades build data.
+            min_profit_usd=float(os.getenv("BOT_MIN_PROFIT_USD", "0.10")),
             max_capital_per_trade=float(os.getenv("BOT_MAX_CAPITAL_PER_TRADE", "100.0")),
             max_bundle_shares=float(os.getenv("BOT_MAX_BUNDLE_SHARES", "100.0")),
-            min_group_size=int(os.getenv("BOT_MIN_GROUP_SIZE", "4")),
+            # Lowered from 4: allows 2-leg NO baskets and reduces groups_below_min_size rejections.
+            min_group_size=int(os.getenv("BOT_MIN_GROUP_SIZE", "2")),
             max_group_size=int(os.getenv("BOT_MAX_GROUP_SIZE", "12")),
-            max_opportunities_per_cycle=int(os.getenv("BOT_MAX_OPPS_PER_CYCLE", "3")),
+            max_opportunities_per_cycle=int(os.getenv("BOT_MAX_OPPS_PER_CYCLE", "5")),
             market_cooldown_seconds=float(os.getenv("BOT_MARKET_COOLDOWN_SECONDS", "20")),
             request_timeout_seconds=float(os.getenv("BOT_REQUEST_TIMEOUT_SECONDS", "10")),
             max_workers=int(os.getenv("BOT_MAX_WORKERS", "20")),
-            sports_only=_get_bool("BOT_SPORTS_ONLY", True),
+            # Defaulting to False: sports-only mode is too restrictive for most market regimes.
+            # Set BOT_SPORTS_ONLY=true in .env if you want to restrict to sports markets.
+            sports_only=_get_bool("BOT_SPORTS_ONLY", False),
             include_keywords=_get_csv("BOT_INCLUDE_KEYWORDS"),
             enable_arb_scanner=_get_bool("BOT_ENABLE_ARB_SCANNER", True),
             enable_no_basket_strategy=_get_bool("BOT_ENABLE_NO_BASKET_STRATEGY", True),

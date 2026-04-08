@@ -1,0 +1,21 @@
+2026-04-07 17:26:55,217 INFO event_trader_improved.runtime event trader (IMPROVED) started  mode=dry_run  kelly=True  min_edge=5.0%
+2026-04-07 17:26:55,657 INFO event_trader.data_client fetched 100 markets across 2 pages
+2026-04-07 17:26:55,657 INFO event_trader_improved.runtime cycle ev_20260408T002655_20478a (#1): fetched 100 markets in 0.4s
+2026-04-07 17:26:55,689 WARNING event_trader_improved.scanner EVScanner needs order book integration - returning empty signals for now
+2026-04-07 17:26:55,689 INFO event_trader_improved.runtime scan: 0 signals found in 0.0s
+2026-04-07 17:26:55,689 INFO event_trader_improved.runtime executed 0 entries in 0.0s
+2026-04-07 17:26:55,690 INFO event_trader_improved.runtime monitored 0 positions, 0 exits in 0.0s
+2026-04-07 17:26:55,691 ERROR event_trader_improved.runtime cycle error #1 (1 consecutive), backing off 20.0s
+Traceback (most recent call last):
+  File "D:\polymart\event_trader_improved\runtime.py", line 165, in run_loop
+    run_once(config, client, scanner, pos_mgr, risk, executor,
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+             state, reporter, cycle_number)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\polymart\event_trader_improved\runtime.py", line 125, in run_once
+    result = CycleResult(
+        cycle_id=cycle_id,
+    ...<7 lines>...
+        elapsed_seconds=time.monotonic() - t_start,
+    )
+TypeError: CycleResult.__init__() got an unexpected keyword argument 'timestamp'

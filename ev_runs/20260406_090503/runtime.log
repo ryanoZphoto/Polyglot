@@ -1,0 +1,571 @@
+{"ts": "2026-04-06T09:05:03.329373+00:00", "level": "INFO", "logger": "__main__", "msg": "======================================================================"}
+{"ts": "2026-04-06T09:05:03.329689+00:00", "level": "INFO", "logger": "__main__", "msg": "EVENT TRADER  mode=dry_run  run_dir=ev_runs\\20260406_090503"}
+{"ts": "2026-04-06T09:05:03.329816+00:00", "level": "INFO", "logger": "__main__", "msg": "======================================================================"}
+{"ts": "2026-04-06T09:05:03.330814+00:00", "level": "INFO", "logger": "__main__", "msg": "config: {\"gamma_host\": \"https://gamma-api.polymarket.com\", \"clob_host\": \"https://clob.polymarket.com\", \"chain_id\": 137, \"private_key\": \"0x59...68c5\", \"funder\": \"\", \"signature_type\": 0, \"api_key\": \"(not set)\", \"api_secret\": \"(not set)\", \"api_passphrase\": \"(not set)\", \"mode\": \"dry_run\", \"dry_run\": true, \"poll_interval_seconds\": 5.0, \"log_json\": true, \"scan_limit\": 600, \"min_liquidity\": 100.0, \"min_volume\": 0.0, \"max_entry_price\": 0.8, \"min_entry_price\": 0.02, \"min_book_depth_usd\": 10.0, \"min_spread_ratio\": 1.5, \"position_size_usd\": 5.0, \"longshot_size_usd\": 2.0, \"highprob_size_usd\": 8.0, \"longshot_ceiling\": 0.3, \"highprob_floor\": 0.55, \"max_contracts_per_entry\": 500.0, \"max_positions\": 20, \"take_profit_pct\": 0.5, \"stop_loss_pct\": 0.4, \"trailing_stop_pct\": 0.0, \"longshot_take_profit_pct\": 1.5, \"longshot_stop_loss_pct\": 0.5, \"highprob_take_profit_pct\": 0.3, \"highprob_stop_loss_pct\": 0.2, \"max_total_exposure_usd\": 100.0, \"max_daily_loss_usd\": 25.0, \"max_per_market_usd\": 20.0, \"emergency_stop\": false, \"request_timeout_seconds\": 8.0, \"max_request_retries\": 2, \"retry_backoff_seconds\": 0.3, \"max_workers\": 10, \"state_db_path\": \"ev_bot_state.sqlite3\", \"log_path\": \"ev_runtime.log\", \"report_path\": \"ev_cycle_report.jsonl\", \"run_dir\": \"ev_runs\\\\20260406_090503\", \"python\": \"3.13.5 (tags/v3.13.5:6cb20a2, Jun 11 2025, 16:15:46) [MSC v.1943 64 bit (AMD64)]\", \"pid\": 44612}"}
+{"ts": "2026-04-06T09:05:03.463490+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "event trader started  mode=dry_run  poll=5.0s  entry_range=$0.02-$0.80  tiers: longshot(<$0.30)=$2 mid=$5 highprob(>$0.55)=$8  max_positions=20"}
+{"ts": "2026-04-06T09:05:04.439159+00:00", "level": "INFO", "logger": "event_trader.data_client", "msg": "fetched 600 markets across 7 pages"}
+{"ts": "2026-04-06T09:05:04.440018+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090503_6a34c3 (#1): fetched 600 markets in 1.0s"}
+{"ts": "2026-04-06T09:05:04.441529+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "pre-filter: 234 candidates from 600 markets (skipped 966 expensive)"}
+{"ts": "2026-04-06T09:05:10.458197+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "scan summary: 234 candidates checked, 234 signals, filters: {'inactive': 0, 'no_orderbook': 0, 'bad_outcomes': 0, 'low_liquidity': 0, 'no_book': 0, 'too_expensive': 0, 'too_cheap': 0, 'wide_spread': 0, 'no_depth': 0, 'has_position': 0, 'recent_signal': 0, 'low_confidence': 0, 'no_asks': 0, 'price_prefilter': 966}"}
+{"ts": "2026-04-06T09:05:10.459934+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 234 signals found in 6.0s"}
+{"ts": "2026-04-06T09:05:10.460072+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "SIGNAL [longshot $2]: $0.021  conf=0.99  Yes  \"Will the Anaheim Ducks win the 2026 NHL Stanley Cup?\"  price=$0.021 | tier=longshot | size=$2 | liq=$175469 | vol=$785436 | spread=0.998 | depth=$6887504 | conf=0.99"}
+{"ts": "2026-04-06T09:05:10.460205+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "SIGNAL [longshot $2]: $0.021  conf=0.99  Yes  \"Will Japan win the 2026 FIFA World Cup?\"  price=$0.021 | tier=longshot | size=$2 | liq=$311305 | vol=$10929586 | spread=0.998 | depth=$12334533 | conf=0.99"}
+{"ts": "2026-04-06T09:05:10.460365+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "SIGNAL [longshot $2]: $0.021  conf=0.99  Yes  \"Will Andy Beshear win the 2028 Democratic presidential nomin\"  price=$0.021 | tier=longshot | size=$2 | liq=$600792 | vol=$7873645 | spread=0.998 | depth=$6075365 | conf=0.99"}
+{"ts": "2026-04-06T09:05:10.460560+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "SIGNAL [longshot $2]: $0.021  conf=0.99  Yes  \"Will Josh Shapiro win the 2028 US Presidential Election?\"  price=$0.021 | tier=longshot | size=$2 | liq=$371246 | vol=$5448485 | spread=0.998 | depth=$8140487 | conf=0.99"}
+{"ts": "2026-04-06T09:05:10.460676+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "SIGNAL [longshot $2]: $0.022  conf=0.99  Yes  \"Will the Minnesota Timberwolves win the 2026 NBA Finals?\"  price=$0.022 | tier=longshot | size=$2 | liq=$265710 | vol=$5255578 | spread=0.998 | depth=$8982982 | conf=0.99"}
+{"ts": "2026-04-06T09:05:10.511563+00:00", "level": "INFO", "logger": "event_trader.executor", "msg": "DRY_BUY [longshot]: 98 contracts @ $0.021 = $2.00  Yes  Will the Anaheim Ducks win the 2026 NHL Stanley Cup?"}
+{"ts": "2026-04-06T09:05:10.556424+00:00", "level": "INFO", "logger": "event_trader.executor", "msg": "DRY_BUY [longshot]: 98 contracts @ $0.021 = $2.00  Yes  Will Japan win the 2026 FIFA World Cup?"}
+{"ts": "2026-04-06T09:05:10.599396+00:00", "level": "INFO", "logger": "event_trader.executor", "msg": "DRY_BUY [longshot]: 98 contracts @ $0.021 = $2.00  Yes  Will Andy Beshear win the 2028 Democratic presidential nomin"}
+{"ts": "2026-04-06T09:05:10.641944+00:00", "level": "INFO", "logger": "event_trader.executor", "msg": "DRY_BUY [mid]: 16 contracts @ $0.315 = $5.00  Yes  Will John Cornyn win the 2026 Texas Republican Primary?"}
+{"ts": "2026-04-06T09:05:10.684931+00:00", "level": "INFO", "logger": "event_trader.executor", "msg": "DRY_BUY [mid]: 14 contracts @ $0.355 = $5.00  Yes  2026 Balance of Power: R Senate, D House"}
+{"ts": "2026-04-06T09:05:10.728491+00:00", "level": "INFO", "logger": "event_trader.executor", "msg": "DRY_BUY [mid]: 14 contracts @ $0.355 = $5.00  Yes  Will the next Prime Minister of Hungary be Viktor Orb\u00e1n?"}
+{"ts": "2026-04-06T09:05:10.771962+00:00", "level": "INFO", "logger": "event_trader.executor", "msg": "DRY_BUY [highprob]: 13 contracts @ $0.595 = $8.00  No  Will the Republicans win the 2028 US Presidential Election?"}
+{"ts": "2026-04-06T09:05:10.813871+00:00", "level": "INFO", "logger": "event_trader.executor", "msg": "DRY_BUY [highprob]: 13 contracts @ $0.595 = $8.00  Yes  Will the Democrats win the 2028 US Presidential Election?"}
+{"ts": "2026-04-06T09:05:10.855140+00:00", "level": "INFO", "logger": "event_trader.executor", "msg": "DRY_BUY [highprob]: 13 contracts @ $0.605 = $8.00  No  Netanyahu out by end of 2026?"}
+{"ts": "2026-04-06T09:05:13.476512+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "PORTFOLIO: 9 positions  cost=$45.00  value=$45.00  pnl=$0.0001"}
+{"ts": "2026-04-06T09:05:13.476686+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:05:13.476800+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:05:13.476905+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:05:13.477009+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.315  now=0.315  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:05:13.477114+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:05:13.477221+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:05:13.477322+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:05:13.477425+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:05:13.477603+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.605  now=0.605  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:05:13.493580+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090503_6a34c3 (#1) done in 10.0s: scanned=600 signals=234 entries=9 exits=0 open=9 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T09:05:18.871750+00:00", "level": "INFO", "logger": "event_trader.data_client", "msg": "fetched 600 markets across 7 pages"}
+{"ts": "2026-04-06T09:05:18.872362+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090518_d6112b (#2): fetched 600 markets in 0.4s"}
+{"ts": "2026-04-06T09:05:18.873472+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "pre-filter: 234 candidates from 600 markets (skipped 966 expensive)"}
+{"ts": "2026-04-06T09:05:24.201687+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "scan summary: 234 candidates checked, 0 signals, filters: {'inactive': 0, 'no_orderbook': 0, 'bad_outcomes': 0, 'low_liquidity': 0, 'no_book': 0, 'too_expensive': 0, 'too_cheap': 0, 'wide_spread': 0, 'no_depth': 0, 'has_position': 9, 'recent_signal': 225, 'low_confidence': 0, 'no_asks': 0, 'price_prefilter': 966}"}
+{"ts": "2026-04-06T09:05:24.203063+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 5.3s"}
+{"ts": "2026-04-06T09:05:24.388581+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "PORTFOLIO: 9 positions  cost=$45.00  value=$45.00  pnl=$0.0001"}
+{"ts": "2026-04-06T09:05:24.388746+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:05:24.388855+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:05:24.388956+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:05:24.389043+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.315  now=0.315  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:05:24.389123+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:05:24.389218+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:05:24.389324+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:05:24.389431+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:05:24.389526+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.605  now=0.605  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:05:24.401852+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090518_d6112b (#2) done in 5.9s: scanned=600 signals=0 entries=0 exits=0 open=9 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T09:05:29.726401+00:00", "level": "INFO", "logger": "event_trader.data_client", "msg": "fetched 600 markets across 7 pages"}
+{"ts": "2026-04-06T09:05:29.726812+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090529_1d0dc9 (#3): fetched 600 markets in 0.3s"}
+{"ts": "2026-04-06T09:05:29.727963+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "pre-filter: 234 candidates from 600 markets (skipped 966 expensive)"}
+{"ts": "2026-04-06T09:05:33.642427+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "scan summary: 234 candidates checked, 0 signals, filters: {'inactive': 0, 'no_orderbook': 0, 'bad_outcomes': 0, 'low_liquidity': 0, 'no_book': 0, 'too_expensive': 0, 'too_cheap': 0, 'wide_spread': 0, 'no_depth': 0, 'has_position': 9, 'recent_signal': 225, 'low_confidence': 0, 'no_asks': 0, 'price_prefilter': 966}"}
+{"ts": "2026-04-06T09:05:33.644805+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 3.9s"}
+{"ts": "2026-04-06T09:05:33.825005+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "PORTFOLIO: 9 positions  cost=$45.00  value=$45.00  pnl=$0.0001"}
+{"ts": "2026-04-06T09:05:33.825131+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:05:33.825218+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:05:33.825299+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:05:33.825381+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.315  now=0.315  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:05:33.825488+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:05:33.825585+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:05:33.825654+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:05:33.825725+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:05:33.825822+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.605  now=0.605  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:05:33.838354+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090529_1d0dc9 (#3) done in 4.4s: scanned=600 signals=0 entries=0 exits=0 open=9 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T09:05:39.292066+00:00", "level": "INFO", "logger": "event_trader.data_client", "msg": "fetched 600 markets across 7 pages"}
+{"ts": "2026-04-06T09:05:39.293133+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090538_c813c9 (#4): fetched 600 markets in 0.5s"}
+{"ts": "2026-04-06T09:05:39.294435+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "pre-filter: 234 candidates from 600 markets (skipped 966 expensive)"}
+{"ts": "2026-04-06T09:05:44.394866+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "scan summary: 234 candidates checked, 0 signals, filters: {'inactive': 0, 'no_orderbook': 0, 'bad_outcomes': 0, 'low_liquidity': 0, 'no_book': 0, 'too_expensive': 0, 'too_cheap': 0, 'wide_spread': 0, 'no_depth': 0, 'has_position': 9, 'recent_signal': 225, 'low_confidence': 0, 'no_asks': 0, 'price_prefilter': 966}"}
+{"ts": "2026-04-06T09:05:44.396846+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 5.1s"}
+{"ts": "2026-04-06T09:05:44.611991+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "PORTFOLIO: 9 positions  cost=$45.00  value=$45.00  pnl=$0.0001"}
+{"ts": "2026-04-06T09:05:44.612153+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:05:44.612258+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:05:44.612366+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:05:44.612462+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.315  now=0.315  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:05:44.612554+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:05:44.612726+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:05:44.612862+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:05:44.612964+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:05:44.613051+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.605  now=0.605  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:05:44.624087+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090538_c813c9 (#4) done in 5.8s: scanned=600 signals=0 entries=0 exits=0 open=9 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T09:05:49.940417+00:00", "level": "INFO", "logger": "event_trader.data_client", "msg": "fetched 600 markets across 7 pages"}
+{"ts": "2026-04-06T09:05:49.941244+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090549_54820f (#5): fetched 600 markets in 0.3s"}
+{"ts": "2026-04-06T09:05:49.942266+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "pre-filter: 234 candidates from 600 markets (skipped 966 expensive)"}
+{"ts": "2026-04-06T09:05:53.894347+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "scan summary: 234 candidates checked, 0 signals, filters: {'inactive': 0, 'no_orderbook': 0, 'bad_outcomes': 0, 'low_liquidity': 0, 'no_book': 0, 'too_expensive': 0, 'too_cheap': 0, 'wide_spread': 0, 'no_depth': 0, 'has_position': 9, 'recent_signal': 225, 'low_confidence': 0, 'no_asks': 0, 'price_prefilter': 966}"}
+{"ts": "2026-04-06T09:05:53.896614+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 4.0s"}
+{"ts": "2026-04-06T09:05:54.069475+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "PORTFOLIO: 9 positions  cost=$45.00  value=$45.00  pnl=$0.0001"}
+{"ts": "2026-04-06T09:05:54.069662+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:05:54.069765+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:05:54.069864+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:05:54.069966+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.315  now=0.315  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:05:54.070056+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:05:54.070151+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:05:54.070238+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:05:54.070317+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:05:54.070404+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.605  now=0.605  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:05:54.089176+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090549_54820f (#5) done in 4.4s: scanned=600 signals=0 entries=0 exits=0 open=9 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T09:05:59.498118+00:00", "level": "INFO", "logger": "event_trader.data_client", "msg": "fetched 600 markets across 7 pages"}
+{"ts": "2026-04-06T09:05:59.498798+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090559_71fc12 (#6): fetched 600 markets in 0.4s"}
+{"ts": "2026-04-06T09:05:59.499772+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "pre-filter: 235 candidates from 600 markets (skipped 965 expensive)"}
+{"ts": "2026-04-06T09:06:04.592627+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "scan summary: 235 candidates checked, 1 signals, filters: {'inactive': 0, 'no_orderbook': 0, 'bad_outcomes': 0, 'low_liquidity': 0, 'no_book': 0, 'too_expensive': 0, 'too_cheap': 0, 'wide_spread': 0, 'no_depth': 0, 'has_position': 9, 'recent_signal': 225, 'low_confidence': 0, 'no_asks': 0, 'price_prefilter': 965}"}
+{"ts": "2026-04-06T09:06:04.594808+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 1 signals found in 5.1s"}
+{"ts": "2026-04-06T09:06:04.594988+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "SIGNAL [longshot $2]: $0.021  conf=0.99  Yes  \"MegaETH market cap (FDV) >$6B one day after launch?\"  price=$0.021 | tier=longshot | size=$2 | liq=$59006 | vol=$2327303 | spread=0.998 | depth=$674272 | conf=0.99"}
+{"ts": "2026-04-06T09:06:04.648635+00:00", "level": "INFO", "logger": "event_trader.executor", "msg": "DRY_BUY [longshot]: 98 contracts @ $0.021 = $2.00  Yes  MegaETH market cap (FDV) >$6B one day after launch?"}
+{"ts": "2026-04-06T09:06:04.845566+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "PORTFOLIO: 10 positions  cost=$47.00  value=$46.95  pnl=$-0.0487"}
+{"ts": "2026-04-06T09:06:04.845703+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:06:04.845779+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.020  pnl=-2.4%  $-0.0488"}
+{"ts": "2026-04-06T09:06:04.845840+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:06:04.845916+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.315  now=0.315  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:06:04.845973+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:06:04.846040+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:06:04.846131+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:06:04.846230+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:06:04.846339+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.605  now=0.605  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:06:04.846406+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:06:04.857907+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090559_71fc12 (#6) done in 5.8s: scanned=600 signals=1 entries=1 exits=0 open=10 unrealized=$-0.0488 realized=$0.0000"}
+{"ts": "2026-04-06T09:06:10.273173+00:00", "level": "INFO", "logger": "event_trader.data_client", "msg": "fetched 600 markets across 7 pages"}
+{"ts": "2026-04-06T09:06:10.273811+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090609_e7a214 (#7): fetched 600 markets in 0.4s"}
+{"ts": "2026-04-06T09:06:10.275311+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "pre-filter: 235 candidates from 600 markets (skipped 965 expensive)"}
+{"ts": "2026-04-06T09:06:15.620618+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "scan summary: 235 candidates checked, 0 signals, filters: {'inactive': 0, 'no_orderbook': 0, 'bad_outcomes': 0, 'low_liquidity': 0, 'no_book': 0, 'too_expensive': 0, 'too_cheap': 0, 'wide_spread': 0, 'no_depth': 0, 'has_position': 10, 'recent_signal': 225, 'low_confidence': 0, 'no_asks': 0, 'price_prefilter': 965}"}
+{"ts": "2026-04-06T09:06:15.622750+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 5.3s"}
+{"ts": "2026-04-06T09:06:15.811677+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "PORTFOLIO: 10 positions  cost=$47.00  value=$46.95  pnl=$-0.0487"}
+{"ts": "2026-04-06T09:06:15.811852+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:06:15.811958+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.020  pnl=-2.4%  $-0.0488"}
+{"ts": "2026-04-06T09:06:15.812048+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:06:15.812126+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.315  now=0.315  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:06:15.812210+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:06:15.812290+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:06:15.812363+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:06:15.812434+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:06:15.812510+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.605  now=0.605  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:06:15.812605+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:06:15.833024+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090609_e7a214 (#7) done in 6.0s: scanned=600 signals=0 entries=0 exits=0 open=10 unrealized=$-0.0488 realized=$0.0000"}
+{"ts": "2026-04-06T09:06:21.239646+00:00", "level": "INFO", "logger": "event_trader.data_client", "msg": "fetched 600 markets across 7 pages"}
+{"ts": "2026-04-06T09:06:21.239974+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090620_00da2c (#8): fetched 600 markets in 0.4s"}
+{"ts": "2026-04-06T09:06:21.240877+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "pre-filter: 235 candidates from 600 markets (skipped 965 expensive)"}
+{"ts": "2026-04-06T09:06:26.400869+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "scan summary: 235 candidates checked, 0 signals, filters: {'inactive': 0, 'no_orderbook': 0, 'bad_outcomes': 0, 'low_liquidity': 0, 'no_book': 0, 'too_expensive': 0, 'too_cheap': 0, 'wide_spread': 0, 'no_depth': 0, 'has_position': 10, 'recent_signal': 225, 'low_confidence': 0, 'no_asks': 0, 'price_prefilter': 965}"}
+{"ts": "2026-04-06T09:06:26.403215+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 5.2s"}
+{"ts": "2026-04-06T09:06:26.593478+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "PORTFOLIO: 10 positions  cost=$47.00  value=$46.95  pnl=$-0.0487"}
+{"ts": "2026-04-06T09:06:26.594029+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:06:26.594629+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.020  pnl=-2.4%  $-0.0488"}
+{"ts": "2026-04-06T09:06:26.594747+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:06:26.594839+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.315  now=0.315  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:06:26.594930+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:06:26.595014+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:06:26.595092+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:06:26.595171+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:06:26.595248+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.605  now=0.605  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:06:26.595713+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:06:26.611271+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090620_00da2c (#8) done in 5.8s: scanned=600 signals=0 entries=0 exits=0 open=10 unrealized=$-0.0488 realized=$0.0000"}
+{"ts": "2026-04-06T09:06:32.027958+00:00", "level": "INFO", "logger": "event_trader.data_client", "msg": "fetched 600 markets across 7 pages"}
+{"ts": "2026-04-06T09:06:32.028697+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090631_ea6b6a (#9): fetched 600 markets in 0.4s"}
+{"ts": "2026-04-06T09:06:32.030150+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "pre-filter: 235 candidates from 600 markets (skipped 965 expensive)"}
+{"ts": "2026-04-06T09:06:36.439416+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "scan summary: 235 candidates checked, 0 signals, filters: {'inactive': 0, 'no_orderbook': 0, 'bad_outcomes': 0, 'low_liquidity': 0, 'no_book': 0, 'too_expensive': 0, 'too_cheap': 0, 'wide_spread': 0, 'no_depth': 0, 'has_position': 10, 'recent_signal': 225, 'low_confidence': 0, 'no_asks': 0, 'price_prefilter': 965}"}
+{"ts": "2026-04-06T09:06:36.441318+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 4.4s"}
+{"ts": "2026-04-06T09:06:36.618713+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "PORTFOLIO: 10 positions  cost=$47.00  value=$46.95  pnl=$-0.0487"}
+{"ts": "2026-04-06T09:06:36.618853+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:06:36.618943+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.020  pnl=-2.4%  $-0.0488"}
+{"ts": "2026-04-06T09:06:36.619006+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:06:36.619086+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.315  now=0.315  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:06:36.619185+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:06:36.619298+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:06:36.619405+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:06:36.619514+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:06:36.619600+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.605  now=0.605  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:06:36.619680+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:06:36.634075+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090631_ea6b6a (#9) done in 5.0s: scanned=600 signals=0 entries=0 exits=0 open=10 unrealized=$-0.0488 realized=$0.0000"}
+{"ts": "2026-04-06T09:06:41.946829+00:00", "level": "INFO", "logger": "event_trader.data_client", "msg": "fetched 600 markets across 7 pages"}
+{"ts": "2026-04-06T09:06:41.947517+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090641_36ba84 (#10): fetched 600 markets in 0.3s"}
+{"ts": "2026-04-06T09:06:41.948615+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "pre-filter: 235 candidates from 600 markets (skipped 965 expensive)"}
+{"ts": "2026-04-06T09:06:45.903137+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "scan summary: 235 candidates checked, 0 signals, filters: {'inactive': 0, 'no_orderbook': 0, 'bad_outcomes': 0, 'low_liquidity': 0, 'no_book': 0, 'too_expensive': 0, 'too_cheap': 0, 'wide_spread': 0, 'no_depth': 0, 'has_position': 10, 'recent_signal': 225, 'low_confidence': 0, 'no_asks': 0, 'price_prefilter': 965}"}
+{"ts": "2026-04-06T09:06:45.905096+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 4.0s"}
+{"ts": "2026-04-06T09:06:46.102172+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "PORTFOLIO: 10 positions  cost=$47.00  value=$46.95  pnl=$-0.0487"}
+{"ts": "2026-04-06T09:06:46.102294+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:06:46.102389+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.020  pnl=-2.4%  $-0.0488"}
+{"ts": "2026-04-06T09:06:46.102477+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:06:46.102560+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.315  now=0.315  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:06:46.102619+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:06:46.102687+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:06:46.102742+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:06:46.102808+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:06:46.102873+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.605  now=0.605  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:06:46.102928+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:06:46.115456+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090641_36ba84 (#10) done in 4.5s: scanned=600 signals=0 entries=0 exits=0 open=10 unrealized=$-0.0488 realized=$0.0000"}
+{"ts": "2026-04-06T09:06:51.541939+00:00", "level": "INFO", "logger": "event_trader.data_client", "msg": "fetched 600 markets across 7 pages"}
+{"ts": "2026-04-06T09:06:51.542371+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090651_d7f025 (#11): fetched 600 markets in 0.4s"}
+{"ts": "2026-04-06T09:06:51.543432+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "pre-filter: 235 candidates from 600 markets (skipped 965 expensive)"}
+{"ts": "2026-04-06T09:06:56.692564+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "scan summary: 235 candidates checked, 0 signals, filters: {'inactive': 0, 'no_orderbook': 0, 'bad_outcomes': 0, 'low_liquidity': 0, 'no_book': 0, 'too_expensive': 0, 'too_cheap': 0, 'wide_spread': 0, 'no_depth': 0, 'has_position': 10, 'recent_signal': 225, 'low_confidence': 0, 'no_asks': 0, 'price_prefilter': 965}"}
+{"ts": "2026-04-06T09:06:56.694283+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 5.2s"}
+{"ts": "2026-04-06T09:06:56.876713+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "PORTFOLIO: 10 positions  cost=$47.00  value=$46.95  pnl=$-0.0487"}
+{"ts": "2026-04-06T09:06:56.876832+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:06:56.876904+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.020  pnl=-2.4%  $-0.0488"}
+{"ts": "2026-04-06T09:06:56.877005+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:06:56.877102+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.315  now=0.315  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:06:56.877166+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:06:56.877238+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:06:56.877311+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:06:56.877410+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:06:56.877509+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.605  now=0.605  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:06:56.877606+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:06:56.889422+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090651_d7f025 (#11) done in 5.8s: scanned=600 signals=0 entries=0 exits=0 open=10 unrealized=$-0.0488 realized=$0.0000"}
+{"ts": "2026-04-06T09:07:02.323342+00:00", "level": "INFO", "logger": "event_trader.data_client", "msg": "fetched 600 markets across 7 pages"}
+{"ts": "2026-04-06T09:07:02.323706+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090701_a26e15 (#12): fetched 600 markets in 0.4s"}
+{"ts": "2026-04-06T09:07:02.324855+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "pre-filter: 235 candidates from 600 markets (skipped 965 expensive)"}
+{"ts": "2026-04-06T09:07:06.441163+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "scan summary: 235 candidates checked, 0 signals, filters: {'inactive': 0, 'no_orderbook': 0, 'bad_outcomes': 0, 'low_liquidity': 0, 'no_book': 0, 'too_expensive': 0, 'too_cheap': 0, 'wide_spread': 0, 'no_depth': 0, 'has_position': 10, 'recent_signal': 225, 'low_confidence': 0, 'no_asks': 0, 'price_prefilter': 965}"}
+{"ts": "2026-04-06T09:07:06.443269+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 4.1s"}
+{"ts": "2026-04-06T09:07:06.627585+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "PORTFOLIO: 10 positions  cost=$47.00  value=$46.95  pnl=$-0.0487"}
+{"ts": "2026-04-06T09:07:06.627777+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:07:06.627905+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.020  pnl=-2.4%  $-0.0488"}
+{"ts": "2026-04-06T09:07:06.628028+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:07:06.628132+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.315  now=0.315  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:07:06.628212+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:07:06.628295+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:07:06.628373+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:07:06.628441+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:07:06.628617+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.605  now=0.605  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:07:06.628785+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:07:06.641476+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090701_a26e15 (#12) done in 4.7s: scanned=600 signals=0 entries=0 exits=0 open=10 unrealized=$-0.0488 realized=$0.0000"}
+{"ts": "2026-04-06T09:07:12.071347+00:00", "level": "INFO", "logger": "event_trader.data_client", "msg": "fetched 600 markets across 7 pages"}
+{"ts": "2026-04-06T09:07:12.072204+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090711_bd54e3 (#13): fetched 600 markets in 0.4s"}
+{"ts": "2026-04-06T09:07:12.073112+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "pre-filter: 235 candidates from 600 markets (skipped 965 expensive)"}
+{"ts": "2026-04-06T09:07:17.240723+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "scan summary: 235 candidates checked, 0 signals, filters: {'inactive': 0, 'no_orderbook': 0, 'bad_outcomes': 0, 'low_liquidity': 0, 'no_book': 0, 'too_expensive': 0, 'too_cheap': 0, 'wide_spread': 0, 'no_depth': 0, 'has_position': 10, 'recent_signal': 225, 'low_confidence': 0, 'no_asks': 0, 'price_prefilter': 965}"}
+{"ts": "2026-04-06T09:07:17.242907+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 5.2s"}
+{"ts": "2026-04-06T09:07:17.476529+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "PORTFOLIO: 10 positions  cost=$47.00  value=$46.95  pnl=$-0.0487"}
+{"ts": "2026-04-06T09:07:17.476673+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:07:17.476765+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.020  pnl=-2.4%  $-0.0488"}
+{"ts": "2026-04-06T09:07:17.476852+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:07:17.476953+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.315  now=0.315  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:07:17.477056+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:07:17.477158+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:07:17.477257+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:07:17.477353+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:07:17.477452+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.605  now=0.605  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:07:17.477550+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:07:17.490163+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090711_bd54e3 (#13) done in 5.8s: scanned=600 signals=0 entries=0 exits=0 open=10 unrealized=$-0.0488 realized=$0.0000"}
+{"ts": "2026-04-06T09:07:22.935602+00:00", "level": "INFO", "logger": "event_trader.data_client", "msg": "fetched 600 markets across 7 pages"}
+{"ts": "2026-04-06T09:07:22.936120+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090722_b953fc (#14): fetched 600 markets in 0.4s"}
+{"ts": "2026-04-06T09:07:22.937039+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "pre-filter: 235 candidates from 600 markets (skipped 965 expensive)"}
+{"ts": "2026-04-06T09:07:27.262929+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "scan summary: 235 candidates checked, 0 signals, filters: {'inactive': 0, 'no_orderbook': 0, 'bad_outcomes': 0, 'low_liquidity': 0, 'no_book': 0, 'too_expensive': 0, 'too_cheap': 0, 'wide_spread': 0, 'no_depth': 0, 'has_position': 10, 'recent_signal': 225, 'low_confidence': 0, 'no_asks': 0, 'price_prefilter': 965}"}
+{"ts": "2026-04-06T09:07:27.264638+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 4.3s"}
+{"ts": "2026-04-06T09:07:27.443218+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "PORTFOLIO: 10 positions  cost=$47.00  value=$46.95  pnl=$-0.0487"}
+{"ts": "2026-04-06T09:07:27.443338+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:07:27.443434+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.020  pnl=-2.4%  $-0.0488"}
+{"ts": "2026-04-06T09:07:27.443540+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:07:27.443614+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.315  now=0.315  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:07:27.443669+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:07:27.443740+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:07:27.443810+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:07:27.443877+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:07:27.443956+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.605  now=0.605  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:07:27.444058+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:07:27.456998+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090722_b953fc (#14) done in 5.0s: scanned=600 signals=0 entries=0 exits=0 open=10 unrealized=$-0.0488 realized=$0.0000"}
+{"ts": "2026-04-06T09:07:32.847013+00:00", "level": "INFO", "logger": "event_trader.data_client", "msg": "fetched 600 markets across 7 pages"}
+{"ts": "2026-04-06T09:07:32.847343+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090732_bb9a18 (#15): fetched 600 markets in 0.4s"}
+{"ts": "2026-04-06T09:07:32.848221+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "pre-filter: 235 candidates from 600 markets (skipped 965 expensive)"}
+{"ts": "2026-04-06T09:07:38.049406+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "scan summary: 235 candidates checked, 0 signals, filters: {'inactive': 0, 'no_orderbook': 0, 'bad_outcomes': 0, 'low_liquidity': 0, 'no_book': 0, 'too_expensive': 0, 'too_cheap': 0, 'wide_spread': 0, 'no_depth': 0, 'has_position': 10, 'recent_signal': 225, 'low_confidence': 0, 'no_asks': 0, 'price_prefilter': 965}"}
+{"ts": "2026-04-06T09:07:38.051402+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 5.2s"}
+{"ts": "2026-04-06T09:07:38.249474+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "PORTFOLIO: 10 positions  cost=$47.00  value=$46.95  pnl=$-0.0487"}
+{"ts": "2026-04-06T09:07:38.249617+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:07:38.249720+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.020  pnl=-2.4%  $-0.0488"}
+{"ts": "2026-04-06T09:07:38.249816+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:07:38.249923+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.315  now=0.315  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:07:38.250028+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:07:38.250109+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:07:38.250186+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:07:38.250272+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:07:38.250336+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.605  now=0.605  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:07:38.250408+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:07:38.262577+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090732_bb9a18 (#15) done in 5.8s: scanned=600 signals=0 entries=0 exits=0 open=10 unrealized=$-0.0488 realized=$0.0000"}
+{"ts": "2026-04-06T09:07:43.576954+00:00", "level": "INFO", "logger": "event_trader.data_client", "msg": "fetched 600 markets across 7 pages"}
+{"ts": "2026-04-06T09:07:43.577553+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090743_3454a5 (#16): fetched 600 markets in 0.3s"}
+{"ts": "2026-04-06T09:07:43.578850+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "pre-filter: 235 candidates from 600 markets (skipped 965 expensive)"}
+{"ts": "2026-04-06T09:07:47.558947+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "scan summary: 235 candidates checked, 0 signals, filters: {'inactive': 0, 'no_orderbook': 0, 'bad_outcomes': 0, 'low_liquidity': 0, 'no_book': 0, 'too_expensive': 0, 'too_cheap': 0, 'wide_spread': 0, 'no_depth': 0, 'has_position': 10, 'recent_signal': 225, 'low_confidence': 0, 'no_asks': 0, 'price_prefilter': 965}"}
+{"ts": "2026-04-06T09:07:47.561106+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 4.0s"}
+{"ts": "2026-04-06T09:07:47.748746+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "PORTFOLIO: 10 positions  cost=$47.00  value=$46.95  pnl=$-0.0487"}
+{"ts": "2026-04-06T09:07:47.748915+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:07:47.749021+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.020  pnl=-2.4%  $-0.0488"}
+{"ts": "2026-04-06T09:07:47.749123+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:07:47.749214+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.315  now=0.315  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:07:47.749303+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:07:47.749402+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:07:47.749485+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:07:47.749577+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:07:47.749672+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.605  now=0.605  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:07:47.749766+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:07:47.761179+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090743_3454a5 (#16) done in 4.5s: scanned=600 signals=0 entries=0 exits=0 open=10 unrealized=$-0.0488 realized=$0.0000"}
+{"ts": "2026-04-06T09:07:53.162106+00:00", "level": "INFO", "logger": "event_trader.data_client", "msg": "fetched 600 markets across 7 pages"}
+{"ts": "2026-04-06T09:07:53.162470+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090752_ed9eb9 (#17): fetched 600 markets in 0.4s"}
+{"ts": "2026-04-06T09:07:53.163394+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "pre-filter: 235 candidates from 600 markets (skipped 965 expensive)"}
+{"ts": "2026-04-06T09:07:58.374864+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "scan summary: 235 candidates checked, 0 signals, filters: {'inactive': 0, 'no_orderbook': 0, 'bad_outcomes': 0, 'low_liquidity': 0, 'no_book': 0, 'too_expensive': 0, 'too_cheap': 0, 'wide_spread': 0, 'no_depth': 0, 'has_position': 10, 'recent_signal': 225, 'low_confidence': 0, 'no_asks': 0, 'price_prefilter': 965}"}
+{"ts": "2026-04-06T09:07:58.376555+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 5.2s"}
+{"ts": "2026-04-06T09:07:58.561990+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "PORTFOLIO: 10 positions  cost=$47.00  value=$46.95  pnl=$-0.0487"}
+{"ts": "2026-04-06T09:07:58.562180+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:07:58.562281+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.020  pnl=-2.4%  $-0.0488"}
+{"ts": "2026-04-06T09:07:58.562402+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:07:58.562493+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.315  now=0.315  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:07:58.562575+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:07:58.562643+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:07:58.562738+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:07:58.562840+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:07:58.562937+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.605  now=0.605  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:07:58.563037+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:07:58.577247+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090752_ed9eb9 (#17) done in 5.8s: scanned=600 signals=0 entries=0 exits=0 open=10 unrealized=$-0.0488 realized=$0.0000"}
+{"ts": "2026-04-06T09:08:04.005068+00:00", "level": "INFO", "logger": "event_trader.data_client", "msg": "fetched 600 markets across 7 pages"}
+{"ts": "2026-04-06T09:08:04.005409+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090803_497b4a (#18): fetched 600 markets in 0.4s"}
+{"ts": "2026-04-06T09:08:04.006236+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "pre-filter: 235 candidates from 600 markets (skipped 965 expensive)"}
+{"ts": "2026-04-06T09:08:09.153682+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "scan summary: 235 candidates checked, 0 signals, filters: {'inactive': 0, 'no_orderbook': 0, 'bad_outcomes': 0, 'low_liquidity': 0, 'no_book': 0, 'too_expensive': 0, 'too_cheap': 0, 'wide_spread': 0, 'no_depth': 0, 'has_position': 10, 'recent_signal': 225, 'low_confidence': 0, 'no_asks': 0, 'price_prefilter': 965}"}
+{"ts": "2026-04-06T09:08:09.155919+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 5.2s"}
+{"ts": "2026-04-06T09:08:09.338133+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "PORTFOLIO: 10 positions  cost=$47.00  value=$46.95  pnl=$-0.0487"}
+{"ts": "2026-04-06T09:08:09.338294+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:08:09.338405+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.020  pnl=-2.4%  $-0.0488"}
+{"ts": "2026-04-06T09:08:09.338540+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:08:09.338642+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.315  now=0.315  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:08:09.338755+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:08:09.338858+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:08:09.338983+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:08:09.339091+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:08:09.339189+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.605  now=0.605  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:08:09.339284+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:08:09.353054+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090803_497b4a (#18) done in 5.8s: scanned=600 signals=0 entries=0 exits=0 open=10 unrealized=$-0.0488 realized=$0.0000"}
+{"ts": "2026-04-06T09:08:14.783245+00:00", "level": "INFO", "logger": "event_trader.data_client", "msg": "fetched 600 markets across 7 pages"}
+{"ts": "2026-04-06T09:08:14.783812+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090814_72e060 (#19): fetched 600 markets in 0.4s"}
+{"ts": "2026-04-06T09:08:14.784933+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "pre-filter: 235 candidates from 600 markets (skipped 965 expensive)"}
+{"ts": "2026-04-06T09:08:19.402920+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "scan summary: 235 candidates checked, 0 signals, filters: {'inactive': 0, 'no_orderbook': 0, 'bad_outcomes': 0, 'low_liquidity': 0, 'no_book': 0, 'too_expensive': 0, 'too_cheap': 0, 'wide_spread': 0, 'no_depth': 0, 'has_position': 10, 'recent_signal': 225, 'low_confidence': 0, 'no_asks': 0, 'price_prefilter': 965}"}
+{"ts": "2026-04-06T09:08:19.404527+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 4.6s"}
+{"ts": "2026-04-06T09:08:19.591604+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "PORTFOLIO: 10 positions  cost=$47.00  value=$46.95  pnl=$-0.0487"}
+{"ts": "2026-04-06T09:08:19.591726+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:08:19.591792+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.020  pnl=-2.4%  $-0.0488"}
+{"ts": "2026-04-06T09:08:19.591848+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:08:19.591920+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.315  now=0.315  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:08:19.592009+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:08:19.592106+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:08:19.592201+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:08:19.592298+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:08:19.592397+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.605  now=0.605  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:08:19.592493+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:08:19.605022+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090814_72e060 (#19) done in 5.2s: scanned=600 signals=0 entries=0 exits=0 open=10 unrealized=$-0.0488 realized=$0.0000"}
+{"ts": "2026-04-06T09:08:24.946415+00:00", "level": "INFO", "logger": "event_trader.data_client", "msg": "fetched 600 markets across 7 pages"}
+{"ts": "2026-04-06T09:08:24.946840+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090824_623ea0 (#20): fetched 600 markets in 0.3s"}
+{"ts": "2026-04-06T09:08:24.948044+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "pre-filter: 235 candidates from 600 markets (skipped 965 expensive)"}
+{"ts": "2026-04-06T09:08:28.889987+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "scan summary: 235 candidates checked, 0 signals, filters: {'inactive': 0, 'no_orderbook': 0, 'bad_outcomes': 0, 'low_liquidity': 0, 'no_book': 0, 'too_expensive': 0, 'too_cheap': 0, 'wide_spread': 0, 'no_depth': 0, 'has_position': 10, 'recent_signal': 225, 'low_confidence': 0, 'no_asks': 0, 'price_prefilter': 965}"}
+{"ts": "2026-04-06T09:08:28.892098+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 3.9s"}
+{"ts": "2026-04-06T09:08:29.078338+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "PORTFOLIO: 10 positions  cost=$47.00  value=$46.95  pnl=$-0.0487"}
+{"ts": "2026-04-06T09:08:29.078466+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:08:29.078552+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.020  pnl=-2.4%  $-0.0488"}
+{"ts": "2026-04-06T09:08:29.078634+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:08:29.078737+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.315  now=0.315  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:08:29.078840+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:08:29.078916+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:08:29.079070+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:08:29.079187+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:08:29.079289+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.605  now=0.605  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:08:29.079398+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:08:29.091823+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090824_623ea0 (#20) done in 4.5s: scanned=600 signals=0 entries=0 exits=0 open=10 unrealized=$-0.0488 realized=$0.0000"}
+{"ts": "2026-04-06T09:08:34.598666+00:00", "level": "INFO", "logger": "event_trader.data_client", "msg": "fetched 600 markets across 7 pages"}
+{"ts": "2026-04-06T09:08:34.599355+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090834_e0cebb (#21): fetched 600 markets in 0.5s"}
+{"ts": "2026-04-06T09:08:34.600305+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "pre-filter: 235 candidates from 600 markets (skipped 965 expensive)"}
+{"ts": "2026-04-06T09:08:39.720298+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "scan summary: 235 candidates checked, 0 signals, filters: {'inactive': 0, 'no_orderbook': 0, 'bad_outcomes': 0, 'low_liquidity': 0, 'no_book': 0, 'too_expensive': 0, 'too_cheap': 0, 'wide_spread': 0, 'no_depth': 0, 'has_position': 10, 'recent_signal': 225, 'low_confidence': 0, 'no_asks': 0, 'price_prefilter': 965}"}
+{"ts": "2026-04-06T09:08:39.722928+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 5.1s"}
+{"ts": "2026-04-06T09:08:39.911398+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "PORTFOLIO: 10 positions  cost=$47.00  value=$46.95  pnl=$-0.0487"}
+{"ts": "2026-04-06T09:08:39.911521+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:08:39.911600+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.020  pnl=-2.4%  $-0.0488"}
+{"ts": "2026-04-06T09:08:39.911660+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:08:39.911717+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.315  now=0.315  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:08:39.911784+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:08:39.911858+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:08:39.911924+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:08:39.911994+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:08:39.912062+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.605  now=0.605  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:08:39.912121+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:08:39.926659+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090834_e0cebb (#21) done in 5.8s: scanned=600 signals=0 entries=0 exits=0 open=10 unrealized=$-0.0488 realized=$0.0000"}
+{"ts": "2026-04-06T09:08:45.265472+00:00", "level": "INFO", "logger": "event_trader.data_client", "msg": "fetched 600 markets across 7 pages"}
+{"ts": "2026-04-06T09:08:45.266111+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090844_1bb687 (#22): fetched 600 markets in 0.3s"}
+{"ts": "2026-04-06T09:08:45.267377+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "pre-filter: 235 candidates from 600 markets (skipped 965 expensive)"}
+{"ts": "2026-04-06T09:08:49.212870+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "scan summary: 235 candidates checked, 0 signals, filters: {'inactive': 0, 'no_orderbook': 0, 'bad_outcomes': 0, 'low_liquidity': 0, 'no_book': 0, 'too_expensive': 0, 'too_cheap': 0, 'wide_spread': 0, 'no_depth': 0, 'has_position': 10, 'recent_signal': 225, 'low_confidence': 0, 'no_asks': 0, 'price_prefilter': 965}"}
+{"ts": "2026-04-06T09:08:49.215228+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 3.9s"}
+{"ts": "2026-04-06T09:08:49.470183+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "PORTFOLIO: 10 positions  cost=$47.00  value=$46.95  pnl=$-0.0487"}
+{"ts": "2026-04-06T09:08:49.470313+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:08:49.470398+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.020  pnl=-2.4%  $-0.0488"}
+{"ts": "2026-04-06T09:08:49.470467+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:08:49.470532+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.315  now=0.315  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:08:49.470623+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:08:49.470718+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:08:49.470813+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:08:49.470917+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:08:49.471015+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.605  now=0.605  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:08:49.471108+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:08:49.484114+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090844_1bb687 (#22) done in 4.5s: scanned=600 signals=0 entries=0 exits=0 open=10 unrealized=$-0.0488 realized=$0.0000"}
+{"ts": "2026-04-06T09:08:54.801487+00:00", "level": "INFO", "logger": "event_trader.data_client", "msg": "fetched 600 markets across 7 pages"}
+{"ts": "2026-04-06T09:08:54.802441+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090854_21dfb3 (#23): fetched 600 markets in 0.3s"}
+{"ts": "2026-04-06T09:08:54.803692+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "pre-filter: 235 candidates from 600 markets (skipped 965 expensive)"}
+{"ts": "2026-04-06T09:08:58.735551+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "scan summary: 235 candidates checked, 0 signals, filters: {'inactive': 0, 'no_orderbook': 0, 'bad_outcomes': 0, 'low_liquidity': 0, 'no_book': 0, 'too_expensive': 0, 'too_cheap': 0, 'wide_spread': 0, 'no_depth': 0, 'has_position': 10, 'recent_signal': 225, 'low_confidence': 0, 'no_asks': 0, 'price_prefilter': 965}"}
+{"ts": "2026-04-06T09:08:58.737263+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 3.9s"}
+{"ts": "2026-04-06T09:08:58.922965+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "PORTFOLIO: 10 positions  cost=$47.00  value=$46.95  pnl=$-0.0487"}
+{"ts": "2026-04-06T09:08:58.923188+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:08:58.923308+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.020  pnl=-2.4%  $-0.0488"}
+{"ts": "2026-04-06T09:08:58.923394+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:08:58.923491+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.315  now=0.315  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:08:58.923568+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:08:58.923648+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:08:58.923728+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:08:58.923808+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:08:58.923879+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.605  now=0.605  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:08:58.923933+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:08:58.938541+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090854_21dfb3 (#23) done in 4.4s: scanned=600 signals=0 entries=0 exits=0 open=10 unrealized=$-0.0488 realized=$0.0000"}
+{"ts": "2026-04-06T09:09:04.257898+00:00", "level": "INFO", "logger": "event_trader.data_client", "msg": "fetched 600 markets across 7 pages"}
+{"ts": "2026-04-06T09:09:04.258664+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090903_4469ec (#24): fetched 600 markets in 0.3s"}
+{"ts": "2026-04-06T09:09:04.259797+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "pre-filter: 236 candidates from 600 markets (skipped 964 expensive)"}
+{"ts": "2026-04-06T09:09:08.576458+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "scan summary: 236 candidates checked, 1 signals, filters: {'inactive': 0, 'no_orderbook': 0, 'bad_outcomes': 0, 'low_liquidity': 0, 'no_book': 0, 'too_expensive': 0, 'too_cheap': 0, 'wide_spread': 0, 'no_depth': 0, 'has_position': 10, 'recent_signal': 225, 'low_confidence': 0, 'no_asks': 0, 'price_prefilter': 964}"}
+{"ts": "2026-04-06T09:09:08.578427+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 1 signals found in 4.3s"}
+{"ts": "2026-04-06T09:09:08.578607+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "SIGNAL [highprob $8]: $0.797  conf=0.36  No  \"Will Harvey Weinstein be sentenced to between 10 and 20 year\"  price=$0.797 | tier=highprob | size=$8 | liq=$1546 | vol=$132350 | spread=0.998 | depth=$5510 | conf=0.36"}
+{"ts": "2026-04-06T09:09:08.629963+00:00", "level": "INFO", "logger": "event_trader.executor", "msg": "DRY_BUY [highprob]: 10 contracts @ $0.797 = $8.00  No  Will Harvey Weinstein be sentenced to between 10 and 20 year"}
+{"ts": "2026-04-06T09:09:08.967084+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "PORTFOLIO: 11 positions  cost=$55.00  value=$54.95  pnl=$-0.0487"}
+{"ts": "2026-04-06T09:09:08.967264+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:09:08.967373+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.020  pnl=-2.4%  $-0.0488"}
+{"ts": "2026-04-06T09:09:08.967477+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:09:08.967594+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.315  now=0.315  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:09:08.967698+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:09:08.967798+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:09:08.967910+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:09:08.968007+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:09:08.968103+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.605  now=0.605  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:09:08.968226+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:09:08.968324+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.797  now=0.797  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:09:08.995181+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090903_4469ec (#24) done in 5.0s: scanned=600 signals=1 entries=1 exits=0 open=11 unrealized=$-0.0488 realized=$0.0000"}
+{"ts": "2026-04-06T09:09:14.459327+00:00", "level": "INFO", "logger": "event_trader.data_client", "msg": "fetched 600 markets across 7 pages"}
+{"ts": "2026-04-06T09:09:14.460156+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090913_de3b7e (#25): fetched 600 markets in 0.5s"}
+{"ts": "2026-04-06T09:09:14.461593+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "pre-filter: 236 candidates from 600 markets (skipped 964 expensive)"}
+{"ts": "2026-04-06T09:09:19.802457+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "scan summary: 236 candidates checked, 0 signals, filters: {'inactive': 0, 'no_orderbook': 0, 'bad_outcomes': 0, 'low_liquidity': 0, 'no_book': 0, 'too_expensive': 0, 'too_cheap': 0, 'wide_spread': 0, 'no_depth': 0, 'has_position': 11, 'recent_signal': 225, 'low_confidence': 0, 'no_asks': 0, 'price_prefilter': 964}"}
+{"ts": "2026-04-06T09:09:19.804307+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 5.3s"}
+{"ts": "2026-04-06T09:09:20.226153+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "PORTFOLIO: 11 positions  cost=$55.00  value=$54.95  pnl=$-0.0487"}
+{"ts": "2026-04-06T09:09:20.226322+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:09:20.226432+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.020  pnl=-2.4%  $-0.0488"}
+{"ts": "2026-04-06T09:09:20.226534+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:09:20.226639+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.315  now=0.315  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:09:20.226739+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:09:20.226833+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:09:20.226935+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:09:20.227032+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:09:20.227126+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.605  now=0.605  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:09:20.227235+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:09:20.227331+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.797  now=0.797  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:09:20.240208+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090913_de3b7e (#25) done in 6.2s: scanned=600 signals=0 entries=0 exits=0 open=11 unrealized=$-0.0488 realized=$0.0000"}
+{"ts": "2026-04-06T09:09:25.670916+00:00", "level": "INFO", "logger": "event_trader.data_client", "msg": "fetched 600 markets across 7 pages"}
+{"ts": "2026-04-06T09:09:25.671919+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090925_a99be6 (#26): fetched 600 markets in 0.4s"}
+{"ts": "2026-04-06T09:09:25.673367+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "pre-filter: 236 candidates from 600 markets (skipped 964 expensive)"}
+{"ts": "2026-04-06T09:09:29.647387+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "scan summary: 236 candidates checked, 0 signals, filters: {'inactive': 0, 'no_orderbook': 0, 'bad_outcomes': 0, 'low_liquidity': 0, 'no_book': 0, 'too_expensive': 0, 'too_cheap': 0, 'wide_spread': 0, 'no_depth': 0, 'has_position': 11, 'recent_signal': 225, 'low_confidence': 0, 'no_asks': 0, 'price_prefilter': 964}"}
+{"ts": "2026-04-06T09:09:29.649088+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 4.0s"}
+{"ts": "2026-04-06T09:09:29.972379+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "PORTFOLIO: 11 positions  cost=$55.00  value=$54.95  pnl=$-0.0487"}
+{"ts": "2026-04-06T09:09:29.972520+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:09:29.972589+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.020  pnl=-2.4%  $-0.0488"}
+{"ts": "2026-04-06T09:09:29.972647+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:09:29.972716+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.315  now=0.315  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:09:29.972780+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:09:29.972846+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:09:29.972898+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:09:29.972956+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:09:29.973017+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.605  now=0.605  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:09:29.973125+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:09:29.973227+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.797  now=0.797  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:09:29.989143+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090925_a99be6 (#26) done in 4.7s: scanned=600 signals=0 entries=0 exits=0 open=11 unrealized=$-0.0488 realized=$0.0000"}
+{"ts": "2026-04-06T09:09:35.521624+00:00", "level": "INFO", "logger": "event_trader.data_client", "msg": "fetched 600 markets across 7 pages"}
+{"ts": "2026-04-06T09:09:35.522201+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090934_01d376 (#27): fetched 600 markets in 0.5s"}
+{"ts": "2026-04-06T09:09:35.523301+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "pre-filter: 236 candidates from 600 markets (skipped 964 expensive)"}
+{"ts": "2026-04-06T09:09:40.734323+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "scan summary: 236 candidates checked, 0 signals, filters: {'inactive': 0, 'no_orderbook': 0, 'bad_outcomes': 0, 'low_liquidity': 0, 'no_book': 0, 'too_expensive': 0, 'too_cheap': 0, 'wide_spread': 0, 'no_depth': 0, 'has_position': 11, 'recent_signal': 225, 'low_confidence': 0, 'no_asks': 0, 'price_prefilter': 964}"}
+{"ts": "2026-04-06T09:09:40.736882+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 5.2s"}
+{"ts": "2026-04-06T09:09:41.125840+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "PORTFOLIO: 11 positions  cost=$55.00  value=$54.95  pnl=$-0.0487"}
+{"ts": "2026-04-06T09:09:41.125985+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:09:41.126057+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.020  pnl=-2.4%  $-0.0488"}
+{"ts": "2026-04-06T09:09:41.126125+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:09:41.126207+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.315  now=0.315  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:09:41.126299+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:09:41.126397+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:09:41.126486+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:09:41.126574+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:09:41.126660+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.605  now=0.605  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:09:41.126745+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:09:41.126837+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.797  now=0.797  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:09:41.139758+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090934_01d376 (#27) done in 6.1s: scanned=600 signals=0 entries=0 exits=0 open=11 unrealized=$-0.0488 realized=$0.0000"}
+{"ts": "2026-04-06T09:09:46.575715+00:00", "level": "INFO", "logger": "event_trader.data_client", "msg": "fetched 600 markets across 7 pages"}
+{"ts": "2026-04-06T09:09:46.576113+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090946_ed5d07 (#28): fetched 600 markets in 0.4s"}
+{"ts": "2026-04-06T09:09:46.577131+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "pre-filter: 236 candidates from 600 markets (skipped 964 expensive)"}
+{"ts": "2026-04-06T09:09:51.695170+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "scan summary: 236 candidates checked, 0 signals, filters: {'inactive': 0, 'no_orderbook': 0, 'bad_outcomes': 0, 'low_liquidity': 0, 'no_book': 0, 'too_expensive': 0, 'too_cheap': 0, 'wide_spread': 0, 'no_depth': 0, 'has_position': 11, 'recent_signal': 225, 'low_confidence': 0, 'no_asks': 0, 'price_prefilter': 964}"}
+{"ts": "2026-04-06T09:09:51.697118+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 5.1s"}
+{"ts": "2026-04-06T09:09:52.083722+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "PORTFOLIO: 11 positions  cost=$55.00  value=$54.95  pnl=$-0.0487"}
+{"ts": "2026-04-06T09:09:52.083891+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:09:52.084010+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.020  pnl=-2.4%  $-0.0488"}
+{"ts": "2026-04-06T09:09:52.084115+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:09:52.084222+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.315  now=0.315  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:09:52.084319+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:09:52.084418+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:09:52.084515+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:09:52.084626+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:09:52.084733+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.605  now=0.605  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:09:52.084852+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:09:52.084962+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.797  now=0.797  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:09:52.101856+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090946_ed5d07 (#28) done in 5.9s: scanned=600 signals=0 entries=0 exits=0 open=11 unrealized=$-0.0488 realized=$0.0000"}
+{"ts": "2026-04-06T09:09:57.523989+00:00", "level": "INFO", "logger": "event_trader.data_client", "msg": "fetched 600 markets across 7 pages"}
+{"ts": "2026-04-06T09:09:57.525123+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090957_d57731 (#29): fetched 600 markets in 0.4s"}
+{"ts": "2026-04-06T09:09:57.526728+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "pre-filter: 236 candidates from 600 markets (skipped 964 expensive)"}
+{"ts": "2026-04-06T09:10:02.536720+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "scan summary: 236 candidates checked, 0 signals, filters: {'inactive': 0, 'no_orderbook': 0, 'bad_outcomes': 0, 'low_liquidity': 0, 'no_book': 0, 'too_expensive': 0, 'too_cheap': 0, 'wide_spread': 0, 'no_depth': 0, 'has_position': 11, 'recent_signal': 225, 'low_confidence': 0, 'no_asks': 0, 'price_prefilter': 964}"}
+{"ts": "2026-04-06T09:10:02.538316+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 5.0s"}
+{"ts": "2026-04-06T09:10:02.925165+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "PORTFOLIO: 11 positions  cost=$55.00  value=$54.95  pnl=$-0.0487"}
+{"ts": "2026-04-06T09:10:02.925330+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:10:02.925444+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.020  pnl=-2.4%  $-0.0488"}
+{"ts": "2026-04-06T09:10:02.925546+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:10:02.925644+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.315  now=0.315  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:10:02.925749+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:10:02.925857+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:10:02.925958+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:10:02.926051+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:10:02.926128+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.605  now=0.605  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:10:02.926202+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:10:02.926285+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.797  now=0.797  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:10:02.940901+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T090957_d57731 (#29) done in 5.8s: scanned=600 signals=0 entries=0 exits=0 open=11 unrealized=$-0.0488 realized=$0.0000"}
+{"ts": "2026-04-06T09:10:08.368881+00:00", "level": "INFO", "logger": "event_trader.data_client", "msg": "fetched 600 markets across 7 pages"}
+{"ts": "2026-04-06T09:10:08.369712+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T091007_3d0a0e (#30): fetched 600 markets in 0.4s"}
+{"ts": "2026-04-06T09:10:08.370750+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "pre-filter: 236 candidates from 600 markets (skipped 964 expensive)"}
+{"ts": "2026-04-06T09:10:13.580682+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "scan summary: 236 candidates checked, 0 signals, filters: {'inactive': 0, 'no_orderbook': 0, 'bad_outcomes': 0, 'low_liquidity': 0, 'no_book': 0, 'too_expensive': 0, 'too_cheap': 0, 'wide_spread': 0, 'no_depth': 0, 'has_position': 11, 'recent_signal': 225, 'low_confidence': 0, 'no_asks': 0, 'price_prefilter': 964}"}
+{"ts": "2026-04-06T09:10:13.583411+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 5.2s"}
+{"ts": "2026-04-06T09:10:13.919229+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "PORTFOLIO: 11 positions  cost=$55.00  value=$54.81  pnl=$-0.1895"}
+{"ts": "2026-04-06T09:10:13.919442+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:10:13.919556+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.020  pnl=-2.4%  $-0.0488"}
+{"ts": "2026-04-06T09:10:13.919664+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:10:13.919773+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.315  now=0.315  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:10:13.919872+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:10:13.919974+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.345  pnl=-2.8%  $-0.1408"}
+{"ts": "2026-04-06T09:10:13.920077+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:10:13.920174+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:10:13.920272+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.605  now=0.605  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:10:13.920376+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:10:13.920473+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.797  now=0.797  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:10:13.932071+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T091007_3d0a0e (#30) done in 6.0s: scanned=600 signals=0 entries=0 exits=0 open=11 unrealized=$-0.1896 realized=$0.0000"}
+{"ts": "2026-04-06T09:10:19.264752+00:00", "level": "INFO", "logger": "event_trader.data_client", "msg": "fetched 600 markets across 7 pages"}
+{"ts": "2026-04-06T09:10:19.265421+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T091018_dcf377 (#31): fetched 600 markets in 0.3s"}
+{"ts": "2026-04-06T09:10:19.267029+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "pre-filter: 236 candidates from 600 markets (skipped 964 expensive)"}
+{"ts": "2026-04-06T09:10:23.249623+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "scan summary: 236 candidates checked, 0 signals, filters: {'inactive': 0, 'no_orderbook': 0, 'bad_outcomes': 0, 'low_liquidity': 0, 'no_book': 0, 'too_expensive': 0, 'too_cheap': 0, 'wide_spread': 0, 'no_depth': 0, 'has_position': 11, 'recent_signal': 225, 'low_confidence': 0, 'no_asks': 0, 'price_prefilter': 964}"}
+{"ts": "2026-04-06T09:10:23.251709+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 4.0s"}
+{"ts": "2026-04-06T09:10:23.574608+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "PORTFOLIO: 11 positions  cost=$55.00  value=$54.81  pnl=$-0.1895"}
+{"ts": "2026-04-06T09:10:23.574715+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:10:23.574788+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.020  pnl=-2.4%  $-0.0488"}
+{"ts": "2026-04-06T09:10:23.574844+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:10:23.574898+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.315  now=0.315  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:10:23.574950+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:10:23.574999+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.345  pnl=-2.8%  $-0.1408"}
+{"ts": "2026-04-06T09:10:23.575047+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:10:23.575095+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:10:23.575143+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.605  now=0.605  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:10:23.575192+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:10:23.575241+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.797  now=0.797  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:10:23.588915+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T091018_dcf377 (#31) done in 4.6s: scanned=600 signals=0 entries=0 exits=0 open=11 unrealized=$-0.1896 realized=$0.0000"}
+{"ts": "2026-04-06T09:10:29.004973+00:00", "level": "INFO", "logger": "event_trader.data_client", "msg": "fetched 600 markets across 7 pages"}
+{"ts": "2026-04-06T09:10:29.005713+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T091028_96c50d (#32): fetched 600 markets in 0.4s"}
+{"ts": "2026-04-06T09:10:29.006891+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "pre-filter: 236 candidates from 600 markets (skipped 964 expensive)"}
+{"ts": "2026-04-06T09:10:34.126556+00:00", "level": "INFO", "logger": "event_trader.scanner", "msg": "scan summary: 236 candidates checked, 0 signals, filters: {'inactive': 0, 'no_orderbook': 0, 'bad_outcomes': 0, 'low_liquidity': 0, 'no_book': 0, 'too_expensive': 0, 'too_cheap': 0, 'wide_spread': 0, 'no_depth': 0, 'has_position': 11, 'recent_signal': 225, 'low_confidence': 0, 'no_asks': 0, 'price_prefilter': 964}"}
+{"ts": "2026-04-06T09:10:34.128174+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 5.1s"}
+{"ts": "2026-04-06T09:10:34.513100+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "PORTFOLIO: 11 positions  cost=$55.00  value=$54.81  pnl=$-0.1895"}
+{"ts": "2026-04-06T09:10:34.513261+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:10:34.513369+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.020  pnl=-2.4%  $-0.0488"}
+{"ts": "2026-04-06T09:10:34.513482+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:10:34.513591+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.315  now=0.315  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:10:34.513702+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.355  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:10:34.513826+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.355  now=0.345  pnl=-2.8%  $-0.1408"}
+{"ts": "2026-04-06T09:10:34.513897+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:10:34.513952+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.595  now=0.595  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:10:34.514027+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.605  now=0.605  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:10:34.514107+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: Yes  entry=0.021  now=0.021  pnl=0.0%  $-0.0000"}
+{"ts": "2026-04-06T09:10:34.514201+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "  POS: No  entry=0.797  now=0.797  pnl=0.0%  $0.0000"}
+{"ts": "2026-04-06T09:10:34.526511+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T091028_96c50d (#32) done in 5.9s: scanned=600 signals=0 entries=0 exits=0 open=11 unrealized=$-0.1896 realized=$0.0000"}

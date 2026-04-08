@@ -55,12 +55,12 @@ class ProfitScorer:
         )
 
     def _estimate_fees_usd(self, opp: Opportunity) -> float:
-        # Approximate taker fee: C * rate * p * (1-p) for each leg.
-        # C is bundle shares and p is leg price.
+        # Issue D fix: Polymarket charges taker fee on notional USDC traded per leg.
+        # Correct formula: shares * price * fee_rate (not the bogus p*(1-p) variance term).
         total = 0.0
         for leg in opp.legs:
             p = max(0.0, min(1.0, leg.price))
-            total += opp.bundle_shares * self.config.taker_fee_rate * p * (1.0 - p)
+            total += opp.bundle_shares * p * self.config.taker_fee_rate
         return max(0.0, total)
 
     def _estimate_slippage_usd(self, opp: Opportunity) -> float:

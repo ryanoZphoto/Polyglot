@@ -1,0 +1,17 @@
+2026-04-07 17:25:29,713 INFO event_trader_improved.runtime event trader (IMPROVED) started  mode=dry_run  kelly=True  min_edge=5.0%
+2026-04-07 17:25:30,231 INFO event_trader.data_client fetched 100 markets across 2 pages
+2026-04-07 17:25:30,232 INFO event_trader_improved.runtime cycle ev_20260408T002529_40cdba (#1): fetched 100 markets in 0.5s
+2026-04-07 17:25:30,232 ERROR event_trader_improved.runtime cycle error #1 (1 consecutive), backing off 20.0s
+Traceback (most recent call last):
+  File "D:\polymart\event_trader_improved\runtime.py", line 165, in run_loop
+    run_once(config, client, scanner, pos_mgr, risk, executor,
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+             state, reporter, cycle_number)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\polymart\event_trader_improved\runtime.py", line 75, in run_once
+    signals = scanner.scan(all_markets) if not is_paused else []
+              ~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\polymart\event_trader_improved\scanner.py", line 32, in scan
+    if self.state.has_position(mkt.token_id):
+       ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'EVStateStore' object has no attribute 'has_position'. Did you mean: 'close_position'?

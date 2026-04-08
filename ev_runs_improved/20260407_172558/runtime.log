@@ -1,0 +1,33 @@
+2026-04-07 17:25:59,105 INFO event_trader_improved.runtime event trader (IMPROVED) started  mode=dry_run  kelly=True  min_edge=5.0%
+2026-04-07 17:25:59,709 INFO event_trader.data_client fetched 100 markets across 2 pages
+2026-04-07 17:25:59,710 INFO event_trader_improved.runtime cycle ev_20260408T002559_4f3990 (#1): fetched 100 markets in 0.6s
+2026-04-07 17:25:59,710 ERROR event_trader_improved.runtime cycle error #1 (1 consecutive), backing off 20.0s
+Traceback (most recent call last):
+  File "D:\polymart\event_trader_improved\runtime.py", line 165, in run_loop
+    run_once(config, client, scanner, pos_mgr, risk, executor,
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+             state, reporter, cycle_number)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\polymart\event_trader_improved\runtime.py", line 75, in run_once
+    signals = scanner.scan(all_markets) if not is_paused else []
+              ~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\polymart\event_trader_improved\scanner.py", line 32, in scan
+    if self.state.has_position_for_token(mkt.token_id):  # FIXED
+                                         ^^^^^^^^^^^^
+AttributeError: 'ParsedMarket' object has no attribute 'token_id'. Did you mean: 'token_ids'?
+2026-04-07 17:26:19,878 INFO event_trader.data_client fetched 100 markets across 2 pages
+2026-04-07 17:26:19,879 INFO event_trader_improved.runtime cycle ev_20260408T002619_24318a (#2): fetched 100 markets in 0.2s
+2026-04-07 17:26:19,879 ERROR event_trader_improved.runtime cycle error #2 (2 consecutive), backing off 40.0s
+Traceback (most recent call last):
+  File "D:\polymart\event_trader_improved\runtime.py", line 165, in run_loop
+    run_once(config, client, scanner, pos_mgr, risk, executor,
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+             state, reporter, cycle_number)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\polymart\event_trader_improved\runtime.py", line 75, in run_once
+    signals = scanner.scan(all_markets) if not is_paused else []
+              ~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\polymart\event_trader_improved\scanner.py", line 32, in scan
+    if self.state.has_position_for_token(mkt.token_id):  # FIXED
+                                         ^^^^^^^^^^^^
+AttributeError: 'ParsedMarket' object has no attribute 'token_id'. Did you mean: 'token_ids'?

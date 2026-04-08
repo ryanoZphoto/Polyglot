@@ -1,0 +1,43 @@
+{"ts": "2026-04-06T01:53:28.013046+00:00", "level": "INFO", "logger": "__main__", "msg": "============================================================"}
+{"ts": "2026-04-06T01:53:28.013540+00:00", "level": "INFO", "logger": "__main__", "msg": "MARKET MAKER  mode=dry_run"}
+{"ts": "2026-04-06T01:53:28.013722+00:00", "level": "INFO", "logger": "__main__", "msg": "============================================================"}
+{"ts": "2026-04-06T01:53:28.148809+00:00", "level": "INFO", "logger": "market_maker.runtime", "msg": "market maker started  mode=dry_run  poll=5.0s  half_spread=0.020  quote_size=20"}
+{"ts": "2026-04-06T01:53:28.592537+00:00", "level": "INFO", "logger": "market_maker.runtime", "msg": "cycle mm_20260406T015328_961660: 196 markets selected from 200 active"}
+{"ts": "2026-04-06T01:53:51.656372+00:00", "level": "INFO", "logger": "market_maker.runtime", "msg": "cycle mm_20260406T015328_961660: quoted=382, orders=764, cancelled=0, fills=0, pnl=$0.0000"}
+{"ts": "2026-04-06T01:53:56.745854+00:00", "level": "INFO", "logger": "market_maker.runtime", "msg": "cycle mm_20260406T015356_7089e0: 196 markets selected from 200 active"}
+{"ts": "2026-04-06T01:54:17.846284+00:00", "level": "INFO", "logger": "market_maker.runtime", "msg": "cycle mm_20260406T015356_7089e0: quoted=0, orders=0, cancelled=764, fills=0, pnl=$0.0000"}
+{"ts": "2026-04-06T01:54:22.923927+00:00", "level": "INFO", "logger": "market_maker.runtime", "msg": "cycle mm_20260406T015422_582740: 196 markets selected from 200 active"}
+{"ts": "2026-04-06T01:54:31.690460+00:00", "level": "INFO", "logger": "market_maker.runtime", "msg": "cycle mm_20260406T015422_582740: quoted=0, orders=0, cancelled=0, fills=0, pnl=$0.0000"}
+{"ts": "2026-04-06T01:54:36.769324+00:00", "level": "INFO", "logger": "market_maker.runtime", "msg": "cycle mm_20260406T015436_929bea: 196 markets selected from 200 active"}
+{"ts": "2026-04-06T01:54:43.492249+00:00", "level": "INFO", "logger": "market_maker.runtime", "msg": "cycle mm_20260406T015436_929bea: quoted=0, orders=0, cancelled=0, fills=0, pnl=$0.0000"}
+{"ts": "2026-04-06T01:54:48.571510+00:00", "level": "INFO", "logger": "market_maker.runtime", "msg": "cycle mm_20260406T015448_ec91cb: 196 markets selected from 200 active"}
+{"ts": "2026-04-06T01:55:10.679177+00:00", "level": "INFO", "logger": "market_maker.runtime", "msg": "cycle mm_20260406T015448_ec91cb: quoted=382, orders=764, cancelled=0, fills=0, pnl=$0.0000"}
+{"ts": "2026-04-06T01:55:15.758196+00:00", "level": "INFO", "logger": "market_maker.runtime", "msg": "cycle mm_20260406T015515_76932c: 196 markets selected from 200 active"}
+{"ts": "2026-04-06T01:55:32.686086+00:00", "level": "INFO", "logger": "market_maker.runtime", "msg": "cycle mm_20260406T015515_76932c: quoted=0, orders=0, cancelled=764, fills=0, pnl=$0.0000"}
+{"ts": "2026-04-06T01:55:37.783401+00:00", "level": "INFO", "logger": "market_maker.runtime", "msg": "cycle mm_20260406T015537_8cc281: 196 markets selected from 200 active"}
+{"ts": "2026-04-06T01:55:44.539813+00:00", "level": "INFO", "logger": "market_maker.runtime", "msg": "cycle mm_20260406T015537_8cc281: quoted=0, orders=0, cancelled=0, fills=0, pnl=$0.0000"}
+{"ts": "2026-04-06T01:55:49.622609+00:00", "level": "INFO", "logger": "market_maker.runtime", "msg": "cycle mm_20260406T015549_b19304: 196 markets selected from 200 active"}
+{"ts": "2026-04-06T01:55:56.387685+00:00", "level": "INFO", "logger": "market_maker.runtime", "msg": "cycle mm_20260406T015549_b19304: quoted=0, orders=0, cancelled=0, fills=0, pnl=$0.0000"}
+{"ts": "2026-04-06T01:56:01.466199+00:00", "level": "INFO", "logger": "market_maker.runtime", "msg": "cycle mm_20260406T015601_45914b: 196 markets selected from 200 active"}
+{"ts": "2026-04-06T01:56:09.839459+00:00", "level": "INFO", "logger": "market_maker.runtime", "msg": "cycle mm_20260406T015601_45914b: quoted=0, orders=0, cancelled=0, fills=0, pnl=$0.0000"}
+{"ts": "2026-04-06T01:56:10.777624+00:00", "level": "INFO", "logger": "market_maker.runtime", "msg": "interrupted during sleep, shutting down"}
+{"ts": "2026-04-06T01:56:10.778332+00:00", "level": "INFO", "logger": "market_maker.runtime", "msg": "market maker stopped"}
+{"ts": "2026-04-06T01:56:22.833745+00:00", "level": "INFO", "logger": "__main__", "msg": "============================================================"}
+{"ts": "2026-04-06T01:56:22.834345+00:00", "level": "INFO", "logger": "__main__", "msg": "MARKET MAKER  mode=dry_run"}
+{"ts": "2026-04-06T01:56:22.834495+00:00", "level": "INFO", "logger": "__main__", "msg": "============================================================"}
+{"ts": "2026-04-06T01:56:22.836753+00:00", "level": "INFO", "logger": "market_maker.runtime", "msg": "market maker started  mode=dry_run  poll=5.0s  half_spread=0.020  quote_size=20"}
+{"ts": "2026-04-06T01:56:23.588208+00:00", "level": "INFO", "logger": "market_maker.runtime", "msg": "cycle mm_20260406T015622_501505: 196 markets selected from 200 active"}
+{"ts": "2026-04-06T01:56:48.425338+00:00", "level": "INFO", "logger": "market_maker.runtime", "msg": "cycle mm_20260406T015622_501505: quoted=382, orders=764, cancelled=0, fills=0, pnl=$0.0000"}
+{"ts": "2026-04-06T01:56:53.508695+00:00", "level": "INFO", "logger": "market_maker.runtime", "msg": "cycle mm_20260406T015653_aa05b7: 196 markets selected from 200 active"}
+{"ts": "2026-04-06T01:57:12.978579+00:00", "level": "INFO", "logger": "market_maker.runtime", "msg": "cycle mm_20260406T015653_aa05b7: quoted=0, orders=0, cancelled=764, fills=0, pnl=$0.0000"}
+{"ts": "2026-04-06T01:57:18.101410+00:00", "level": "INFO", "logger": "market_maker.runtime", "msg": "cycle mm_20260406T015717_81119a: 196 markets selected from 200 active"}
+{"ts": "2026-04-06T01:57:25.597194+00:00", "level": "INFO", "logger": "market_maker.runtime", "msg": "cycle mm_20260406T015717_81119a: quoted=0, orders=0, cancelled=0, fills=0, pnl=$0.0000"}
+{"ts": "2026-04-06T01:57:30.681789+00:00", "level": "INFO", "logger": "market_maker.runtime", "msg": "cycle mm_20260406T015730_d639e8: 196 markets selected from 200 active"}
+{"ts": "2026-04-06T01:57:37.470551+00:00", "level": "INFO", "logger": "market_maker.runtime", "msg": "cycle mm_20260406T015730_d639e8: quoted=0, orders=0, cancelled=0, fills=0, pnl=$0.0000"}
+{"ts": "2026-04-06T01:57:42.548150+00:00", "level": "INFO", "logger": "market_maker.runtime", "msg": "cycle mm_20260406T015742_49f2b7: 196 markets selected from 200 active"}
+{"ts": "2026-04-06T01:58:06.619009+00:00", "level": "INFO", "logger": "market_maker.runtime", "msg": "cycle mm_20260406T015742_49f2b7: quoted=382, orders=764, cancelled=0, fills=0, pnl=$0.0000"}
+{"ts": "2026-04-06T01:58:11.741350+00:00", "level": "INFO", "logger": "market_maker.runtime", "msg": "cycle mm_20260406T015811_724f4a: 196 markets selected from 200 active"}
+{"ts": "2026-04-06T01:58:32.339758+00:00", "level": "INFO", "logger": "market_maker.runtime", "msg": "cycle mm_20260406T015811_724f4a: quoted=0, orders=0, cancelled=764, fills=0, pnl=$0.0000"}
+{"ts": "2026-04-06T01:58:37.579649+00:00", "level": "INFO", "logger": "market_maker.runtime", "msg": "cycle mm_20260406T015837_6899c1: 196 markets selected from 200 active"}
+{"ts": "2026-04-06T01:58:44.481255+00:00", "level": "INFO", "logger": "market_maker.runtime", "msg": "cycle mm_20260406T015837_6899c1: quoted=0, orders=0, cancelled=0, fills=0, pnl=$0.0000"}
+{"ts": "2026-04-06T01:58:49.564310+00:00", "level": "INFO", "logger": "market_maker.runtime", "msg": "cycle mm_20260406T015849_5f87ff: 196 markets selected from 200 active"}

@@ -1,0 +1,14 @@
+2026-04-07 17:21:56,435 INFO event_trader_improved.runtime event trader (IMPROVED) started  mode=dry_run  kelly=True  min_edge=5.0%
+2026-04-07 17:21:56,981 INFO event_trader.data_client fetched 100 markets across 2 pages
+2026-04-07 17:21:56,982 INFO event_trader.runtime cycle ev_20260408T002156_c975c0 (#1): fetched 100 markets in 0.5s
+2026-04-07 17:21:56,983 ERROR event_trader_improved.runtime cycle error #1 (1 consecutive), backing off 20.0s
+Traceback (most recent call last):
+  File "D:\polymart\event_trader_improved\runtime.py", line 71, in run_loop
+    run_once(config, client, scanner, pos_mgr, risk, executor,
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+             state, reporter, cycle_number)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\polymart\event_trader\runtime.py", line 91, in run_once
+    signals = scanner.scan(all_markets) if not is_paused else []
+              ^^^^^^^^^^^^
+AttributeError: 'EVScanner' object has no attribute 'scan'

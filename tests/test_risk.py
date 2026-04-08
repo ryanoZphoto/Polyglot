@@ -49,7 +49,10 @@ def test_risk_blocks_event_exposure_limit(tmp_path):
     db = tmp_path / "state.sqlite3"
     store = StateStore(str(db))
     try:
+        # emergency_stop=False is mandatory: otherwise the emergency-stop check fires first
+        # and shadows the event-exposure block we actually want to test.
         config = _build_config(
+            emergency_stop=False,
             max_event_exposure_usd=120.0,
             max_open_exposure_usd=10000.0,
             state_db_path=str(db),

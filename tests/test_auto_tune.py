@@ -73,6 +73,8 @@ def test_auto_tuner_tightens_on_negative_net_quality():
         aggression=0.9,
         min_net_profit_usd=0.2,
         min_net_edge=0.004,
+        auto_tune_min_aggression=0.55,
+        auto_tune_max_aggression=0.97,
     )
     tuner = AutoTuner(config)
     summary = _summary(top_scores=[_score(-0.2, -0.01)], opportunities=0, executions=0, found=3)

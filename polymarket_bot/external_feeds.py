@@ -3,9 +3,6 @@ from __future__ import annotations
 import logging
 from dataclasses import dataclass
 from datetime import datetime, timezone
-from typing import Any
-
-import requests
 
 from .config import BotConfig
 
@@ -25,35 +22,24 @@ class ExternalSignalClient:
     Optional external-price check.
 
     This is deliberately conservative: if no reliable match is found, it returns None.
+    Issue I fix: removed the pointless connectivity-only API call that made a live HTTP request
+    every cycle and always returned None anyway. The method now fast-paths to None unless
+    a real market-to-odds-book mapping layer is implemented.
     """
 
     def __init__(self, config: BotConfig):
         self.config = config
-        self.session = requests.Session()
 
     def signal_for_market_question(self, question: str) -> ExternalSignal | None:
         if not self.config.enable_external_price_check:
             return None
         if not self.config.odds_api_key:
             return None
-        # Matching market questions to external books robustly requires market-specific
-        # mapping. Keep safe defaults: only emit a signal when we have high confidence.
-        try:
-            # Lightweight connectivity check to avoid dead API keys breaking the cycle.
-            self.session.get(
-                "https://api.the-odds-api.com/v4/sports",
-                params={
-                    "apiKey": self.config.odds_api_key,
-                    "regions": self.config.odds_regions,
-                    "markets": self.config.odds_markets,
-                },
-                timeout=self.config.request_timeout_seconds,
-            ).raise_for_status()
-        except Exception as exc:
-            logger.debug("External feed check failed: %s", exc)
-            return None
-
-        # No inferred value unless we can map confidently.
+        # A robust market-question → external-odds mapping requires event-specific lookup tables.
+        # Until that mapping layer is built, always return None to avoid spurious adjustments.
+        # When implementing: fetch https://api.the-odds-api.com/v4/sports/{sport}/odds and match
+        # on team/player names extracted from `question`, then compute fair_probability from
+        # American/decimal odds and set confidence based on match quality.
         return None
 
 

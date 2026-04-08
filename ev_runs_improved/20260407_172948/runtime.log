@@ -1,0 +1,6 @@
+2026-04-07 17:29:48,564 INFO event_trader_improved.runtime event trader (IMPROVED) started  mode=dry_run  kelly=True  min_edge=5.0%
+2026-04-07 17:29:49,160 INFO event_trader.data_client fetched 100 markets across 2 pages
+2026-04-07 17:29:49,161 INFO event_trader_improved.runtime cycle ev_20260408T002948_ff7842 (#1): fetched 100 markets in 0.6s
+2026-04-07 17:29:49,161 INFO event_trader_improved.scanner filtered to 100 candidate markets from 100
+2026-04-07 17:30:00,073 INFO event_trader_improved.runtime interrupted after 1 cycles
+2026-04-07 17:30:00,077 INFO event_trader_improved.runtime event trader (IMPROVED) stopped

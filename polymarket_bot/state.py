@@ -52,6 +52,7 @@ class StateStore:
                 market_slug TEXT NOT NULL,
                 status TEXT NOT NULL,
                 order_id TEXT,
+                mode TEXT,
                 error TEXT,
                 created_at TEXT NOT NULL
             );
@@ -59,6 +60,7 @@ class StateStore:
             CREATE TABLE IF NOT EXISTS fills (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 trade_id TEXT NOT NULL,
+                mode TEXT,
                 filled_usd REAL NOT NULL,
                 realized_pnl_usd REAL NOT NULL,
                 created_at TEXT NOT NULL
@@ -86,6 +88,28 @@ class StateStore:
                 diagnostics_json TEXT NOT NULL,
                 created_at TEXT NOT NULL
             );
+
+            CREATE TABLE IF NOT EXISTS simulated_performance (
+                trade_id TEXT PRIMARY KEY,
+                group_key TEXT NOT NULL,
+                entry_sum_ask REAL NOT NULL,
+                current_sum_ask REAL NOT NULL,
+                shares REAL NOT NULL,
+                payout_per_share REAL NOT NULL,
+                is_closed INTEGER DEFAULT 0,
+                created_at TEXT NOT NULL,
+                updated_at TEXT NOT NULL
+            );
+
+            -- Issue J fix: indexes to avoid full-table scans on hot query paths.
+            CREATE INDEX IF NOT EXISTS idx_trades_status ON trades(status);
+            CREATE INDEX IF NOT EXISTS idx_trades_event_key ON trades(event_key, status);
+            CREATE INDEX IF NOT EXISTS idx_fills_created_at ON fills(created_at);
+            CREATE INDEX IF NOT EXISTS idx_orders_created_at ON orders(created_at);
+            CREATE INDEX IF NOT EXISTS idx_orders_trade_id ON orders(trade_id);
+            CREATE INDEX IF NOT EXISTS idx_near_misses_cycle ON near_misses(cycle_id);
+            CREATE INDEX IF NOT EXISTS idx_cycles_started_at ON cycles(started_at);
+            CREATE INDEX IF NOT EXISTS idx_simperf_closed ON simulated_performance(is_closed);
             """
         )
         self.conn.commit()
@@ -183,12 +207,13 @@ class StateStore:
         market_slug: str,
         status: str,
         order_id: str | None = None,
+        mode: str | None = None,
         error: str | None = None,
     ) -> None:
         self.conn.execute(
             """
-            INSERT INTO orders (trade_id, token_id, market_slug, status, order_id, error, created_at)
-            VALUES (?, ?, ?, ?, ?, ?, ?)
+            INSERT INTO orders (trade_id, token_id, market_slug, status, order_id, mode, error, created_at)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
             """,
             (
                 trade_id,
@@ -196,19 +221,20 @@ class StateStore:
                 market_slug,
                 status,
                 order_id,
+                mode,
                 error,
                 datetime.now(timezone.utc).isoformat(),
             ),
         )
         self.conn.commit()
 
-    def record_fill(self, trade_id: str, filled_usd: float, realized_pnl_usd: float) -> None:
+    def record_fill(self, trade_id: str, filled_usd: float, realized_pnl_usd: float, mode: str | None = None) -> None:
         self.conn.execute(
             """
-            INSERT INTO fills (trade_id, filled_usd, realized_pnl_usd, created_at)
-            VALUES (?, ?, ?, ?)
+            INSERT INTO fills (trade_id, filled_usd, realized_pnl_usd, mode, created_at)
+            VALUES (?, ?, ?, ?, ?)
             """,
-            (trade_id, filled_usd, realized_pnl_usd, datetime.now(timezone.utc).isoformat()),
+            (trade_id, filled_usd, realized_pnl_usd, mode, datetime.now(timezone.utc).isoformat()),
         )
         self.conn.commit()
 
@@ -290,3 +316,31 @@ class StateStore:
             "opportunities": int(row["opportunities"]),
             "executed": int(row["executed"]),
         }
+
+    def record_simulated_entry(self, trade_id: str, group_key: str, entry_sum_ask: float, shares: float, payout_per_share: float) -> None:
+        now = datetime.now(timezone.utc).isoformat()
+        self.conn.execute(
+            """
+            INSERT INTO simulated_performance (trade_id, group_key, entry_sum_ask, current_sum_ask, shares, payout_per_share, created_at, updated_at)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+            """,
+            (trade_id, group_key, entry_sum_ask, entry_sum_ask, shares, payout_per_share, now, now),
+        )
+        self.conn.commit()
+
+    def get_active_simulated_performance(self) -> list[sqlite3.Row]:
+        return self.conn.execute(
+            """
+            SELECT p.trade_id, p.shares, p.entry_sum_ask, o.token_id
+            FROM simulated_performance p
+            JOIN orders o ON p.trade_id = o.trade_id
+            WHERE p.is_closed = 0
+            """
+        ).fetchall()
+
+    def update_simulated_mark(self, trade_id: str, current_sum_ask: float, close: bool = False) -> None:
+        self.conn.execute(
+            "UPDATE simulated_performance SET current_sum_ask = ?, is_closed = ?, updated_at = ? WHERE trade_id = ?",
+            (current_sum_ask, 1 if close else 0, datetime.now(timezone.utc).isoformat(), trade_id),
+        )
+        self.conn.commit()

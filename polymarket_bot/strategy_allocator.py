@@ -11,11 +11,13 @@ class StrategyAllocator:
     def select(self, scored: list[ScoredOpportunity]) -> list[ScoredOpportunity]:
         if not scored:
             return []
-        # Higher aggression means allowing more candidates through.
+        # Issue E fix: aggression scaling was too weak (only 35%/30% reduction at full aggression).
+        # New formula: aggression=0.5 reduces thresholds by 50%; aggression=1.0 drops them to 0.
+        # This allows the auto-tuner to actually reach candidates when loosening.
         aggression = max(0.0, min(1.0, self.config.aggression))
-        dynamic_min_net_profit = self.config.min_net_profit_usd * (1.0 - (0.35 * aggression))
-        dynamic_min_net_edge = self.config.min_net_edge * (1.0 - (0.30 * aggression))
-        max_candidates = max(1, min(self.config.max_opportunities_per_cycle, int(1 + aggression * 3)))
+        dynamic_min_net_profit = self.config.min_net_profit_usd * max(0.0, 1.0 - aggression)
+        dynamic_min_net_edge = self.config.min_net_edge * max(0.0, 1.0 - aggression)
+        max_candidates = max(1, min(self.config.max_opportunities_per_cycle, int(1 + aggression * 5)))
 
         selected: list[ScoredOpportunity] = []
         seen_groups: set[str] = set()

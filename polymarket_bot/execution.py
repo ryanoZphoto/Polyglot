@@ -42,8 +42,17 @@ class DryRunExecutor:
                 token_id=leg_result.token_id,
                 market_slug=leg_result.market_slug,
                 status=leg_result.status,
+                mode=self.mode,
                 order_id=leg_result.order_id,
             )
+
+        state.record_simulated_entry(
+            trade_id=trade_id,
+            group_key=opp.group_key,
+            entry_sum_ask=opp.sum_ask,
+            shares=opp.bundle_shares,
+            payout_per_share=opp.guaranteed_payout_usd / opp.bundle_shares if opp.bundle_shares > 0 else 0.0,
+        )
 
         message = (
             f"[DRY-RUN] trade_id={trade_id} group='{opp.group_key}' "
@@ -202,6 +211,7 @@ class LiveExecutor:
                     token_id=leg.token_id,
                     market_slug=leg.market_slug,
                     status=leg_result.status,
+                    mode="live",
                     order_id=order_id,
                 )
             except Exception as exc:  # pragma: no cover - runtime/API dependent
@@ -214,7 +224,7 @@ class LiveExecutor:
                     error=msg,
                 )
                 results.append(leg_result)
-                state.record_order(trade_id, leg.token_id, leg.market_slug, leg_result.status, error=msg)
+                state.record_order(trade_id, leg.token_id, leg.market_slug, leg_result.status, mode="live", error=msg)
                 break
 
         # Best-effort rollback of already-submitted orders if any leg failed.
@@ -226,6 +236,7 @@ class LiveExecutor:
                     token_id="n/a",
                     market_slug="n/a",
                     status="canceled",
+                    mode="live",
                     order_id=order_id,
                 )
 

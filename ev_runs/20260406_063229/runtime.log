@@ -1,0 +1,947 @@
+{"ts": "2026-04-06T06:32:29.921327+00:00", "level": "INFO", "logger": "__main__", "msg": "======================================================================"}
+{"ts": "2026-04-06T06:32:29.921644+00:00", "level": "INFO", "logger": "__main__", "msg": "EVENT TRADER  mode=dry_run  run_dir=ev_runs\\20260406_063229"}
+{"ts": "2026-04-06T06:32:29.921765+00:00", "level": "INFO", "logger": "__main__", "msg": "======================================================================"}
+{"ts": "2026-04-06T06:32:29.922645+00:00", "level": "INFO", "logger": "__main__", "msg": "config: {\"gamma_host\": \"https://gamma-api.polymarket.com\", \"clob_host\": \"https://clob.polymarket.com\", \"chain_id\": 137, \"private_key\": \"0x59...68c5\", \"funder\": \"\", \"signature_type\": 0, \"api_key\": \"(not set)\", \"api_secret\": \"(not set)\", \"api_passphrase\": \"(not set)\", \"mode\": \"dry_run\", \"dry_run\": true, \"poll_interval_seconds\": 10.0, \"log_json\": true, \"scan_limit\": 300, \"min_liquidity\": 1000.0, \"min_volume\": 500.0, \"max_entry_price\": 0.4, \"min_entry_price\": 0.02, \"min_book_depth_usd\": 50.0, \"min_spread_ratio\": 0.3, \"position_size_usd\": 5.0, \"max_contracts_per_entry\": 500.0, \"max_positions\": 20, \"take_profit_pct\": 0.5, \"stop_loss_pct\": 0.4, \"trailing_stop_pct\": 0.0, \"max_total_exposure_usd\": 100.0, \"max_daily_loss_usd\": 25.0, \"max_per_market_usd\": 20.0, \"emergency_stop\": false, \"request_timeout_seconds\": 8.0, \"max_request_retries\": 2, \"retry_backoff_seconds\": 0.3, \"max_workers\": 10, \"state_db_path\": \"ev_bot_state.sqlite3\", \"log_path\": \"ev_runtime.log\", \"report_path\": \"ev_cycle_report.jsonl\", \"run_dir\": \"ev_runs\\\\20260406_063229\", \"python\": \"3.13.5 (tags/v3.13.5:6cb20a2, Jun 11 2025, 16:15:46) [MSC v.1943 64 bit (AMD64)]\", \"pid\": 45032}"}
+{"ts": "2026-04-06T06:32:30.048331+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "event trader started  mode=dry_run  poll=10.0s  entry_range=$0.02-$0.40  position_size=$5.0  max_positions=20  tp=50%  sl=40%"}
+{"ts": "2026-04-06T06:32:30.712993+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T063230_a10eb8 (#1): fetched 300 markets in 0.7s"}
+{"ts": "2026-04-06T06:32:42.872093+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.2s"}
+{"ts": "2026-04-06T06:32:42.889492+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T063230_a10eb8 (#1) done in 12.8s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:32:53.003931+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T063252_65d647 (#2): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:33:03.853779+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.8s"}
+{"ts": "2026-04-06T06:33:03.866693+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T063252_65d647 (#2) done in 11.0s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:33:14.120884+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T063313_115228 (#3): fetched 300 markets in 0.3s"}
+{"ts": "2026-04-06T06:33:27.333963+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 13.2s"}
+{"ts": "2026-04-06T06:33:27.345307+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T063313_115228 (#3) done in 13.5s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:33:37.448670+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T063337_776331 (#4): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:33:50.544347+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 13.1s"}
+{"ts": "2026-04-06T06:33:50.560748+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T063337_776331 (#4) done in 13.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:34:00.673243+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T063400_d0c9f3 (#5): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:34:12.094115+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.4s"}
+{"ts": "2026-04-06T06:34:12.106260+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T063400_d0c9f3 (#5) done in 11.5s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:34:22.248668+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T063422_e3e9fc (#6): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:34:33.396113+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.1s"}
+{"ts": "2026-04-06T06:34:33.408596+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T063422_e3e9fc (#6) done in 11.3s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:34:43.510831+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T063443_92a3e0 (#7): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:34:56.743035+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 13.2s"}
+{"ts": "2026-04-06T06:34:56.754779+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T063443_92a3e0 (#7) done in 13.3s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:35:06.856352+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T063506_7fd6a7 (#8): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:35:18.121300+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.3s"}
+{"ts": "2026-04-06T06:35:18.133074+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T063506_7fd6a7 (#8) done in 11.4s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:35:28.334526+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T063528_0c6be5 (#9): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T06:35:39.915581+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.6s"}
+{"ts": "2026-04-06T06:35:39.929299+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T063528_0c6be5 (#9) done in 11.8s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:35:50.030802+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T063549_9f91a3 (#10): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:36:01.256165+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.2s"}
+{"ts": "2026-04-06T06:36:01.268609+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T063549_9f91a3 (#10) done in 11.3s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:36:11.388080+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T063611_0c681c (#11): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:36:24.525630+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 13.1s"}
+{"ts": "2026-04-06T06:36:24.538101+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T063611_0c681c (#11) done in 13.3s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:36:34.652532+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T063634_43566e (#12): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:36:46.637224+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.0s"}
+{"ts": "2026-04-06T06:36:46.650800+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T063634_43566e (#12) done in 12.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:36:56.749652+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T063656_3a8d2e (#13): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:37:08.295226+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.5s"}
+{"ts": "2026-04-06T06:37:08.306185+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T063656_3a8d2e (#13) done in 11.6s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:37:18.426857+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T063718_f30347 (#14): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:37:29.421441+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.0s"}
+{"ts": "2026-04-06T06:37:29.434406+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T063718_f30347 (#14) done in 11.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:37:39.535358+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T063739_ac870b (#15): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:37:52.564038+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 13.0s"}
+{"ts": "2026-04-06T06:37:52.575027+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T063739_ac870b (#15) done in 13.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:38:02.712600+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T063802_40b0ed (#16): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:38:15.788254+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 13.1s"}
+{"ts": "2026-04-06T06:38:15.799129+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T063802_40b0ed (#16) done in 13.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:38:25.902487+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T063825_634ac1 (#17): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:38:39.471611+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 13.6s"}
+{"ts": "2026-04-06T06:38:39.484064+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T063825_634ac1 (#17) done in 13.7s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:38:49.609922+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T063849_ebb948 (#18): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:39:07.992042+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 18.4s"}
+{"ts": "2026-04-06T06:39:08.005668+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T063849_ebb948 (#18) done in 18.5s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:39:18.283265+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T063918_595060 (#19): fetched 300 markets in 0.3s"}
+{"ts": "2026-04-06T06:39:31.534225+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 13.3s"}
+{"ts": "2026-04-06T06:39:31.547580+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T063918_595060 (#19) done in 13.5s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:39:41.643624+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T063941_9b761b (#20): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:39:51.702865+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.1s"}
+{"ts": "2026-04-06T06:39:51.717166+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T063941_9b761b (#20) done in 10.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:40:01.822323+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064001_8db945 (#21): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:40:11.985810+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.2s"}
+{"ts": "2026-04-06T06:40:11.997493+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064001_8db945 (#21) done in 10.3s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:40:22.109351+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064021_6c8947 (#22): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:40:34.583346+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.5s"}
+{"ts": "2026-04-06T06:40:34.596626+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064021_6c8947 (#22) done in 12.6s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:40:44.697962+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064044_1423ec (#23): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:40:54.837431+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.1s"}
+{"ts": "2026-04-06T06:40:54.850832+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064044_1423ec (#23) done in 10.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:41:04.949338+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064104_74ae64 (#24): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:41:15.772053+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.8s"}
+{"ts": "2026-04-06T06:41:15.784093+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064104_74ae64 (#24) done in 10.9s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:41:25.904387+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064125_a407c5 (#25): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:41:40.112843+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 14.2s"}
+{"ts": "2026-04-06T06:41:40.124823+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064125_a407c5 (#25) done in 14.3s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:41:50.249381+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064150_22d398 (#26): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:42:00.305734+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.1s"}
+{"ts": "2026-04-06T06:42:00.320632+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064150_22d398 (#26) done in 10.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:42:10.455468+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064210_ff7bd8 (#27): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:42:21.997054+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.5s"}
+{"ts": "2026-04-06T06:42:22.008873+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064210_ff7bd8 (#27) done in 11.7s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:42:32.273660+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064232_5f7adc (#28): fetched 300 markets in 0.3s"}
+{"ts": "2026-04-06T06:42:45.211146+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.9s"}
+{"ts": "2026-04-06T06:42:45.222803+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064232_5f7adc (#28) done in 13.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:42:55.324195+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064255_d7057e (#29): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:43:05.479846+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.2s"}
+{"ts": "2026-04-06T06:43:05.494002+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064255_d7057e (#29) done in 10.3s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:43:15.598456+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064315_ae04a1 (#30): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:43:25.676146+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.1s"}
+{"ts": "2026-04-06T06:43:25.689741+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064315_ae04a1 (#30) done in 10.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:43:35.788009+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064335_eb8e5c (#31): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:43:48.201926+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.4s"}
+{"ts": "2026-04-06T06:43:48.215315+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064335_eb8e5c (#31) done in 12.5s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:43:58.314258+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064358_4fef6b (#32): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:44:08.346379+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.0s"}
+{"ts": "2026-04-06T06:44:08.358978+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064358_4fef6b (#32) done in 10.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:44:18.461315+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064418_037123 (#33): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:44:28.557389+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.1s"}
+{"ts": "2026-04-06T06:44:28.570342+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064418_037123 (#33) done in 10.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:44:38.694541+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064438_9c6cee (#34): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:44:51.079817+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.4s"}
+{"ts": "2026-04-06T06:44:51.093219+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064438_9c6cee (#34) done in 12.5s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:45:01.213090+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064501_20d1c0 (#35): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:45:11.495657+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.3s"}
+{"ts": "2026-04-06T06:45:11.508836+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064501_20d1c0 (#35) done in 10.4s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:45:21.793983+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064521_c80826 (#36): fetched 300 markets in 0.3s"}
+{"ts": "2026-04-06T06:45:33.600985+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.8s"}
+{"ts": "2026-04-06T06:45:33.612153+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064521_c80826 (#36) done in 12.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:45:44.653904+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064543_cdd680 (#37): fetched 300 markets in 1.0s"}
+{"ts": "2026-04-06T06:45:57.597502+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.9s"}
+{"ts": "2026-04-06T06:45:57.609559+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064543_cdd680 (#37) done in 14.0s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:46:08.052558+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064607_edb0fe (#38): fetched 300 markets in 0.4s"}
+{"ts": "2026-04-06T06:46:18.150329+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.1s"}
+{"ts": "2026-04-06T06:46:18.163462+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064607_edb0fe (#38) done in 10.5s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:46:28.283448+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064628_7e39c1 (#39): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:46:38.449246+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.2s"}
+{"ts": "2026-04-06T06:46:38.466422+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064628_7e39c1 (#39) done in 10.3s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:46:48.678100+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064648_de8fe4 (#40): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T06:47:01.714546+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 13.0s"}
+{"ts": "2026-04-06T06:47:01.737682+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064648_de8fe4 (#40) done in 13.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:47:11.835205+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064711_2483d1 (#41): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:47:21.877664+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.0s"}
+{"ts": "2026-04-06T06:47:21.890350+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064711_2483d1 (#41) done in 10.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:47:32.094553+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064731_11fcf4 (#42): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T06:47:43.910761+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.8s"}
+{"ts": "2026-04-06T06:47:43.923857+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064731_11fcf4 (#42) done in 12.0s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:47:54.028327+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064753_bdb8ab (#43): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:48:06.953732+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.9s"}
+{"ts": "2026-04-06T06:48:06.967339+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064753_bdb8ab (#43) done in 13.0s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:48:17.220195+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064816_bc9ce2 (#44): fetched 300 markets in 0.3s"}
+{"ts": "2026-04-06T06:48:27.315295+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.1s"}
+{"ts": "2026-04-06T06:48:27.327022+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064816_bc9ce2 (#44) done in 10.3s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:48:37.433925+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064837_375a5f (#45): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:48:47.902937+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.5s"}
+{"ts": "2026-04-06T06:48:47.924800+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064837_375a5f (#45) done in 10.6s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:48:58.027922+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064857_1c56de (#46): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:49:10.219636+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.2s"}
+{"ts": "2026-04-06T06:49:10.231520+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064857_1c56de (#46) done in 12.3s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:49:20.357443+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064920_a5fec1 (#47): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:49:30.437689+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.1s"}
+{"ts": "2026-04-06T06:49:30.450314+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064920_a5fec1 (#47) done in 10.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:49:40.564203+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064940_c0732e (#48): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:49:50.717998+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.2s"}
+{"ts": "2026-04-06T06:49:50.734044+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T064940_c0732e (#48) done in 10.3s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:50:00.922045+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065000_1fd700 (#49): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T06:50:13.794760+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.9s"}
+{"ts": "2026-04-06T06:50:13.819819+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065000_1fd700 (#49) done in 13.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:50:23.934489+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065023_c58c4a (#50): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:50:34.717452+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.8s"}
+{"ts": "2026-04-06T06:50:34.747832+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065023_c58c4a (#50) done in 10.9s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:50:44.858471+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065044_166ca2 (#51): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:50:55.261016+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.4s"}
+{"ts": "2026-04-06T06:50:55.276169+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065044_166ca2 (#51) done in 10.5s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:51:05.413529+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065105_57c383 (#52): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:51:17.532853+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.1s"}
+{"ts": "2026-04-06T06:51:17.546947+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065105_57c383 (#52) done in 12.3s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:51:27.830049+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065127_019171 (#53): fetched 300 markets in 0.3s"}
+{"ts": "2026-04-06T06:51:37.936578+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.1s"}
+{"ts": "2026-04-06T06:51:37.950078+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065127_019171 (#53) done in 10.4s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:51:48.055242+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065147_36286b (#54): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:51:58.068089+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.0s"}
+{"ts": "2026-04-06T06:51:58.081821+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065147_36286b (#54) done in 10.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:52:08.194116+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065208_150491 (#55): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:52:20.472381+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.3s"}
+{"ts": "2026-04-06T06:52:20.485657+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065208_150491 (#55) done in 12.4s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:52:30.603013+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065230_dfb05a (#56): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:52:43.527361+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.9s"}
+{"ts": "2026-04-06T06:52:43.540852+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065230_dfb05a (#56) done in 13.0s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:52:53.655982+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065253_ff906f (#57): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:53:04.785108+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.1s"}
+{"ts": "2026-04-06T06:53:04.800747+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065253_ff906f (#57) done in 11.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:53:14.958615+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065314_f23817 (#58): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T06:53:27.300181+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.3s"}
+{"ts": "2026-04-06T06:53:27.315126+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065314_f23817 (#58) done in 12.5s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:53:37.429718+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065337_1124d3 (#59): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:53:47.541023+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.1s"}
+{"ts": "2026-04-06T06:53:47.557214+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065337_1124d3 (#59) done in 10.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:53:57.696215+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065357_e4d530 (#60): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:54:07.866888+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.2s"}
+{"ts": "2026-04-06T06:54:07.880247+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065357_e4d530 (#60) done in 10.3s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:54:18.152883+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065417_1fd726 (#61): fetched 300 markets in 0.3s"}
+{"ts": "2026-04-06T06:54:31.083985+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.9s"}
+{"ts": "2026-04-06T06:54:31.101990+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065417_1fd726 (#61) done in 13.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:54:41.204480+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065441_8ccede (#62): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:54:51.212203+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.0s"}
+{"ts": "2026-04-06T06:54:51.229195+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065441_8ccede (#62) done in 10.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:55:01.357282+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065501_4ccd06 (#63): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:55:11.466229+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.1s"}
+{"ts": "2026-04-06T06:55:11.479132+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065501_4ccd06 (#63) done in 10.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:55:21.590406+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065521_ac4846 (#64): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:55:33.200038+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.6s"}
+{"ts": "2026-04-06T06:55:33.212268+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065521_ac4846 (#64) done in 11.7s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:55:43.336285+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065543_fe3166 (#65): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:55:53.432184+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.1s"}
+{"ts": "2026-04-06T06:55:53.449349+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065543_fe3166 (#65) done in 10.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:56:03.610036+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065603_af8d03 (#66): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T06:56:14.944660+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.3s"}
+{"ts": "2026-04-06T06:56:14.957344+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065603_af8d03 (#66) done in 11.5s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:56:25.060683+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065624_eabff2 (#67): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:56:37.788617+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.7s"}
+{"ts": "2026-04-06T06:56:37.824654+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065624_eabff2 (#67) done in 12.8s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:56:47.924921+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065647_063b0d (#68): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:56:57.939613+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.0s"}
+{"ts": "2026-04-06T06:56:57.960242+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065647_063b0d (#68) done in 10.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:57:08.067474+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065707_ed52f0 (#69): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:57:18.140333+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.1s"}
+{"ts": "2026-04-06T06:57:18.167899+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065707_ed52f0 (#69) done in 10.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:57:28.349475+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065728_b4de09 (#70): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T06:57:40.374789+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.0s"}
+{"ts": "2026-04-06T06:57:40.387110+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065728_b4de09 (#70) done in 12.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:57:50.497507+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065750_efeb79 (#71): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:58:00.493408+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.0s"}
+{"ts": "2026-04-06T06:58:00.523591+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065750_efeb79 (#71) done in 10.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:58:10.736923+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065810_194e47 (#72): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T06:58:22.215526+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.5s"}
+{"ts": "2026-04-06T06:58:22.231034+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065810_194e47 (#72) done in 11.7s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:58:32.333286+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065832_84f8d6 (#73): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:58:45.545102+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 13.2s"}
+{"ts": "2026-04-06T06:58:45.560951+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065832_84f8d6 (#73) done in 13.3s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:58:55.664884+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065855_bbcb02 (#74): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:59:05.686485+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.0s"}
+{"ts": "2026-04-06T06:59:05.723587+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065855_bbcb02 (#74) done in 10.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:59:15.934024+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065915_88d84e (#75): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T06:59:27.972379+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.0s"}
+{"ts": "2026-04-06T06:59:27.987956+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065915_88d84e (#75) done in 12.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T06:59:38.115497+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065937_5263ed (#76): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T06:59:50.344234+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.2s"}
+{"ts": "2026-04-06T06:59:50.357243+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T065937_5263ed (#76) done in 12.4s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:00:00.462534+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070000_3f526f (#77): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:00:10.829414+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.4s"}
+{"ts": "2026-04-06T07:00:10.843333+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070000_3f526f (#77) done in 10.5s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:00:21.102741+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070020_1d1bbe (#78): fetched 300 markets in 0.3s"}
+{"ts": "2026-04-06T07:00:31.301551+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.2s"}
+{"ts": "2026-04-06T07:00:31.313887+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070020_1d1bbe (#78) done in 10.5s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:00:41.415941+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070041_082207 (#79): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:00:52.434763+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.0s"}
+{"ts": "2026-04-06T07:00:52.447798+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070041_082207 (#79) done in 11.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:01:02.556476+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070102_35e628 (#80): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:01:12.929220+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.4s"}
+{"ts": "2026-04-06T07:01:12.940510+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070102_35e628 (#80) done in 10.5s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:01:23.101145+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070122_a0a55c (#81): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T07:01:33.910794+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.8s"}
+{"ts": "2026-04-06T07:01:33.926244+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070122_a0a55c (#81) done in 11.0s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:01:44.027165+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070143_120195 (#82): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:01:56.774249+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.7s"}
+{"ts": "2026-04-06T07:01:56.787239+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070143_120195 (#82) done in 12.8s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:02:06.890141+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070206_63f7ca (#83): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:02:23.760149+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 16.9s"}
+{"ts": "2026-04-06T07:02:23.775733+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070206_63f7ca (#83) done in 17.0s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:02:33.882698+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070233_3271bc (#84): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:02:44.467489+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.6s"}
+{"ts": "2026-04-06T07:02:44.479478+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070233_3271bc (#84) done in 10.7s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:02:54.664980+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070254_eafaca (#85): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T07:03:06.256275+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.6s"}
+{"ts": "2026-04-06T07:03:06.268414+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070254_eafaca (#85) done in 11.8s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:03:16.368809+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070316_03b5b2 (#86): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:03:26.351809+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.0s"}
+{"ts": "2026-04-06T07:03:26.363854+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070316_03b5b2 (#86) done in 10.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:03:36.622972+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070336_26af23 (#87): fetched 300 markets in 0.3s"}
+{"ts": "2026-04-06T07:03:46.645283+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.0s"}
+{"ts": "2026-04-06T07:03:46.656810+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070336_26af23 (#87) done in 10.3s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:03:56.757534+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070356_13f887 (#88): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:04:08.360103+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.6s"}
+{"ts": "2026-04-06T07:04:08.371799+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070356_13f887 (#88) done in 11.7s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:04:18.479468+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070418_3a9bb4 (#89): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:04:28.549133+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.1s"}
+{"ts": "2026-04-06T07:04:28.560089+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070418_3a9bb4 (#89) done in 10.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:04:38.780209+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070438_37f47e (#90): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T07:04:49.941335+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.2s"}
+{"ts": "2026-04-06T07:04:49.954138+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070438_37f47e (#90) done in 11.4s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:05:00.053098+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070459_e08d57 (#91): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:05:12.644417+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.6s"}
+{"ts": "2026-04-06T07:05:12.657388+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070459_e08d57 (#91) done in 12.7s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:05:22.758566+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070522_d20e75 (#92): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:05:32.755691+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.0s"}
+{"ts": "2026-04-06T07:05:32.768048+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070522_d20e75 (#92) done in 10.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:05:42.884112+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070542_3c261b (#93): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:05:52.818155+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 9.9s"}
+{"ts": "2026-04-06T07:05:52.844297+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070542_3c261b (#93) done in 10.0s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:06:02.947383+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070602_3de828 (#94): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:06:15.749510+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.8s"}
+{"ts": "2026-04-06T07:06:15.767555+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070602_3de828 (#94) done in 12.9s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:06:26.018555+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070625_7bbfb5 (#95): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T07:06:36.062600+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.0s"}
+{"ts": "2026-04-06T07:06:36.073182+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070625_7bbfb5 (#95) done in 10.3s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:06:46.175209+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070646_c5e84f (#96): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:06:56.188151+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.0s"}
+{"ts": "2026-04-06T07:06:56.199902+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070646_c5e84f (#96) done in 10.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:07:06.322148+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070706_56600b (#97): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:07:18.205123+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.9s"}
+{"ts": "2026-04-06T07:07:18.217633+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070706_56600b (#97) done in 12.0s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:07:28.330103+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070728_f6cc6f (#98): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:07:38.388033+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.1s"}
+{"ts": "2026-04-06T07:07:38.400344+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070728_f6cc6f (#98) done in 10.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:07:48.503989+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070748_d40644 (#99): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:07:58.454108+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 9.9s"}
+{"ts": "2026-04-06T07:07:58.469413+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070748_d40644 (#99) done in 10.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:08:08.565259+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070808_16f8c1 (#100): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:08:20.319111+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.8s"}
+{"ts": "2026-04-06T07:08:20.330860+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070808_16f8c1 (#100) done in 11.8s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:08:30.431594+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070830_1b791a (#101): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:08:43.716066+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 13.3s"}
+{"ts": "2026-04-06T07:08:43.728065+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070830_1b791a (#101) done in 13.4s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:08:53.832899+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070853_aa9554 (#102): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:09:04.510846+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.7s"}
+{"ts": "2026-04-06T07:09:04.522539+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070853_aa9554 (#102) done in 10.8s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:09:14.707034+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070914_d97d59 (#103): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T07:09:26.803633+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.1s"}
+{"ts": "2026-04-06T07:09:26.814147+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070914_d97d59 (#103) done in 12.3s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:09:37.066181+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070936_6bad3d (#104): fetched 300 markets in 0.3s"}
+{"ts": "2026-04-06T07:09:47.040230+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.0s"}
+{"ts": "2026-04-06T07:09:47.054269+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070936_6bad3d (#104) done in 10.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:09:57.153729+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070957_3f17ba (#105): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:10:07.273240+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.1s"}
+{"ts": "2026-04-06T07:10:07.282830+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T070957_3f17ba (#105) done in 10.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:10:17.386986+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071017_691477 (#106): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:10:30.153183+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.8s"}
+{"ts": "2026-04-06T07:10:30.165164+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071017_691477 (#106) done in 12.9s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:10:40.260926+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071040_46aee8 (#107): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:10:50.503176+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.2s"}
+{"ts": "2026-04-06T07:10:50.514132+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071040_46aee8 (#107) done in 10.3s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:11:00.609407+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071100_9ee665 (#108): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:11:10.629004+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.0s"}
+{"ts": "2026-04-06T07:11:10.640622+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071100_9ee665 (#108) done in 10.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:11:20.738937+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071120_869277 (#109): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:11:33.793820+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 13.1s"}
+{"ts": "2026-04-06T07:11:33.803946+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071120_869277 (#109) done in 13.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:11:43.900298+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071143_459ea3 (#110): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:11:53.889747+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.0s"}
+{"ts": "2026-04-06T07:11:53.899895+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071143_459ea3 (#110) done in 10.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:12:04.102953+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071203_cee8af (#111): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T07:12:14.931772+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.8s"}
+{"ts": "2026-04-06T07:12:14.942243+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071203_cee8af (#111) done in 11.0s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:12:25.226158+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071224_68978f (#112): fetched 300 markets in 0.3s"}
+{"ts": "2026-04-06T07:12:37.599697+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.4s"}
+{"ts": "2026-04-06T07:12:37.611559+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071224_68978f (#112) done in 12.7s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:12:47.714186+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071247_2fce8c (#113): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:12:59.475524+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.8s"}
+{"ts": "2026-04-06T07:12:59.487452+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071247_2fce8c (#113) done in 11.9s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:13:09.639915+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071309_81e7de (#114): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T07:13:20.962827+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.3s"}
+{"ts": "2026-04-06T07:13:20.975232+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071309_81e7de (#114) done in 11.5s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:13:31.169944+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071330_b80656 (#115): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T07:13:42.190304+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.0s"}
+{"ts": "2026-04-06T07:13:42.200919+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071330_b80656 (#115) done in 11.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:13:52.318219+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071352_fc6509 (#116): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:14:02.484383+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.2s"}
+{"ts": "2026-04-06T07:14:02.496173+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071352_fc6509 (#116) done in 10.3s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:14:12.610933+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071412_629791 (#117): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:14:23.848077+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.2s"}
+{"ts": "2026-04-06T07:14:23.858902+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071412_629791 (#117) done in 11.4s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:14:33.969607+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071433_6e146c (#118): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:14:46.947691+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 13.0s"}
+{"ts": "2026-04-06T07:14:46.959483+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071433_6e146c (#118) done in 13.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:14:57.067206+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071456_56e318 (#119): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:15:07.181515+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.1s"}
+{"ts": "2026-04-06T07:15:07.192455+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071456_56e318 (#119) done in 10.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:15:17.424861+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071517_3268b4 (#120): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T07:15:29.316404+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.9s"}
+{"ts": "2026-04-06T07:15:29.333542+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071517_3268b4 (#120) done in 12.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:15:39.714899+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071539_9509ad (#121): fetched 300 markets in 0.4s"}
+{"ts": "2026-04-06T07:15:52.509934+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.8s"}
+{"ts": "2026-04-06T07:15:52.526207+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071539_9509ad (#121) done in 13.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:16:02.625457+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071602_c0cedc (#122): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:16:12.699017+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.1s"}
+{"ts": "2026-04-06T07:16:12.708593+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071602_c0cedc (#122) done in 10.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:16:22.847618+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071622_91ae8d (#123): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:16:33.700694+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.9s"}
+{"ts": "2026-04-06T07:16:33.712628+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071622_91ae8d (#123) done in 11.0s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:16:43.864752+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071643_b32fdc (#124): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T07:16:56.241432+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.4s"}
+{"ts": "2026-04-06T07:16:56.251216+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071643_b32fdc (#124) done in 12.5s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:17:06.362062+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071706_5e1ae0 (#125): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:17:16.368767+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.0s"}
+{"ts": "2026-04-06T07:17:16.383699+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071706_5e1ae0 (#125) done in 10.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:17:26.550209+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071726_9b9e56 (#126): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T07:17:38.529995+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.0s"}
+{"ts": "2026-04-06T07:17:38.541115+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071726_9b9e56 (#126) done in 12.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:17:48.655146+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071748_318979 (#127): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:18:01.927953+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 13.3s"}
+{"ts": "2026-04-06T07:18:01.940349+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071748_318979 (#127) done in 13.4s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:18:12.045099+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071811_af7dcf (#128): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:18:22.083030+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.0s"}
+{"ts": "2026-04-06T07:18:22.094692+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071811_af7dcf (#128) done in 10.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:18:32.354492+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071832_f0d54b (#129): fetched 300 markets in 0.3s"}
+{"ts": "2026-04-06T07:18:42.416963+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.1s"}
+{"ts": "2026-04-06T07:18:42.428204+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071832_f0d54b (#129) done in 10.3s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:18:52.530835+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071852_cfab44 (#130): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:19:05.422923+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.9s"}
+{"ts": "2026-04-06T07:19:05.436497+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071852_cfab44 (#130) done in 13.0s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:19:15.563403+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071915_b203ea (#131): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:19:25.527551+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.0s"}
+{"ts": "2026-04-06T07:19:25.539939+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071915_b203ea (#131) done in 10.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:19:35.647008+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071935_57e2d6 (#132): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:19:45.699926+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.1s"}
+{"ts": "2026-04-06T07:19:45.713474+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071935_57e2d6 (#132) done in 10.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:19:55.825811+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071955_3b7461 (#133): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:20:07.886695+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.1s"}
+{"ts": "2026-04-06T07:20:07.902166+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T071955_3b7461 (#133) done in 12.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:20:18.004044+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072017_873b26 (#134): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:20:28.591527+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.6s"}
+{"ts": "2026-04-06T07:20:28.607180+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072017_873b26 (#134) done in 10.7s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:20:38.812593+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072038_c20ddb (#135): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T07:20:50.999329+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.2s"}
+{"ts": "2026-04-06T07:20:51.014738+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072038_c20ddb (#135) done in 12.4s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:21:01.116301+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072101_13734a (#136): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:21:13.860775+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.7s"}
+{"ts": "2026-04-06T07:21:13.874916+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072101_13734a (#136) done in 12.8s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:21:24.219035+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072123_4336b6 (#137): fetched 300 markets in 0.3s"}
+{"ts": "2026-04-06T07:21:35.231841+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.0s"}
+{"ts": "2026-04-06T07:21:35.242601+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072123_4336b6 (#137) done in 11.4s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:21:45.381192+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072145_92cccf (#138): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:21:57.922902+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.5s"}
+{"ts": "2026-04-06T07:21:57.935863+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072145_92cccf (#138) done in 12.7s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:22:08.048261+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072207_4e54cf (#139): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:22:20.878360+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.8s"}
+{"ts": "2026-04-06T07:22:20.890819+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072207_4e54cf (#139) done in 12.9s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:22:31.000627+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072230_af675f (#140): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:22:41.089960+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.1s"}
+{"ts": "2026-04-06T07:22:41.101695+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072230_af675f (#140) done in 10.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:22:51.282437+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072251_bed58f (#141): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T07:23:02.762001+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.5s"}
+{"ts": "2026-04-06T07:23:02.774050+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072251_bed58f (#141) done in 11.7s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:23:12.921813+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072312_ed61cf (#142): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:23:25.802233+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.9s"}
+{"ts": "2026-04-06T07:23:25.814772+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072312_ed61cf (#142) done in 13.0s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:23:35.917524+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072335_a25925 (#143): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:23:45.964042+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.0s"}
+{"ts": "2026-04-06T07:23:45.974750+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072335_a25925 (#143) done in 10.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:23:56.084675+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072355_560a6c (#144): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:24:08.375501+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.3s"}
+{"ts": "2026-04-06T07:24:08.391220+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072355_560a6c (#144) done in 12.4s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:24:18.497732+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072418_c5fc5b (#145): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:24:31.021803+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.5s"}
+{"ts": "2026-04-06T07:24:31.034730+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072418_c5fc5b (#145) done in 12.6s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:24:41.328793+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072441_609c17 (#146): fetched 300 markets in 0.3s"}
+{"ts": "2026-04-06T07:24:52.537395+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.2s"}
+{"ts": "2026-04-06T07:24:52.549844+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072441_609c17 (#146) done in 11.5s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:25:02.691450+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072502_673fc6 (#147): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:25:13.754814+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.1s"}
+{"ts": "2026-04-06T07:25:13.767738+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072502_673fc6 (#147) done in 11.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:25:23.875248+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072523_30160f (#148): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:25:36.478283+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.6s"}
+{"ts": "2026-04-06T07:25:36.490312+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072523_30160f (#148) done in 12.7s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:25:46.594440+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072546_074291 (#149): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:25:56.604451+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.0s"}
+{"ts": "2026-04-06T07:25:56.615649+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072546_074291 (#149) done in 10.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:26:06.720145+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072606_bef3ad (#150): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:26:18.939749+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.2s"}
+{"ts": "2026-04-06T07:26:18.952577+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072606_bef3ad (#150) done in 12.3s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:26:29.055931+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072628_404773 (#151): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:26:42.285539+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 13.2s"}
+{"ts": "2026-04-06T07:26:42.298605+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072628_404773 (#151) done in 13.3s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:26:52.414642+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072652_608abf (#152): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:27:02.546968+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.1s"}
+{"ts": "2026-04-06T07:27:02.558481+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072652_608abf (#152) done in 10.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:27:12.660099+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072712_80d590 (#153): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:27:23.410494+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.8s"}
+{"ts": "2026-04-06T07:27:23.446937+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072712_80d590 (#153) done in 10.9s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:27:33.735804+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072733_a1fbc6 (#154): fetched 300 markets in 0.3s"}
+{"ts": "2026-04-06T07:27:46.039182+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.3s"}
+{"ts": "2026-04-06T07:27:46.069906+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072733_a1fbc6 (#154) done in 12.6s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:27:56.302702+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072756_6a8441 (#155): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T07:28:08.176866+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.9s"}
+{"ts": "2026-04-06T07:28:08.188179+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072756_6a8441 (#155) done in 12.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:28:18.287687+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072818_7dcfad (#156): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:28:31.532527+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 13.2s"}
+{"ts": "2026-04-06T07:28:31.544283+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072818_7dcfad (#156) done in 13.3s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:28:41.740473+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072841_842f8b (#157): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T07:28:54.672199+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.9s"}
+{"ts": "2026-04-06T07:28:54.683489+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072841_842f8b (#157) done in 13.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:29:04.785728+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072904_c09afc (#158): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:29:14.926833+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.1s"}
+{"ts": "2026-04-06T07:29:14.938025+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072904_c09afc (#158) done in 10.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:29:25.038875+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072924_6cce24 (#159): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:29:36.862717+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.8s"}
+{"ts": "2026-04-06T07:29:36.879195+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072924_6cce24 (#159) done in 11.9s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:29:47.079039+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072946_b1f273 (#160): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T07:30:00.070448+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 13.0s"}
+{"ts": "2026-04-06T07:30:00.092562+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T072946_b1f273 (#160) done in 13.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:30:10.197121+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073010_b1ba54 (#161): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:30:20.326411+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.1s"}
+{"ts": "2026-04-06T07:30:20.338897+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073010_b1ba54 (#161) done in 10.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:30:30.614275+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073030_5408a2 (#162): fetched 300 markets in 0.3s"}
+{"ts": "2026-04-06T07:30:43.049423+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.4s"}
+{"ts": "2026-04-06T07:30:43.062106+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073030_5408a2 (#162) done in 12.7s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:30:53.166708+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073053_4b3750 (#163): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:31:05.167574+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.0s"}
+{"ts": "2026-04-06T07:31:05.180281+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073053_4b3750 (#163) done in 12.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:31:15.285136+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073115_2ccaf2 (#164): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:31:25.384847+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.1s"}
+{"ts": "2026-04-06T07:31:25.402346+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073115_2ccaf2 (#164) done in 10.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:31:35.510101+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073135_6975e8 (#165): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:31:48.507032+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 13.0s"}
+{"ts": "2026-04-06T07:31:48.519479+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073135_6975e8 (#165) done in 13.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:31:58.623942+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073158_5d59cd (#166): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:32:08.883565+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.3s"}
+{"ts": "2026-04-06T07:32:08.896238+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073158_5d59cd (#166) done in 10.4s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:32:19.001283+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073218_00b127 (#167): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:32:29.438172+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.4s"}
+{"ts": "2026-04-06T07:32:29.450638+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073218_00b127 (#167) done in 10.5s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:32:39.674636+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073239_6fb9e1 (#168): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T07:32:50.780323+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.1s"}
+{"ts": "2026-04-06T07:32:50.792917+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073239_6fb9e1 (#168) done in 11.3s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:33:00.924967+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073300_f4eb05 (#169): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:33:13.210688+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.3s"}
+{"ts": "2026-04-06T07:33:13.223029+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073300_f4eb05 (#169) done in 12.4s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:33:23.535593+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073323_da132f (#170): fetched 300 markets in 0.3s"}
+{"ts": "2026-04-06T07:33:33.523194+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.0s"}
+{"ts": "2026-04-06T07:33:33.537685+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073323_da132f (#170) done in 10.3s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:33:43.642581+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073343_e44300 (#171): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:33:55.660441+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.0s"}
+{"ts": "2026-04-06T07:33:55.696240+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073343_e44300 (#171) done in 12.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:34:05.898636+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073405_995fb4 (#172): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T07:34:17.447478+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.5s"}
+{"ts": "2026-04-06T07:34:17.488508+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073405_995fb4 (#172) done in 11.8s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:34:27.712789+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073427_3170a0 (#173): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T07:34:39.204757+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.5s"}
+{"ts": "2026-04-06T07:34:39.223691+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073427_3170a0 (#173) done in 11.7s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:34:49.349079+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073449_292f5e (#174): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:35:01.984577+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.6s"}
+{"ts": "2026-04-06T07:35:01.996795+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073449_292f5e (#174) done in 12.8s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:35:12.492985+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073511_6dc87c (#175): fetched 300 markets in 0.5s"}
+{"ts": "2026-04-06T07:35:25.538232+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 13.0s"}
+{"ts": "2026-04-06T07:35:25.550897+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073511_6dc87c (#175) done in 13.5s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:35:35.654487+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073535_32ac64 (#176): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:35:45.623387+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.0s"}
+{"ts": "2026-04-06T07:35:45.636621+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073535_32ac64 (#176) done in 10.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:35:55.749550+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073555_a8b6bd (#177): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:36:07.449457+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.7s"}
+{"ts": "2026-04-06T07:36:07.463302+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073555_a8b6bd (#177) done in 11.8s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:36:17.747826+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073617_d281b4 (#178): fetched 300 markets in 0.3s"}
+{"ts": "2026-04-06T07:36:29.808495+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.1s"}
+{"ts": "2026-04-06T07:36:29.820892+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073617_d281b4 (#178) done in 12.3s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:36:40.247824+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073639_1dc088 (#179): fetched 300 markets in 0.4s"}
+{"ts": "2026-04-06T07:36:50.975300+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.7s"}
+{"ts": "2026-04-06T07:36:50.987588+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073639_1dc088 (#179) done in 11.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:37:01.234446+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073700_4f7ebc (#180): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T07:37:13.357739+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.1s"}
+{"ts": "2026-04-06T07:37:13.370099+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073700_4f7ebc (#180) done in 12.4s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:37:23.573869+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073723_12523d (#181): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T07:37:35.566079+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.0s"}
+{"ts": "2026-04-06T07:37:35.577483+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073723_12523d (#181) done in 12.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:37:45.817702+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073745_b0be03 (#182): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T07:37:57.249344+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.4s"}
+{"ts": "2026-04-06T07:37:57.262579+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073745_b0be03 (#182) done in 11.7s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:38:07.394504+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073807_21679a (#183): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:38:17.435742+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.0s"}
+{"ts": "2026-04-06T07:38:17.448309+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073807_21679a (#183) done in 10.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:38:27.568050+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073827_1287be (#184): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:38:40.186544+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.6s"}
+{"ts": "2026-04-06T07:38:40.201281+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073827_1287be (#184) done in 12.7s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:38:50.330455+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073850_a4e2f7 (#185): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:39:02.791573+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.5s"}
+{"ts": "2026-04-06T07:39:02.804282+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073850_a4e2f7 (#185) done in 12.6s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:39:12.925509+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073912_e8d123 (#186): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:39:22.922036+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.0s"}
+{"ts": "2026-04-06T07:39:22.936669+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073912_e8d123 (#186) done in 10.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:39:33.297978+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073932_52eec8 (#187): fetched 300 markets in 0.4s"}
+{"ts": "2026-04-06T07:39:45.443600+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.1s"}
+{"ts": "2026-04-06T07:39:45.456277+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073932_52eec8 (#187) done in 12.5s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:39:55.670209+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073955_f7c747 (#188): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T07:40:07.004326+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.3s"}
+{"ts": "2026-04-06T07:40:07.016261+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T073955_f7c747 (#188) done in 11.5s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:40:17.121992+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074017_26f477 (#189): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:40:27.048196+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 9.9s"}
+{"ts": "2026-04-06T07:40:27.062718+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074017_26f477 (#189) done in 10.0s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:40:37.170735+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074037_db8fea (#190): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:40:49.690962+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.5s"}
+{"ts": "2026-04-06T07:40:49.716509+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074037_db8fea (#190) done in 12.6s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:40:59.939582+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074059_ca2028 (#191): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T07:41:12.268884+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.3s"}
+{"ts": "2026-04-06T07:41:12.286641+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074059_ca2028 (#191) done in 12.6s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:41:22.393278+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074122_dc8ef7 (#192): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:41:32.467727+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.1s"}
+{"ts": "2026-04-06T07:41:32.483106+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074122_dc8ef7 (#192) done in 10.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:41:42.584618+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074142_962316 (#193): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:41:55.098118+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.5s"}
+{"ts": "2026-04-06T07:41:55.110805+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074142_962316 (#193) done in 12.6s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:42:05.210967+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074205_7bdacc (#194): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:42:16.439462+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.2s"}
+{"ts": "2026-04-06T07:42:16.454965+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074205_7bdacc (#194) done in 11.3s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:42:26.711101+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074226_11ae02 (#195): fetched 300 markets in 0.3s"}
+{"ts": "2026-04-06T07:42:36.813595+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.1s"}
+{"ts": "2026-04-06T07:42:36.826175+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074226_11ae02 (#195) done in 10.4s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:42:46.963405+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074246_b17ac8 (#196): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:42:58.301953+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.3s"}
+{"ts": "2026-04-06T07:42:58.314738+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074246_b17ac8 (#196) done in 11.5s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:43:08.590905+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074308_cedf37 (#197): fetched 300 markets in 0.3s"}
+{"ts": "2026-04-06T07:43:20.917223+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.3s"}
+{"ts": "2026-04-06T07:43:20.929238+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074308_cedf37 (#197) done in 12.6s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:43:31.037338+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074330_5deb49 (#198): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:43:41.064571+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.0s"}
+{"ts": "2026-04-06T07:43:41.076781+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074330_5deb49 (#198) done in 10.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:43:51.181569+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074351_99399d (#199): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:44:03.759399+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.6s"}
+{"ts": "2026-04-06T07:44:03.774320+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074351_99399d (#199) done in 12.7s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:44:13.954069+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074413_801432 (#200): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T07:44:27.045568+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 13.1s"}
+{"ts": "2026-04-06T07:44:27.057475+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074413_801432 (#200) done in 13.3s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:44:37.164132+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074437_562db6 (#201): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:44:49.433583+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.3s"}
+{"ts": "2026-04-06T07:44:49.446062+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074437_562db6 (#201) done in 12.4s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:44:59.540601+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074459_7a199f (#202): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:45:11.858760+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.3s"}
+{"ts": "2026-04-06T07:45:11.891888+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074459_7a199f (#202) done in 12.4s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:45:22.087213+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074521_457e3f (#203): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T07:45:33.567107+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.5s"}
+{"ts": "2026-04-06T07:45:33.600680+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074521_457e3f (#203) done in 11.7s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:45:43.862841+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074543_b77c0e (#204): fetched 300 markets in 0.3s"}
+{"ts": "2026-04-06T07:45:54.961726+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.1s"}
+{"ts": "2026-04-06T07:45:54.974062+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074543_b77c0e (#204) done in 11.4s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:46:05.113099+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074604_c7c518 (#205): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:46:15.990859+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.9s"}
+{"ts": "2026-04-06T07:46:16.008260+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074604_c7c518 (#205) done in 11.0s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:46:26.226802+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074626_0fd39f (#206): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T07:46:38.637955+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.4s"}
+{"ts": "2026-04-06T07:46:38.653774+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074626_0fd39f (#206) done in 12.6s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:46:48.760283+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074648_94e511 (#207): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:46:58.699299+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 9.9s"}
+{"ts": "2026-04-06T07:46:58.712081+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074648_94e511 (#207) done in 10.0s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:47:08.827089+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074708_98624c (#208): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:47:20.706931+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.9s"}
+{"ts": "2026-04-06T07:47:20.718676+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074708_98624c (#208) done in 12.0s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:47:30.825858+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074730_aba687 (#209): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:47:43.774472+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.9s"}
+{"ts": "2026-04-06T07:47:43.785864+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074730_aba687 (#209) done in 13.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:47:53.896762+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074753_e5e916 (#210): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:48:03.910670+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.0s"}
+{"ts": "2026-04-06T07:48:03.922658+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074753_e5e916 (#210) done in 10.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:48:14.147989+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074813_afe08d (#211): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T07:48:25.111438+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.0s"}
+{"ts": "2026-04-06T07:48:25.126564+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074813_afe08d (#211) done in 11.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:48:35.375665+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074835_6d4441 (#212): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T07:48:47.832891+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.5s"}
+{"ts": "2026-04-06T07:48:47.845714+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074835_6d4441 (#212) done in 12.7s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:48:57.950822+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074857_ee0d4f (#213): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:49:08.091647+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.1s"}
+{"ts": "2026-04-06T07:49:08.107727+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074857_ee0d4f (#213) done in 10.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:49:18.204099+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074918_9501a3 (#214): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:49:30.269312+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.1s"}
+{"ts": "2026-04-06T07:49:30.284993+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074918_9501a3 (#214) done in 12.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:49:40.388236+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074940_db550e (#215): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:49:53.262738+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.9s"}
+{"ts": "2026-04-06T07:49:53.274797+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T074940_db550e (#215) done in 13.0s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:50:03.374781+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075003_4071a7 (#216): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:50:14.243373+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.9s"}
+{"ts": "2026-04-06T07:50:14.257093+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075003_4071a7 (#216) done in 11.0s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:50:24.369524+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075024_214933 (#217): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:50:35.453665+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.1s"}
+{"ts": "2026-04-06T07:50:35.465936+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075024_214933 (#217) done in 11.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:50:45.568802+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075045_60c1b3 (#218): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:50:55.635741+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.1s"}
+{"ts": "2026-04-06T07:50:55.651425+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075045_60c1b3 (#218) done in 10.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:51:05.753780+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075105_3545ad (#219): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:51:15.954963+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.2s"}
+{"ts": "2026-04-06T07:51:15.967054+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075105_3545ad (#219) done in 10.3s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:51:26.150395+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075125_9a7f51 (#220): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T07:51:38.350470+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.2s"}
+{"ts": "2026-04-06T07:51:38.361351+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075125_9a7f51 (#220) done in 12.4s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:51:48.608565+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075148_7d30fc (#221): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T07:51:58.554994+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 9.9s"}
+{"ts": "2026-04-06T07:51:58.567954+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075148_7d30fc (#221) done in 10.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:52:08.683086+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075208_93c822 (#222): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:52:18.614841+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 9.9s"}
+{"ts": "2026-04-06T07:52:18.630396+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075208_93c822 (#222) done in 10.0s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:52:28.738029+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075228_5375c3 (#223): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:52:40.775993+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.0s"}
+{"ts": "2026-04-06T07:52:40.790382+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075228_5375c3 (#223) done in 12.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:52:50.904463+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075250_5fbd27 (#224): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:53:00.826928+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 9.9s"}
+{"ts": "2026-04-06T07:53:00.842313+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075250_5fbd27 (#224) done in 10.0s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:53:10.946226+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075310_c8e2af (#225): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:53:20.975331+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.0s"}
+{"ts": "2026-04-06T07:53:20.987877+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075310_c8e2af (#225) done in 10.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:53:31.090231+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075330_b4a08d (#226): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:53:42.692578+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.6s"}
+{"ts": "2026-04-06T07:53:42.704664+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075330_b4a08d (#226) done in 11.7s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:53:52.801536+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075352_fe8c24 (#227): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:54:05.849934+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 13.0s"}
+{"ts": "2026-04-06T07:54:05.860019+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075352_fe8c24 (#227) done in 13.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:54:15.961477+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075415_9a4987 (#228): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:54:25.872856+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 9.9s"}
+{"ts": "2026-04-06T07:54:25.885926+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075415_9a4987 (#228) done in 10.0s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:54:36.187417+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075435_038dc3 (#229): fetched 300 markets in 0.3s"}
+{"ts": "2026-04-06T07:54:48.672991+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.5s"}
+{"ts": "2026-04-06T07:54:48.683797+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075435_038dc3 (#229) done in 12.8s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:54:58.793677+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075458_4e80f1 (#230): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:55:08.842023+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.0s"}
+{"ts": "2026-04-06T07:55:08.851847+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075458_4e80f1 (#230) done in 10.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:55:18.986970+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075518_3121f9 (#231): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:55:30.906082+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.9s"}
+{"ts": "2026-04-06T07:55:30.918195+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075518_3121f9 (#231) done in 12.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:55:41.024012+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075540_d0d9c5 (#232): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:55:52.690230+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.7s"}
+{"ts": "2026-04-06T07:55:52.704068+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075540_d0d9c5 (#232) done in 11.8s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:56:02.806364+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075602_d8e277 (#233): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:56:12.860827+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.1s"}
+{"ts": "2026-04-06T07:56:12.876022+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075602_d8e277 (#233) done in 10.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:56:22.986997+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075622_c095f9 (#234): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:56:33.264295+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.3s"}
+{"ts": "2026-04-06T07:56:33.276758+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075622_c095f9 (#234) done in 10.4s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:56:43.367693+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075643_1012e6 (#235): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:56:56.643832+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 13.3s"}
+{"ts": "2026-04-06T07:56:56.662536+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075643_1012e6 (#235) done in 13.4s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:57:06.771586+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075706_a7addd (#236): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:57:19.167135+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.4s"}
+{"ts": "2026-04-06T07:57:19.177857+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075706_a7addd (#236) done in 12.5s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:57:29.562608+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075729_bdee0d (#237): fetched 300 markets in 0.4s"}
+{"ts": "2026-04-06T07:57:39.607034+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.0s"}
+{"ts": "2026-04-06T07:57:39.619482+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075729_bdee0d (#237) done in 10.4s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:57:49.806643+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075749_3eace6 (#238): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T07:58:01.578034+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.8s"}
+{"ts": "2026-04-06T07:58:01.588503+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075749_3eace6 (#238) done in 12.0s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:58:11.689427+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075811_afd31d (#239): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:58:24.563515+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.9s"}
+{"ts": "2026-04-06T07:58:24.578411+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075811_afd31d (#239) done in 13.0s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:58:34.676386+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075834_0c74f4 (#240): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:58:47.058042+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.4s"}
+{"ts": "2026-04-06T07:58:47.071661+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075834_0c74f4 (#240) done in 12.5s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:58:57.172477+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075857_a0134a (#241): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:59:09.008974+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.8s"}
+{"ts": "2026-04-06T07:59:09.021166+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075857_a0134a (#241) done in 11.9s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:59:19.134707+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075919_52dcee (#242): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:59:32.401033+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 13.3s"}
+{"ts": "2026-04-06T07:59:32.413245+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075919_52dcee (#242) done in 13.4s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T07:59:42.506091+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075942_6c6352 (#243): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T07:59:52.441674+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 9.9s"}
+{"ts": "2026-04-06T07:59:52.456813+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T075942_6c6352 (#243) done in 10.0s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:00:02.559820+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080002_c554f7 (#244): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T08:00:13.656309+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.1s"}
+{"ts": "2026-04-06T08:00:13.669312+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080002_c554f7 (#244) done in 11.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:00:23.774981+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080023_a74878 (#245): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T08:00:33.764325+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.0s"}
+{"ts": "2026-04-06T08:00:33.776434+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080023_a74878 (#245) done in 10.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:00:44.057945+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080043_71dfc4 (#246): fetched 300 markets in 0.3s"}
+{"ts": "2026-04-06T08:00:54.133568+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.1s"}
+{"ts": "2026-04-06T08:00:54.145009+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080043_71dfc4 (#246) done in 10.4s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:01:04.253949+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080104_b03be4 (#247): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T08:01:18.711780+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 14.5s"}
+{"ts": "2026-04-06T08:01:18.724096+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080104_b03be4 (#247) done in 14.6s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:01:28.823196+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080128_c3c452 (#248): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T08:01:38.905220+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.1s"}
+{"ts": "2026-04-06T08:01:38.916729+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080128_c3c452 (#248) done in 10.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:01:49.015030+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080148_25541f (#249): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T08:01:59.131686+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.1s"}
+{"ts": "2026-04-06T08:01:59.148967+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080148_25541f (#249) done in 10.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:02:09.366893+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080209_9f39aa (#250): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T08:02:21.172103+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.8s"}
+{"ts": "2026-04-06T08:02:21.183745+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080209_9f39aa (#250) done in 12.0s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:02:31.293203+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080231_ad9eb2 (#251): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T08:02:41.572526+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.3s"}
+{"ts": "2026-04-06T08:02:41.587353+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080231_ad9eb2 (#251) done in 10.4s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:02:51.686317+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080251_7f822b (#252): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T08:03:03.079646+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.4s"}
+{"ts": "2026-04-06T08:03:03.091977+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080251_7f822b (#252) done in 11.5s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:03:13.191817+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080313_463743 (#253): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T08:03:25.697468+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.5s"}
+{"ts": "2026-04-06T08:03:25.707031+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080313_463743 (#253) done in 12.6s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:03:35.976746+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080335_bc5063 (#254): fetched 300 markets in 0.3s"}
+{"ts": "2026-04-06T08:03:46.152963+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.2s"}
+{"ts": "2026-04-06T08:03:46.165582+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080335_bc5063 (#254) done in 10.4s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:03:56.277843+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080356_9aa1c7 (#255): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T08:04:06.311555+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.0s"}
+{"ts": "2026-04-06T08:04:06.323583+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080356_9aa1c7 (#255) done in 10.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:04:16.481565+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080416_685f79 (#256): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T08:04:27.610141+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.1s"}
+{"ts": "2026-04-06T08:04:27.621150+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080416_685f79 (#256) done in 11.3s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:04:37.717203+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080437_d90137 (#257): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T08:04:47.720708+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.0s"}
+{"ts": "2026-04-06T08:04:47.732862+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080437_d90137 (#257) done in 10.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:04:57.842656+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080457_475ce0 (#258): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T08:05:07.873869+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.0s"}
+{"ts": "2026-04-06T08:05:07.884830+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080457_475ce0 (#258) done in 10.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:05:17.988753+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080517_313531 (#259): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T08:05:31.065256+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 13.1s"}
+{"ts": "2026-04-06T08:05:31.079416+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080517_313531 (#259) done in 13.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:05:41.182671+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080541_93bbe3 (#260): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T08:05:51.218928+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.0s"}
+{"ts": "2026-04-06T08:05:51.235126+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080541_93bbe3 (#260) done in 10.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:06:01.338732+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080601_ac2d2e (#261): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T08:06:11.320163+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.0s"}
+{"ts": "2026-04-06T08:06:11.332732+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080601_ac2d2e (#261) done in 10.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:06:21.485578+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080621_abac24 (#262): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T08:06:33.661688+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.2s"}
+{"ts": "2026-04-06T08:06:33.672736+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080621_abac24 (#262) done in 12.3s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:06:44.068468+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080643_933c60 (#263): fetched 300 markets in 0.4s"}
+{"ts": "2026-04-06T08:06:54.046872+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.0s"}
+{"ts": "2026-04-06T08:06:54.057947+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080643_933c60 (#263) done in 10.4s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:07:04.167540+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080704_8d0fea (#264): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T08:07:14.110347+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 9.9s"}
+{"ts": "2026-04-06T08:07:14.122685+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080704_8d0fea (#264) done in 10.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:07:24.261719+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080724_497069 (#265): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T08:07:36.238961+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.0s"}
+{"ts": "2026-04-06T08:07:36.251614+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080724_497069 (#265) done in 12.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:07:46.358025+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080746_3add31 (#266): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T08:07:57.793602+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.4s"}
+{"ts": "2026-04-06T08:07:57.806476+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080746_3add31 (#266) done in 11.5s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:08:07.904131+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080807_3e2410 (#267): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T08:08:19.286644+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.4s"}
+{"ts": "2026-04-06T08:08:19.299570+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080807_3e2410 (#267) done in 11.5s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:08:29.462983+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080829_8f4105 (#268): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T08:08:42.563009+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 13.1s"}
+{"ts": "2026-04-06T08:08:42.578260+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080829_8f4105 (#268) done in 13.3s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:08:52.678090+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080852_cc7fa6 (#269): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T08:09:02.771841+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.1s"}
+{"ts": "2026-04-06T08:09:02.788296+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080852_cc7fa6 (#269) done in 10.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:09:12.923651+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080912_02307b (#270): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T08:09:24.732992+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.8s"}
+{"ts": "2026-04-06T08:09:24.745406+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080912_02307b (#270) done in 11.9s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:09:35.005043+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080934_70e63a (#271): fetched 300 markets in 0.3s"}
+{"ts": "2026-04-06T08:09:48.364134+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 13.4s"}
+{"ts": "2026-04-06T08:09:48.399758+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080934_70e63a (#271) done in 13.6s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:09:58.533426+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080958_3c669a (#272): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T08:10:09.625464+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.1s"}
+{"ts": "2026-04-06T08:10:09.654667+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T080958_3c669a (#272) done in 11.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:10:19.764222+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081019_6d4ba8 (#273): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T08:10:32.151804+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.4s"}
+{"ts": "2026-04-06T08:10:32.181451+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081019_6d4ba8 (#273) done in 12.5s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:10:42.288704+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081042_597ecb (#274): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T08:10:54.961956+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.7s"}
+{"ts": "2026-04-06T08:10:54.972688+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081042_597ecb (#274) done in 12.8s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:11:07.673039+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081104_fb9340 (#275): fetched 300 markets in 2.7s"}
+{"ts": "2026-04-06T08:11:17.700292+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.0s"}
+{"ts": "2026-04-06T08:11:17.712728+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081104_fb9340 (#275) done in 12.7s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:11:27.888331+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081127_b7fce2 (#276): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T08:11:38.681620+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.8s"}
+{"ts": "2026-04-06T08:11:38.693492+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081127_b7fce2 (#276) done in 11.0s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:11:48.800871+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081148_1d8f2c (#277): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T08:12:01.938207+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 13.1s"}
+{"ts": "2026-04-06T08:12:01.955637+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081148_1d8f2c (#277) done in 13.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:12:12.090223+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081211_6bb43e (#278): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T08:12:22.073518+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.0s"}
+{"ts": "2026-04-06T08:12:22.086988+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081211_6bb43e (#278) done in 10.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:12:32.352876+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081232_e0e8ea (#279): fetched 300 markets in 0.3s"}
+{"ts": "2026-04-06T08:12:43.967262+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.6s"}
+{"ts": "2026-04-06T08:12:43.979595+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081232_e0e8ea (#279) done in 11.9s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:12:54.087529+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081253_b95d66 (#280): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T08:13:07.156071+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 13.1s"}
+{"ts": "2026-04-06T08:13:07.168562+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081253_b95d66 (#280) done in 13.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:13:17.262124+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081317_9941b8 (#281): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T08:13:27.295464+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.0s"}
+{"ts": "2026-04-06T08:13:27.308297+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081317_9941b8 (#281) done in 10.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:13:37.526508+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081337_33b112 (#282): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T08:13:49.883612+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.4s"}
+{"ts": "2026-04-06T08:13:49.896872+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081337_33b112 (#282) done in 12.6s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:14:00.060580+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081359_c4a890 (#283): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T08:14:13.184722+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 13.1s"}
+{"ts": "2026-04-06T08:14:13.201417+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081359_c4a890 (#283) done in 13.3s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:14:23.305304+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081423_87f9d3 (#284): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T08:14:33.564246+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.3s"}
+{"ts": "2026-04-06T08:14:33.576598+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081423_87f9d3 (#284) done in 10.4s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:14:43.671436+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081443_1ca6a5 (#285): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T08:14:54.872481+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.2s"}
+{"ts": "2026-04-06T08:14:54.886218+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081443_1ca6a5 (#285) done in 11.3s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:15:04.994699+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081504_28da2d (#286): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T08:15:17.704800+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.7s"}
+{"ts": "2026-04-06T08:15:17.716842+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081504_28da2d (#286) done in 12.8s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:15:27.820078+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081527_506d5e (#287): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T08:15:37.939867+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.1s"}
+{"ts": "2026-04-06T08:15:37.952255+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081527_506d5e (#287) done in 10.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:15:48.067187+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081547_91b0c0 (#288): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T08:15:58.647526+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.6s"}
+{"ts": "2026-04-06T08:15:58.659711+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081547_91b0c0 (#288) done in 10.7s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:16:08.757672+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081608_d4330e (#289): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T08:16:21.349227+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.6s"}
+{"ts": "2026-04-06T08:16:21.361215+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081608_d4330e (#289) done in 12.7s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:16:31.467688+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081631_2d8a6a (#290): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T08:16:41.599555+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.1s"}
+{"ts": "2026-04-06T08:16:41.611928+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081631_2d8a6a (#290) done in 10.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:16:51.708346+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081651_2bbde7 (#291): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T08:17:01.694991+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.0s"}
+{"ts": "2026-04-06T08:17:01.707645+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081651_2bbde7 (#291) done in 10.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:17:11.800620+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081711_ed16c4 (#292): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T08:17:23.802637+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.0s"}
+{"ts": "2026-04-06T08:17:23.815873+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081711_ed16c4 (#292) done in 12.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:17:33.915722+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081733_9738fb (#293): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T08:17:43.897409+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.0s"}
+{"ts": "2026-04-06T08:17:43.922128+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081733_9738fb (#293) done in 10.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:17:54.092755+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081753_71dcb2 (#294): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T08:18:05.211095+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.1s"}
+{"ts": "2026-04-06T08:18:05.246911+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081753_71dcb2 (#294) done in 11.3s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:18:15.404156+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081815_bcd636 (#295): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T08:18:28.026838+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.6s"}
+{"ts": "2026-04-06T08:18:28.047357+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081815_bcd636 (#295) done in 12.8s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:18:38.317102+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081838_95e9b3 (#296): fetched 300 markets in 0.3s"}
+{"ts": "2026-04-06T08:18:48.406654+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.1s"}
+{"ts": "2026-04-06T08:18:48.421321+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081838_95e9b3 (#296) done in 10.4s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:18:58.517137+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081858_ec6555 (#297): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T08:19:08.516500+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.0s"}
+{"ts": "2026-04-06T08:19:08.527897+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081858_ec6555 (#297) done in 10.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:19:18.721821+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081918_937cac (#298): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T08:19:31.085435+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.4s"}
+{"ts": "2026-04-06T08:19:31.098263+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081918_937cac (#298) done in 12.6s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:19:41.194963+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081941_80a353 (#299): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T08:19:51.640829+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.4s"}
+{"ts": "2026-04-06T08:19:51.653459+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T081941_80a353 (#299) done in 10.5s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:20:02.003515+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T082001_275f91 (#300): fetched 300 markets in 0.3s"}
+{"ts": "2026-04-06T08:20:12.224993+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.2s"}
+{"ts": "2026-04-06T08:20:12.239835+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T082001_275f91 (#300) done in 10.6s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:20:22.381992+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T082022_28dc7f (#301): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T08:20:34.921740+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.5s"}
+{"ts": "2026-04-06T08:20:34.933745+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T082022_28dc7f (#301) done in 12.7s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:20:45.051118+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T082044_5aea3e (#302): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T08:20:56.193815+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.1s"}
+{"ts": "2026-04-06T08:20:56.208277+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T082044_5aea3e (#302) done in 11.3s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:21:06.340565+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T082106_e49f82 (#303): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T08:21:17.348447+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.0s"}
+{"ts": "2026-04-06T08:21:17.391067+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T082106_e49f82 (#303) done in 11.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:21:27.494207+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T082127_670139 (#304): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T08:21:39.836751+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.3s"}
+{"ts": "2026-04-06T08:21:39.849104+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T082127_670139 (#304) done in 12.4s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:21:50.112747+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T082149_ad786f (#305): fetched 300 markets in 0.3s"}
+{"ts": "2026-04-06T08:22:00.144893+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.0s"}
+{"ts": "2026-04-06T08:22:00.185074+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T082149_ad786f (#305) done in 10.3s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:22:10.308672+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T082210_270d33 (#306): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T08:22:20.272214+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.0s"}
+{"ts": "2026-04-06T08:22:20.300203+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T082210_270d33 (#306) done in 10.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:22:30.412384+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T082230_23dc9b (#307): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T08:22:41.928792+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.5s"}
+{"ts": "2026-04-06T08:22:41.956997+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T082230_23dc9b (#307) done in 11.6s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:22:52.061635+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T082251_882b73 (#308): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T08:23:02.062198+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.0s"}
+{"ts": "2026-04-06T08:23:02.091166+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T082251_882b73 (#308) done in 10.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:23:12.191351+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T082312_b5fd5d (#309): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T08:23:23.851229+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 11.7s"}
+{"ts": "2026-04-06T08:23:23.881936+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T082312_b5fd5d (#309) done in 11.8s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:23:33.988471+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T082333_5706a5 (#310): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T08:23:46.806043+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.8s"}
+{"ts": "2026-04-06T08:23:46.847042+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T082333_5706a5 (#310) done in 12.9s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:23:57.006322+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T082356_7714c1 (#311): fetched 300 markets in 0.2s"}
+{"ts": "2026-04-06T08:24:09.232726+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 12.2s"}
+{"ts": "2026-04-06T08:24:09.262901+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T082356_7714c1 (#311) done in 12.4s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:24:19.358105+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T082419_0c5400 (#312): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T08:24:29.482885+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.1s"}
+{"ts": "2026-04-06T08:24:29.494973+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T082419_0c5400 (#312) done in 10.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:24:39.769834+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T082439_04d202 (#313): fetched 300 markets in 0.3s"}
+{"ts": "2026-04-06T08:24:52.741548+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 13.0s"}
+{"ts": "2026-04-06T08:24:52.758065+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T082439_04d202 (#313) done in 13.2s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
+{"ts": "2026-04-06T08:25:02.869292+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T082502_83078a (#314): fetched 300 markets in 0.1s"}
+{"ts": "2026-04-06T08:25:12.835565+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "scan: 0 signals found in 10.0s"}
+{"ts": "2026-04-06T08:25:12.848411+00:00", "level": "INFO", "logger": "event_trader.runtime", "msg": "cycle ev_20260406T082502_83078a (#314) done in 10.1s: scanned=300 signals=0 entries=0 exits=0 open=0 unrealized=$0.0000 realized=$0.0000"}
