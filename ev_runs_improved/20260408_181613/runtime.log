@@ -1,0 +1,279 @@
+2026-04-08 18:16:13,751 [INFO] event_trader_improved.runtime: Event Trader (IMPROVED) started | mode=dry_run kelly=True min_edge=1.0%
+2026-04-08 18:16:13,752 [INFO] event_trader_improved.runtime: === Cycle ev_20260408T181613_d6fddd (#1) ===
+2026-04-08 18:16:15,197 [INFO] event_trader.data_client: fetched 600 markets across 7 pages
+2026-04-08 18:16:15,197 [INFO] event_trader_improved.runtime: Fetched 600 markets
+2026-04-08 18:16:15,199 [INFO] event_trader_improved.scanner: Scan stats: scanned=600 signals=239 skipped_active=0 skipped_volume=17 skipped_price=277 skipped_edge=0
+2026-04-08 18:16:15,199 [INFO] event_trader_improved.runtime: Found 239 signals
+2026-04-08 18:16:15,199 [INFO] event_trader_improved.runtime: Signal #1: Yes @ $0.011 (edge=48.9%)
+2026-04-08 18:16:15,199 [INFO] event_trader_improved.runtime: Signal #2: Yes @ $0.011 (edge=48.9%)
+2026-04-08 18:16:15,200 [INFO] event_trader_improved.runtime: Signal #3: Yes @ $0.011 (edge=48.9%)
+2026-04-08 18:16:15,200 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:17,585 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:17,586 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:17,595 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:17,595 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:17,605 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:17,605 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:17,615 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:17,615 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:17,716 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:17,716 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:17,731 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:17,731 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:17,740 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:17,740 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:17,749 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:17,750 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:17,759 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:17,760 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:17,769 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:17,769 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:17,778 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:17,779 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:17,788 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:17,788 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:17,806 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:17,806 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:17,815 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:17,815 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.67 (edge=48.9%)
+2026-04-08 18:16:17,824 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:17,824 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.67 (edge=48.9%)
+2026-04-08 18:16:17,833 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:17,834 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.67 (edge=48.9%)
+2026-04-08 18:16:17,850 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:17,851 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.67 (edge=48.9%)
+2026-04-08 18:16:17,860 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:17,860 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.67 (edge=48.9%)
+2026-04-08 18:16:17,870 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:17,870 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.67 (edge=48.9%)
+2026-04-08 18:16:17,880 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:17,880 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.67 (edge=48.9%)
+2026-04-08 18:16:17,921 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:17,922 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.67 (edge=48.9%)
+2026-04-08 18:16:17,957 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:17,957 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.64 (edge=48.9%)
+2026-04-08 18:16:17,982 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:17,982 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.64 (edge=48.9%)
+2026-04-08 18:16:18,002 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:18,002 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.64 (edge=48.9%)
+2026-04-08 18:16:18,055 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:18,056 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.64 (edge=48.9%)
+2026-04-08 18:16:18,075 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:18,076 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.64 (edge=48.9%)
+2026-04-08 18:16:18,119 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:18,119 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.64 (edge=48.9%)
+2026-04-08 18:16:18,136 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:18,136 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.64 (edge=48.9%)
+2026-04-08 18:16:18,146 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:18,146 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.64 (edge=48.9%)
+2026-04-08 18:16:18,155 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:18,165 [INFO] event_trader_improved.runtime: Cycle complete: scanned=600 signals=239 executed=30
+2026-04-08 18:16:23,165 [INFO] event_trader_improved.runtime: === Cycle ev_20260408T181623_d6fde7 (#2) ===
+2026-04-08 18:16:23,626 [INFO] event_trader.data_client: fetched 600 markets across 7 pages
+2026-04-08 18:16:23,627 [INFO] event_trader_improved.runtime: Fetched 600 markets
+2026-04-08 18:16:23,628 [INFO] event_trader_improved.scanner: Scan stats: scanned=600 signals=239 skipped_active=0 skipped_volume=17 skipped_price=277 skipped_edge=0
+2026-04-08 18:16:23,628 [INFO] event_trader_improved.runtime: Found 239 signals
+2026-04-08 18:16:23,628 [INFO] event_trader_improved.runtime: Signal #1: Yes @ $0.011 (edge=48.9%)
+2026-04-08 18:16:23,629 [INFO] event_trader_improved.runtime: Signal #2: Yes @ $0.011 (edge=48.9%)
+2026-04-08 18:16:23,629 [INFO] event_trader_improved.runtime: Signal #3: Yes @ $0.011 (edge=48.9%)
+2026-04-08 18:16:23,629 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:23,643 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:23,643 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:23,680 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:23,680 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:23,696 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:23,696 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:23,710 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:23,710 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:23,721 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:23,722 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:23,771 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:23,771 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:23,781 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:23,781 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:23,790 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:23,790 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:23,800 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:23,800 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:23,819 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:23,820 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:23,834 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:23,834 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:23,846 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:23,846 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:23,871 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:23,871 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:23,880 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:23,880 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.67 (edge=48.9%)
+2026-04-08 18:16:23,898 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:23,899 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.67 (edge=48.9%)
+2026-04-08 18:16:23,913 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:23,913 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.67 (edge=48.9%)
+2026-04-08 18:16:23,923 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:23,923 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.67 (edge=48.9%)
+2026-04-08 18:16:23,936 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:23,936 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.67 (edge=48.9%)
+2026-04-08 18:16:23,966 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:23,966 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.67 (edge=48.9%)
+2026-04-08 18:16:23,981 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:23,981 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.67 (edge=48.9%)
+2026-04-08 18:16:24,008 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:24,008 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.67 (edge=48.9%)
+2026-04-08 18:16:24,026 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:24,026 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.64 (edge=48.9%)
+2026-04-08 18:16:24,036 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:24,036 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.64 (edge=48.9%)
+2026-04-08 18:16:24,063 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:24,063 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.64 (edge=48.9%)
+2026-04-08 18:16:24,082 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:24,082 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.64 (edge=48.9%)
+2026-04-08 18:16:24,107 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:24,107 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.64 (edge=48.9%)
+2026-04-08 18:16:24,115 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:24,116 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.64 (edge=48.9%)
+2026-04-08 18:16:24,125 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:24,125 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.64 (edge=48.9%)
+2026-04-08 18:16:24,135 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:24,135 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.64 (edge=48.9%)
+2026-04-08 18:16:24,149 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:24,160 [INFO] event_trader_improved.runtime: Cycle complete: scanned=600 signals=239 executed=30
+2026-04-08 18:16:29,160 [INFO] event_trader_improved.runtime: === Cycle ev_20260408T181629_d6fded (#3) ===
+2026-04-08 18:16:29,839 [INFO] event_trader.data_client: fetched 600 markets across 7 pages
+2026-04-08 18:16:29,839 [INFO] event_trader_improved.runtime: Fetched 600 markets
+2026-04-08 18:16:29,841 [INFO] event_trader_improved.scanner: Scan stats: scanned=600 signals=239 skipped_active=0 skipped_volume=17 skipped_price=277 skipped_edge=0
+2026-04-08 18:16:29,841 [INFO] event_trader_improved.runtime: Found 239 signals
+2026-04-08 18:16:29,841 [INFO] event_trader_improved.runtime: Signal #1: Yes @ $0.011 (edge=48.9%)
+2026-04-08 18:16:29,841 [INFO] event_trader_improved.runtime: Signal #2: Yes @ $0.011 (edge=48.9%)
+2026-04-08 18:16:29,841 [INFO] event_trader_improved.runtime: Signal #3: Yes @ $0.011 (edge=48.9%)
+2026-04-08 18:16:29,842 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:29,879 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:29,879 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:29,898 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:29,898 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:29,906 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:29,907 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:29,916 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:29,916 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:29,925 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:29,926 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:29,942 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:29,942 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:29,985 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:29,986 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:29,994 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:29,995 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:30,021 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:30,021 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:30,059 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:30,059 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:30,078 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:30,078 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:30,086 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:30,086 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:30,104 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:30,104 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:30,119 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:30,119 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.67 (edge=48.9%)
+2026-04-08 18:16:30,128 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:30,128 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.67 (edge=48.9%)
+2026-04-08 18:16:30,140 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:30,140 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.67 (edge=48.9%)
+2026-04-08 18:16:30,152 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:30,153 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.67 (edge=48.9%)
+2026-04-08 18:16:30,163 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:30,163 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.67 (edge=48.9%)
+2026-04-08 18:16:30,189 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:30,189 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.67 (edge=48.9%)
+2026-04-08 18:16:30,209 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:30,209 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.67 (edge=48.9%)
+2026-04-08 18:16:30,241 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:30,241 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.67 (edge=48.9%)
+2026-04-08 18:16:30,254 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:30,254 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.64 (edge=48.9%)
+2026-04-08 18:16:30,296 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:30,297 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.64 (edge=48.9%)
+2026-04-08 18:16:30,310 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:30,311 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.64 (edge=48.9%)
+2026-04-08 18:16:30,323 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:30,323 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.64 (edge=48.9%)
+2026-04-08 18:16:30,347 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:30,347 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.64 (edge=48.9%)
+2026-04-08 18:16:30,357 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:30,357 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.64 (edge=48.9%)
+2026-04-08 18:16:30,366 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:30,366 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.64 (edge=48.9%)
+2026-04-08 18:16:30,376 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:30,377 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.64 (edge=48.9%)
+2026-04-08 18:16:30,389 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:30,434 [INFO] event_trader_improved.runtime: Cycle complete: scanned=600 signals=239 executed=30
+2026-04-08 18:16:35,435 [INFO] event_trader_improved.runtime: === Cycle ev_20260408T181635_d6fdf3 (#4) ===
+2026-04-08 18:16:36,116 [INFO] event_trader.data_client: fetched 600 markets across 7 pages
+2026-04-08 18:16:36,116 [INFO] event_trader_improved.runtime: Fetched 600 markets
+2026-04-08 18:16:36,117 [INFO] event_trader_improved.scanner: Scan stats: scanned=600 signals=239 skipped_active=0 skipped_volume=17 skipped_price=277 skipped_edge=0
+2026-04-08 18:16:36,117 [INFO] event_trader_improved.runtime: Found 239 signals
+2026-04-08 18:16:36,118 [INFO] event_trader_improved.runtime: Signal #1: Yes @ $0.011 (edge=48.9%)
+2026-04-08 18:16:36,118 [INFO] event_trader_improved.runtime: Signal #2: Yes @ $0.011 (edge=48.9%)
+2026-04-08 18:16:36,118 [INFO] event_trader_improved.runtime: Signal #3: Yes @ $0.011 (edge=48.9%)
+2026-04-08 18:16:36,118 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:36,162 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:36,162 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:36,176 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:36,176 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:36,187 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:36,187 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:36,196 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:36,196 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:36,211 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:36,211 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:36,220 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:36,220 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:36,233 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:36,234 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:36,259 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:36,259 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:36,267 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:36,267 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:36,275 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:36,275 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:36,303 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:36,304 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:36,311 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:36,312 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:36,320 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:36,320 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:36,355 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:36,355 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.67 (edge=48.9%)
+2026-04-08 18:16:36,366 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:36,367 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.67 (edge=48.9%)
+2026-04-08 18:16:36,375 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:36,375 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.67 (edge=48.9%)
+2026-04-08 18:16:36,388 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:36,389 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.67 (edge=48.9%)
+2026-04-08 18:16:36,397 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:36,397 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.67 (edge=48.9%)
+2026-04-08 18:16:36,406 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:36,406 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.67 (edge=48.9%)
+2026-04-08 18:16:36,434 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:36,435 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.67 (edge=48.9%)
+2026-04-08 18:16:36,468 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:36,468 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.67 (edge=48.9%)
+2026-04-08 18:16:36,479 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:36,480 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.64 (edge=48.9%)
+2026-04-08 18:16:36,488 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:36,488 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.64 (edge=48.9%)
+2026-04-08 18:16:36,497 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:36,497 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.64 (edge=48.9%)
+2026-04-08 18:16:36,505 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:36,505 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.64 (edge=48.9%)
+2026-04-08 18:16:36,513 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:36,513 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.64 (edge=48.9%)
+2026-04-08 18:16:36,525 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:36,525 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.64 (edge=48.9%)
+2026-04-08 18:16:36,567 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:36,567 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.64 (edge=48.9%)
+2026-04-08 18:16:36,575 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:36,575 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.64 (edge=48.9%)
+2026-04-08 18:16:36,592 [WARNING] event_trader_improved.state_wrapper: Failed to record position: name 'datetime' is not defined
+2026-04-08 18:16:36,605 [INFO] event_trader_improved.runtime: Cycle complete: scanned=600 signals=239 executed=30
+2026-04-08 18:16:37,389 [INFO] event_trader_improved.runtime: Interrupted after 4 cycles
+2026-04-08 18:16:40,043 [INFO] event_trader_improved.runtime: Event Trader (IMPROVED) stopped

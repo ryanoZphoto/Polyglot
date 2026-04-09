@@ -1,0 +1,66 @@
+2026-04-08 18:16:50,155 [INFO] event_trader_improved.runtime: Event Trader (IMPROVED) started | mode=dry_run kelly=True min_edge=1.0%
+2026-04-08 18:16:50,156 [INFO] event_trader_improved.runtime: === Cycle ev_20260408T181650_d6fe02 (#1) ===
+2026-04-08 18:16:51,039 [INFO] event_trader.data_client: fetched 600 markets across 7 pages
+2026-04-08 18:16:51,039 [INFO] event_trader_improved.runtime: Fetched 600 markets
+2026-04-08 18:16:51,040 [INFO] event_trader_improved.scanner: Scan stats: scanned=600 signals=239 skipped_active=0 skipped_volume=17 skipped_price=277 skipped_edge=0
+2026-04-08 18:16:51,041 [INFO] event_trader_improved.runtime: Found 239 signals
+2026-04-08 18:16:51,041 [INFO] event_trader_improved.runtime: Signal #1: Yes @ $0.011 (edge=48.9%)
+2026-04-08 18:16:51,041 [INFO] event_trader_improved.runtime: Signal #2: Yes @ $0.011 (edge=48.9%)
+2026-04-08 18:16:51,041 [INFO] event_trader_improved.runtime: Signal #3: Yes @ $0.011 (edge=48.9%)
+2026-04-08 18:16:51,041 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:51,069 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:51,161 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:51,203 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:51,228 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:51,245 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:51,290 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:51,313 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:51,333 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:51,384 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:51,402 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:51,423 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:51,473 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:51,492 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:51,514 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.67 (edge=48.9%)
+2026-04-08 18:16:51,533 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.67 (edge=48.9%)
+2026-04-08 18:16:51,551 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.67 (edge=48.9%)
+2026-04-08 18:16:51,583 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.67 (edge=48.9%)
+2026-04-08 18:16:51,605 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.67 (edge=48.9%)
+2026-04-08 18:16:51,627 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.67 (edge=48.9%)
+2026-04-08 18:16:51,648 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.67 (edge=48.9%)
+2026-04-08 18:16:51,695 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.67 (edge=48.9%)
+2026-04-08 18:16:51,727 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.64 (edge=48.9%)
+2026-04-08 18:16:51,779 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.64 (edge=48.9%)
+2026-04-08 18:16:51,797 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.64 (edge=48.9%)
+2026-04-08 18:16:51,847 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.64 (edge=48.9%)
+2026-04-08 18:16:51,909 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.64 (edge=48.9%)
+2026-04-08 18:16:51,932 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.64 (edge=48.9%)
+2026-04-08 18:16:51,958 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.64 (edge=48.9%)
+2026-04-08 18:16:51,997 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.64 (edge=48.9%)
+2026-04-08 18:16:52,050 [INFO] event_trader_improved.runtime: Cycle complete: scanned=600 signals=239 executed=30
+2026-04-08 18:16:57,050 [INFO] event_trader_improved.runtime: === Cycle ev_20260408T181657_d6fe09 (#2) ===
+2026-04-08 18:16:57,573 [INFO] event_trader.data_client: fetched 600 markets across 7 pages
+2026-04-08 18:16:57,574 [INFO] event_trader_improved.runtime: Fetched 600 markets
+2026-04-08 18:16:57,575 [INFO] event_trader_improved.scanner: Scan stats: scanned=600 signals=239 skipped_active=0 skipped_volume=17 skipped_price=277 skipped_edge=0
+2026-04-08 18:16:57,575 [INFO] event_trader_improved.runtime: Found 239 signals
+2026-04-08 18:16:57,575 [INFO] event_trader_improved.runtime: Signal #1: Yes @ $0.011 (edge=48.9%)
+2026-04-08 18:16:57,576 [INFO] event_trader_improved.runtime: Signal #2: Yes @ $0.011 (edge=48.9%)
+2026-04-08 18:16:57,576 [INFO] event_trader_improved.runtime: Signal #3: Yes @ $0.011 (edge=48.9%)
+2026-04-08 18:16:57,576 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:59,683 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:59,728 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:59,797 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:59,817 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:59,838 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:59,876 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:59,898 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:59,920 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:59,966 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:16:59,989 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:17:00,007 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:17:00,024 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:17:00,058 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.71 (edge=48.9%)
+2026-04-08 18:17:00,078 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.67 (edge=48.9%)
+2026-04-08 18:17:00,096 [INFO] event_trader_improved.runtime: DRY-RUN: Would buy Yes @ $0.011 for $36.67 (edge=48.9%)
+2026-04-08 18:17:00,104 [INFO] event_trader_improved.runtime: Interrupted after 2 cycles
+2026-04-08 18:17:00,106 [INFO] event_trader_improved.runtime: Event Trader (IMPROVED) stopped

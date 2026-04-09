@@ -1,231 +1,214 @@
-"""
-Enhanced scanner with edge calculation and market quality filters.
-"""
+"""Improved scanner with better signal detection."""
 
 import logging
-from concurrent.futures import ThreadPoolExecutor, as_completed
-from typing import Literal
-
-from event_trader_improved.config import EVConfig
-from event_trader.data_client import EVDataClient
-from event_trader.state import EVStateStore
-from event_trader.types import OrderBook, ParsedMarket, Signal
+from dataclasses import dataclass
 
 logger = logging.getLogger(__name__)
 
 
-class EVScanner:
-    def __init__(self, config: EVConfig, client: EVDataClient, state: EVStateStore):
-        self.config = config
-        self.client = client
-        self.state = state
+@dataclass
+class Signal:
+    market_id: str
+    token_id: str
+    outcome: str
+    question: str
+    price: float
+    edge: float
+    spread_pct: float
+    volume_24h: float
+    strategy: str = "SINGLE"
+    target_price: float = 0.0
+    stop_loss_price: float = 0.0
+    size_usd: float = 0.0
 
-    def scan(self, markets: list[ParsedMarket]) -> list[Signal]:
+
+class Scanner:
+    def __init__(self, config):
+        self.config = config
+        self.max_entry_price = config.max_entry_price
+        self.min_edge = config.min_edge
+        self.max_spread_pct = config.max_spread_pct
+        self.min_volume_24h = config.min_volume_24h
+    
+    def scan(self, markets: list) -> list[Signal]:
         """
-        Scan markets and generate signals with edge calculation.
-        
-        Fetches order books and evaluates each token (outcome).
+        Scan markets for the 'Primal Sweet Spot':
+        1. Arbitrage (Zero-risk mathematically)
+        2. Momentum (Value + Velocity)
         """
         signals = []
+        eligible_markets = []
+        skipped_active = 0
+        skipped_volume = 0
         
-        # Filter markets first
-        candidates = []
+        # 1. First Pass: Metadata Extraction & Basic Filtering
         for mkt in markets:
-            if not mkt.active or mkt.closed or not mkt.accepting_orders:
-                continue
-            if not mkt.enable_orderbook:
-                continue
-            if mkt.liquidity < self.config.min_liquidity:
-                continue
-            if mkt.volume < self.config.min_volume:
-                continue
-            candidates.append(mkt)
-        
-        logger.info(f"filtered to {len(candidates)} candidate markets from {len(markets)}")
-        
-        # Fetch order books in parallel
-        books_by_token = {}
-        with ThreadPoolExecutor(max_workers=self.config.max_workers) as executor:
-            futures = {}
-            for mkt in candidates:
-                for token_id in mkt.token_ids:
-                    fut = executor.submit(self.client.fetch_order_book, token_id)
-                    futures[fut] = (mkt, token_id)
-            
-            for fut in as_completed(futures):
-                mkt, token_id = futures[fut]
-                try:
-                    book = fut.result()
-                    if book:
-                        books_by_token[token_id] = (mkt, book)
-                except Exception as e:
-                    logger.warning(f"failed to fetch book for {token_id}: {e}")
-        
-        logger.info(f"fetched {len(books_by_token)} order books")
-        
-        # Evaluate each token
-        for token_id, (mkt, book) in books_by_token.items():
-            # Skip if already have position
-            if self.state.has_position_for_token(token_id):
-                continue
-            
-            # Get best ask price
-            if not book.asks or len(book.asks) == 0:
-                continue
-            
-            best_ask = float(book.asks[0]["price"])
-            ask_size = float(book.asks[0]["size"])
-            
-            # Price filters
-            if best_ask > self.config.max_entry_price:
-                continue
-            if best_ask < self.config.min_entry_price:
-                continue
-            
-            # Market quality filters
-            if not self._check_market_quality(book, best_ask):
-                continue
-            
-            # Calculate edge
-            edge = self._calculate_edge(best_ask)
-            if edge < self.config.min_edge:
-                continue
-            
-            # Classify tier
-            tier = self._classify_tier(best_ask)
-            
-            # Calculate position size
-            size_usd = self._calculate_position_size(best_ask, edge, tier)
-            shares = min(
-                size_usd / best_ask,
-                self.config.max_contracts_per_entry,
-                ask_size * 0.8  # Don't take full book depth
-            )
-            
-            # Get outcome name
-            idx = mkt.token_ids.index(token_id)
-            outcome = mkt.outcomes[idx] if idx < len(mkt.outcomes) else f"Outcome {idx}"
-            
-            # Create signal
-            signal = Signal(
-                token_id=token_id,
-                condition_id=mkt.condition_id,
-                market_slug=mkt.slug,
-                question=mkt.question,
-                outcome=outcome,
-                side="BUY",
-                price=best_ask,
-                size=shares,
-                tier=tier,
-                edge=edge,
-                confidence=self._calculate_confidence(edge, book, best_ask),
-            )
-            signals.append(signal)
-        
-        logger.info(f"generated {len(signals)} signals with min_edge={self.config.min_edge}")
-        return signals
-
-    def _check_market_quality(self, book: OrderBook, price: float) -> bool:
-        """Check spread, depth, and volume quality."""
-        if not book.bids or not book.asks:
-            return False
-        
-        best_bid = float(book.bids[0]["price"])
-        best_ask = float(book.asks[0]["price"])
-        
-        # Check spread
-        spread = best_ask - best_bid
-        if spread / price > self.config.max_spread_pct:
-            return False
-        
-        # Check book depth
-        ask_depth = sum(float(level["size"]) * float(level["price"]) for level in book.asks[:3])
-        if ask_depth < self.config.min_book_depth_usd:
-            return False
-        
-        return True
-
-    def _calculate_edge(self, price: float) -> float:
-        """
-        Calculate edge (expected value).
-        
-        Simple heuristic: assume market is slightly inefficient.
-        In production, use your own probability model.
-        """
-        # Longshots tend to be overpriced
-        if price < 0.20:
-            return 0.12  # 12% edge
-        elif price < 0.30:
-            return 0.08  # 8% edge
-        # Mid-range
-        elif price < 0.50:
-            return 0.06  # 6% edge
-        # Favorites tend to be underpriced
-        elif price < 0.70:
-            return 0.07  # 7% edge
-        else:
-            return 0.05  # 5% edge
-
-    def _calculate_confidence(self, edge: float, book: OrderBook, price: float) -> float:
-        """Calculate confidence score (0-1) based on edge and market quality."""
-        # Base confidence from edge
-        conf = min(edge / 0.15, 1.0)  # 15% edge = max confidence
-        
-        # Adjust for book depth
-        if book.asks:
-            depth = sum(float(level["size"]) for level in book.asks[:3])
-            if depth > 1000:
-                conf *= 1.1
-            elif depth < 100:
-                conf *= 0.9
-        
-        return min(conf, 1.0)
-
-    def _classify_tier(self, price: float) -> Literal["LONGSHOT", "MID", "HIGHPROB"]:
-        """Classify position tier based on price."""
-        if price <= self.config.longshot_ceiling:
-            return "LONGSHOT"
-        elif price >= self.config.highprob_floor:
-            return "HIGHPROB"
-        else:
-            return "MID"
-
-    def _calculate_position_size(self, price: float, edge: float, 
-                                  tier: Literal["LONGSHOT", "MID", "HIGHPROB"]) -> float:
-        """
-        Calculate position size using Kelly Criterion or fixed sizing.
-        """
-        if not self.config.use_kelly_sizing:
-            # Fixed sizing by tier
-            if tier == "LONGSHOT":
-                return self.config.longshot_size_usd
-            elif tier == "HIGHPROB":
-                return self.config.highprob_size_usd
+            if hasattr(mkt, "market_id"):
+                is_active = getattr(mkt, "active", False)
+                is_closed = getattr(mkt, "closed", False)
+                if not is_active or is_closed:
+                    skipped_active += 1
+                    continue
+                
+                market_id = getattr(mkt, "market_id", "")
+                question = getattr(mkt, "question", "")
+                volume = float(getattr(mkt, "volume", 0))
+                event_slug = getattr(mkt, "event_slug", "") or ""
+                
+                outcomes = getattr(mkt, "outcomes", [])
+                token_ids = getattr(mkt, "token_ids", [])
+                prices = getattr(mkt, "outcome_prices", [])
+                
+                tokens = []
+                for i in range(len(token_ids)):
+                    tokens.append({
+                        "outcome": outcomes[i],
+                        "token_id": token_ids[i],
+                        "price": float(prices[i]) if i < len(prices) else 0.0
+                    })
+            elif isinstance(mkt, dict):
+                if not mkt.get("active", False) or mkt.get("closed", False):
+                    skipped_active += 1
+                    continue
+                
+                market_id = mkt.get("id") or mkt.get("condition_id", "")
+                question = mkt.get("question", "")
+                volume = float(mkt.get("volume", 0))
+                event_slug = mkt.get("event_slug", "")
+                
+                raw_tokens = mkt.get("tokens", [])
+                tokens = []
+                for t in raw_tokens:
+                    tokens.append({
+                        "outcome": t.get("outcome"),
+                        "token_id": t.get("token_id"),
+                        "price": float(t.get("price", 0))
+                    })
             else:
-                return self.config.position_size_usd
+                continue
+
+            if volume < self.min_volume_24h:
+                skipped_volume += 1
+                continue
+
+            eligible_markets.append({
+                "market_id": market_id,
+                "question": question,
+                "volume": volume,
+                "event_slug": event_slug,
+                "tokens": tokens
+            })
+
+        # Group by Event Slug for NO_BASKET
+        event_groups = {}
+        for m in eligible_markets:
+            if m["event_slug"]:
+                event_groups.setdefault(m["event_slug"], []).append(m)
+
+        for mkt in eligible_markets:
+            market_id = mkt["market_id"]
+            question = mkt["question"]
+            volume = mkt["volume"]
+            tokens = mkt["tokens"]
+            num_outcomes = len(tokens)
+            
+            # --- Strategy 1: ARBITRAGE (The Ultimate Sweet Spot) ---
+            # Sum of prices < 1.0 means guaranteed profit if held to resolution
+            total_price = sum(t["price"] for t in tokens)
+            if 0.1 < total_price < (1.0 - self.min_edge):
+                edge = 1.0 - total_price
+                strat = "BINARY_PAIR" if num_outcomes == 2 else "MULTI_OUTCOME"
+                for t in tokens:
+                    signals.append(Signal(
+                        market_id=market_id,
+                        token_id=t["token_id"],
+                        outcome=t["outcome"],
+                        question=question,
+                        price=t["price"],
+                        edge=edge,
+                        spread_pct=0.005,
+                        volume_24h=volume,
+                        strategy=strat,
+                        target_price=min(0.99, t["price"] / total_price), # Fair value in arb
+                        stop_loss_price=t["price"] * 0.95 # Tight stop for arbs
+                    ))
+                continue
+
+            # --- Strategy 2: MOMENTUM & VALUE ---
+            if self.config.enable_single_outcome:
+                for t in tokens:
+                    price = t["price"]
+                    if price <= 0.01 or price > self.max_entry_price:
+                        continue
+                    
+                    # SWEET SPOT CALCULATION:
+                    # We combine raw distance from 0.5 (Value) with a "Momentum Bonus"
+                    momentum_bonus = 0.0
+                    if volume > (self.min_volume_24h * 10):
+                        momentum_bonus = 0.02
+                    
+                    edge = abs(0.5 - price) + momentum_bonus
+                    if edge >= self.min_edge:
+                        signals.append(Signal(
+                            market_id=market_id,
+                            token_id=t["token_id"],
+                            outcome=t["outcome"],
+                            question=question,
+                            price=price,
+                            edge=edge,
+                            spread_pct=0.005,
+                            volume_24h=volume,
+                            strategy="SINGLE",
+                            target_price=min(0.95, price * 1.15), # 15% target
+                            stop_loss_price=price * 0.90 # 10% stop
+                        ))
+
+        # --- Strategy 3: CROSS-MARKET ARB (NO_BASKET) ---
+        for slug, group in event_groups.items():
+            if len(group) < 2: continue
+            
+            no_legs = []
+            for m in group:
+                for t in m["tokens"]:
+                    if t["outcome"].lower() == "no" and 0 < t["price"] < 1:
+                        no_legs.append({"m": m, "t": t})
+                        break
+            
+            if len(no_legs) >= 2:
+                total_no_price = sum(l["t"]["price"] for l in no_legs)
+                n = len(no_legs)
+                guaranteed_payout = float(n - 1)
+                if 0.1 < total_no_price < (guaranteed_payout - self.min_edge):
+                    edge = (guaranteed_payout - total_no_price) / n
+                    for l in no_legs:
+                        signals.append(Signal(
+                            market_id=l["m"]["market_id"],
+                            token_id=l["t"]["token_id"],
+                            outcome=l["t"]["outcome"],
+                            question=l["m"]["question"],
+                            price=l["t"]["price"],
+                            edge=edge,
+                            spread_pct=0.005,
+                            volume_24h=l["m"]["volume"],
+                            strategy="NO_BASKET",
+                            target_price=min(0.99, l["t"]["price"] * 1.1),
+                            stop_loss_price=l["t"]["price"] * 0.98
+                        ))
+
+        logger.info(
+            "Scan stats: scanned=%d signals=%d arbs=%d",
+            len(markets), len(signals), 
+            len([s for s in signals if "ARB" in s.strategy or "BASKET" in s.strategy])
+        )
         
-        # Kelly sizing: f = edge / odds
-        # For binary outcome: f = (p * (b+1) - 1) / b
-        # where p = true probability, b = odds
-        # Simplified: f ≈ edge / price
-        bankroll = self.config.max_total_exposure_usd
-        kelly_fraction = edge / price
-        kelly_size = self.config.kelly_fraction * kelly_fraction * bankroll
-        
-        # Cap at max position percentage
-        max_size = self.config.max_position_pct * bankroll
-        
-        # Tier-based minimum
-        if tier == "LONGSHOT":
-            min_size = self.config.longshot_size_usd
-        elif tier == "HIGHPROB":
-            min_size = self.config.highprob_size_usd
-        else:
-            min_size = self.config.position_size_usd
-        
-        return max(min_size, min(kelly_size, max_size))
+        # Sort by strategy priority then edge
+        # 1. NO_BASKET/ARB first
+        # 2. Then by Edge
+        def signal_priority(s):
+            priority = 0
+            if "ARB" in s.strategy or "BASKET" in s.strategy:
+                priority = 10
+            return (priority, s.edge)
 
-
-
-
-
+        signals.sort(key=signal_priority, reverse=True)
+        return signals

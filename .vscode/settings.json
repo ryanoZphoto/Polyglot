@@ -1,0 +1,4 @@
+{
+    "python.terminal.useEnvFile": true,
+    "python.envFile": "${workspaceFolder}/event_trader_improved/.env"
+}

@@ -1,0 +1,34 @@
+2026-04-08 17:15:00,989 INFO event_trader_improved.scanner Scanner initialized: max_entry_price=0.4, min_edge=0.01
+2026-04-08 17:15:00,990 INFO event_trader_improved.runtime event trader (IMPROVED) started  mode=dry_run  kelly=True  min_edge=1.0%
+2026-04-08 17:19:14,726 INFO event_trader_improved.data_client fetched 51678 markets across 517 pages
+2026-04-08 17:19:14,726 INFO event_trader_improved.runtime cycle ev_20260409T001500_f5914e (#1): fetched 51678 markets in 253.7s
+2026-04-08 17:19:14,726 ERROR event_trader_improved.runtime cycle error #1 (1 consecutive), backing off 20.0s
+Traceback (most recent call last):
+  File "D:\polymart\event_trader_improved\runtime.py", line 178, in run_loop
+    run_once(config, client, scanner, pos_mgr, risk, executor,
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+             state, reporter, cycle_number)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\polymart\event_trader_improved\runtime.py", line 75, in run_once
+    signals = scanner.scan(all_markets) if not is_paused else []
+              ~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\polymart\event_trader_improved\scanner.py", line 35, in scan
+    if not mkt.active or mkt.closed or not mkt.accepting_orders:
+           ^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'active'
+2026-04-08 17:23:27,822 INFO event_trader_improved.data_client fetched 51666 markets across 517 pages
+2026-04-08 17:23:27,822 INFO event_trader_improved.runtime cycle ev_20260409T001934_b83119 (#2): fetched 51666 markets in 232.9s
+2026-04-08 17:23:27,823 ERROR event_trader_improved.runtime cycle error #2 (2 consecutive), backing off 40.0s
+Traceback (most recent call last):
+  File "D:\polymart\event_trader_improved\runtime.py", line 178, in run_loop
+    run_once(config, client, scanner, pos_mgr, risk, executor,
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+             state, reporter, cycle_number)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\polymart\event_trader_improved\runtime.py", line 75, in run_once
+    signals = scanner.scan(all_markets) if not is_paused else []
+              ~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\polymart\event_trader_improved\scanner.py", line 35, in scan
+    if not mkt.active or mkt.closed or not mkt.accepting_orders:
+           ^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'active'

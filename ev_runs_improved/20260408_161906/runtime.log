@@ -1,0 +1,91 @@
+2026-04-08 16:19:06,630 INFO event_trader_improved.runtime event trader (IMPROVED) started  mode=dry_run  kelly=True  min_edge=5.0%
+2026-04-08 16:19:07,353 INFO event_trader.data_client fetched 100 markets across 2 pages
+2026-04-08 16:19:07,353 INFO event_trader_improved.runtime cycle ev_20260408T231906_f0af10 (#1): fetched 100 markets in 0.7s
+2026-04-08 16:19:07,353 INFO event_trader_improved.scanner filtered to 100 candidate markets from 100
+2026-04-08 16:19:18,952 INFO event_trader_improved.scanner fetched 200 order books
+2026-04-08 16:19:18,953 ERROR event_trader_improved.runtime cycle error #1 (1 consecutive), backing off 20.0s
+Traceback (most recent call last):
+  File "D:\polymart\event_trader_improved\runtime.py", line 178, in run_loop
+    run_once(config, client, scanner, pos_mgr, risk, executor,
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+             state, reporter, cycle_number)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\polymart\event_trader_improved\runtime.py", line 75, in run_once
+    signals = scanner.scan(all_markets) if not is_paused else []
+              ~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\polymart\event_trader_improved\scanner.py", line 76, in scan
+    best_ask = float(book.asks[0]["price"])
+                     ~~~~~~~~~~~~^^^^^^^^^
+TypeError: 'BookLevel' object is not subscriptable
+2026-04-08 16:19:39,112 INFO event_trader.data_client fetched 100 markets across 2 pages
+2026-04-08 16:19:39,112 INFO event_trader_improved.runtime cycle ev_20260408T231938_67bf98 (#2): fetched 100 markets in 0.2s
+2026-04-08 16:19:39,113 INFO event_trader_improved.scanner filtered to 100 candidate markets from 100
+2026-04-08 16:19:49,853 INFO event_trader_improved.scanner fetched 200 order books
+2026-04-08 16:19:49,854 ERROR event_trader_improved.runtime cycle error #2 (2 consecutive), backing off 40.0s
+Traceback (most recent call last):
+  File "D:\polymart\event_trader_improved\runtime.py", line 178, in run_loop
+    run_once(config, client, scanner, pos_mgr, risk, executor,
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+             state, reporter, cycle_number)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\polymart\event_trader_improved\runtime.py", line 75, in run_once
+    signals = scanner.scan(all_markets) if not is_paused else []
+              ~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\polymart\event_trader_improved\scanner.py", line 76, in scan
+    best_ask = float(book.asks[0]["price"])
+                     ~~~~~~~~~~~~^^^^^^^^^
+TypeError: 'BookLevel' object is not subscriptable
+2026-04-08 16:20:30,020 INFO event_trader.data_client fetched 100 markets across 2 pages
+2026-04-08 16:20:30,020 INFO event_trader_improved.runtime cycle ev_20260408T232029_0f7b47 (#3): fetched 100 markets in 0.2s
+2026-04-08 16:20:30,020 INFO event_trader_improved.scanner filtered to 100 candidate markets from 100
+2026-04-08 16:20:40,810 INFO event_trader_improved.scanner fetched 200 order books
+2026-04-08 16:20:40,810 ERROR event_trader_improved.runtime cycle error #3 (3 consecutive), backing off 60.0s
+Traceback (most recent call last):
+  File "D:\polymart\event_trader_improved\runtime.py", line 178, in run_loop
+    run_once(config, client, scanner, pos_mgr, risk, executor,
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+             state, reporter, cycle_number)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\polymart\event_trader_improved\runtime.py", line 75, in run_once
+    signals = scanner.scan(all_markets) if not is_paused else []
+              ~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\polymart\event_trader_improved\scanner.py", line 76, in scan
+    best_ask = float(book.asks[0]["price"])
+                     ~~~~~~~~~~~~^^^^^^^^^
+TypeError: 'BookLevel' object is not subscriptable
+2026-04-08 16:21:40,919 INFO event_trader.data_client fetched 100 markets across 2 pages
+2026-04-08 16:21:40,919 INFO event_trader_improved.runtime cycle ev_20260408T232140_2f44d2 (#4): fetched 100 markets in 0.1s
+2026-04-08 16:21:40,919 INFO event_trader_improved.scanner filtered to 100 candidate markets from 100
+2026-04-08 16:21:51,536 INFO event_trader_improved.scanner fetched 200 order books
+2026-04-08 16:21:51,537 ERROR event_trader_improved.runtime cycle error #4 (4 consecutive), backing off 60.0s
+Traceback (most recent call last):
+  File "D:\polymart\event_trader_improved\runtime.py", line 178, in run_loop
+    run_once(config, client, scanner, pos_mgr, risk, executor,
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+             state, reporter, cycle_number)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\polymart\event_trader_improved\runtime.py", line 75, in run_once
+    signals = scanner.scan(all_markets) if not is_paused else []
+              ~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\polymart\event_trader_improved\scanner.py", line 76, in scan
+    best_ask = float(book.asks[0]["price"])
+                     ~~~~~~~~~~~~^^^^^^^^^
+TypeError: 'BookLevel' object is not subscriptable
+2026-04-08 16:22:51,591 INFO event_trader.data_client fetched 100 markets across 2 pages
+2026-04-08 16:22:51,591 INFO event_trader_improved.runtime cycle ev_20260408T232251_639b6d (#5): fetched 100 markets in 0.1s
+2026-04-08 16:22:51,591 INFO event_trader_improved.scanner filtered to 100 candidate markets from 100
+2026-04-08 16:23:00,742 INFO event_trader_improved.scanner fetched 200 order books
+2026-04-08 16:23:00,742 ERROR event_trader_improved.runtime cycle error #5 (5 consecutive), backing off 60.0s
+Traceback (most recent call last):
+  File "D:\polymart\event_trader_improved\runtime.py", line 178, in run_loop
+    run_once(config, client, scanner, pos_mgr, risk, executor,
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+             state, reporter, cycle_number)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\polymart\event_trader_improved\runtime.py", line 75, in run_once
+    signals = scanner.scan(all_markets) if not is_paused else []
+              ~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\polymart\event_trader_improved\scanner.py", line 76, in scan
+    if best_ask > self.config.max_entry_price:
+                     ^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'BookLevel' object is not subscriptable

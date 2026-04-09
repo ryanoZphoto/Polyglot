@@ -746,3 +746,4 @@ with tab_logs:
 if auto:
     time.sleep(5)
     st.rerun()
+

@@ -1,0 +1,51 @@
+{"ts": "2026-04-09T00:32:34.390024+00:00", "level": "INFO", "logger": "event_trader_improved.scanner", "msg": "Scanner initialized: max_entry_price=0.40, min_edge=0.05, max_spread=5.00%, min_volume=100"}
+{"ts": "2026-04-09T00:32:34.390318+00:00", "level": "INFO", "logger": "event_trader_improved.positions", "msg": "PositionManager initialized: bankroll=$300.00 kelly=True"}
+{"ts": "2026-04-09T00:32:34.390435+00:00", "level": "INFO", "logger": "event_trader_improved.runtime", "msg": "event trader (IMPROVED) started  mode=dry_run  kelly=True  min_edge=5.0%"}
+{"ts": "2026-04-09T00:32:34.390573+00:00", "level": "INFO", "logger": "event_trader_improved.runtime", "msg": "=== Cycle 1 ==="}
+{"ts": "2026-04-09T00:32:34.390633+00:00", "level": "INFO", "logger": "event_trader_improved.runtime", "msg": "Fetching active markets..."}
+{"ts": "2026-04-09T00:32:34.390687+00:00", "level": "INFO", "logger": "event_trader_improved.data_client", "msg": "Fetching active markets from Gamma API..."}
+{"ts": "2026-04-09T00:32:34.390742+00:00", "level": "ERROR", "logger": "event_trader_improved.data_client", "msg": "Failed to fetch markets page 1: 'EVDataClient' object has no attribute 'session'"}
+{"ts": "2026-04-09T00:32:34.390790+00:00", "level": "INFO", "logger": "event_trader_improved.data_client", "msg": "Fetched 0 total active markets across 1 pages"}
+{"ts": "2026-04-09T00:32:34.390837+00:00", "level": "INFO", "logger": "event_trader_improved.runtime", "msg": "fetched 0 active markets"}
+{"ts": "2026-04-09T00:32:34.390880+00:00", "level": "INFO", "logger": "event_trader_improved.runtime", "msg": "Scanning for signals..."}
+{"ts": "2026-04-09T00:32:34.390926+00:00", "level": "INFO", "logger": "event_trader_improved.runtime", "msg": "scanner found 0 signals"}
+{"ts": "2026-04-09T00:32:39.391260+00:00", "level": "INFO", "logger": "event_trader_improved.runtime", "msg": "=== Cycle 2 ==="}
+{"ts": "2026-04-09T00:32:39.391432+00:00", "level": "INFO", "logger": "event_trader_improved.runtime", "msg": "Fetching active markets..."}
+{"ts": "2026-04-09T00:32:39.391525+00:00", "level": "INFO", "logger": "event_trader_improved.data_client", "msg": "Fetching active markets from Gamma API..."}
+{"ts": "2026-04-09T00:32:39.391611+00:00", "level": "ERROR", "logger": "event_trader_improved.data_client", "msg": "Failed to fetch markets page 1: 'EVDataClient' object has no attribute 'session'"}
+{"ts": "2026-04-09T00:32:39.391687+00:00", "level": "INFO", "logger": "event_trader_improved.data_client", "msg": "Fetched 0 total active markets across 1 pages"}
+{"ts": "2026-04-09T00:32:39.391768+00:00", "level": "INFO", "logger": "event_trader_improved.runtime", "msg": "fetched 0 active markets"}
+{"ts": "2026-04-09T00:32:39.391853+00:00", "level": "INFO", "logger": "event_trader_improved.runtime", "msg": "Scanning for signals..."}
+{"ts": "2026-04-09T00:32:39.391925+00:00", "level": "INFO", "logger": "event_trader_improved.runtime", "msg": "scanner found 0 signals"}
+{"ts": "2026-04-09T00:32:44.392542+00:00", "level": "INFO", "logger": "event_trader_improved.runtime", "msg": "=== Cycle 3 ==="}
+{"ts": "2026-04-09T00:32:44.392721+00:00", "level": "INFO", "logger": "event_trader_improved.runtime", "msg": "Fetching active markets..."}
+{"ts": "2026-04-09T00:32:44.392821+00:00", "level": "INFO", "logger": "event_trader_improved.data_client", "msg": "Fetching active markets from Gamma API..."}
+{"ts": "2026-04-09T00:32:44.392916+00:00", "level": "ERROR", "logger": "event_trader_improved.data_client", "msg": "Failed to fetch markets page 1: 'EVDataClient' object has no attribute 'session'"}
+{"ts": "2026-04-09T00:32:44.393011+00:00", "level": "INFO", "logger": "event_trader_improved.data_client", "msg": "Fetched 0 total active markets across 1 pages"}
+{"ts": "2026-04-09T00:32:44.393113+00:00", "level": "INFO", "logger": "event_trader_improved.runtime", "msg": "fetched 0 active markets"}
+{"ts": "2026-04-09T00:32:44.393206+00:00", "level": "INFO", "logger": "event_trader_improved.runtime", "msg": "Scanning for signals..."}
+{"ts": "2026-04-09T00:32:44.393302+00:00", "level": "INFO", "logger": "event_trader_improved.runtime", "msg": "scanner found 0 signals"}
+{"ts": "2026-04-09T00:32:49.394159+00:00", "level": "INFO", "logger": "event_trader_improved.runtime", "msg": "=== Cycle 4 ==="}
+{"ts": "2026-04-09T00:32:49.394318+00:00", "level": "INFO", "logger": "event_trader_improved.runtime", "msg": "Fetching active markets..."}
+{"ts": "2026-04-09T00:32:49.394401+00:00", "level": "INFO", "logger": "event_trader_improved.data_client", "msg": "Fetching active markets from Gamma API..."}
+{"ts": "2026-04-09T00:32:49.394482+00:00", "level": "ERROR", "logger": "event_trader_improved.data_client", "msg": "Failed to fetch markets page 1: 'EVDataClient' object has no attribute 'session'"}
+{"ts": "2026-04-09T00:32:49.394559+00:00", "level": "INFO", "logger": "event_trader_improved.data_client", "msg": "Fetched 0 total active markets across 1 pages"}
+{"ts": "2026-04-09T00:32:49.394630+00:00", "level": "INFO", "logger": "event_trader_improved.runtime", "msg": "fetched 0 active markets"}
+{"ts": "2026-04-09T00:32:49.394698+00:00", "level": "INFO", "logger": "event_trader_improved.runtime", "msg": "Scanning for signals..."}
+{"ts": "2026-04-09T00:32:49.394768+00:00", "level": "INFO", "logger": "event_trader_improved.runtime", "msg": "scanner found 0 signals"}
+{"ts": "2026-04-09T00:32:54.394940+00:00", "level": "INFO", "logger": "event_trader_improved.runtime", "msg": "=== Cycle 5 ==="}
+{"ts": "2026-04-09T00:32:54.395057+00:00", "level": "INFO", "logger": "event_trader_improved.runtime", "msg": "Fetching active markets..."}
+{"ts": "2026-04-09T00:32:54.395138+00:00", "level": "INFO", "logger": "event_trader_improved.data_client", "msg": "Fetching active markets from Gamma API..."}
+{"ts": "2026-04-09T00:32:54.395220+00:00", "level": "ERROR", "logger": "event_trader_improved.data_client", "msg": "Failed to fetch markets page 1: 'EVDataClient' object has no attribute 'session'"}
+{"ts": "2026-04-09T00:32:54.395295+00:00", "level": "INFO", "logger": "event_trader_improved.data_client", "msg": "Fetched 0 total active markets across 1 pages"}
+{"ts": "2026-04-09T00:32:54.395369+00:00", "level": "INFO", "logger": "event_trader_improved.runtime", "msg": "fetched 0 active markets"}
+{"ts": "2026-04-09T00:32:54.395437+00:00", "level": "INFO", "logger": "event_trader_improved.runtime", "msg": "Scanning for signals..."}
+{"ts": "2026-04-09T00:32:54.395508+00:00", "level": "INFO", "logger": "event_trader_improved.runtime", "msg": "scanner found 0 signals"}
+{"ts": "2026-04-09T00:32:59.396057+00:00", "level": "INFO", "logger": "event_trader_improved.runtime", "msg": "=== Cycle 6 ==="}
+{"ts": "2026-04-09T00:32:59.396208+00:00", "level": "INFO", "logger": "event_trader_improved.runtime", "msg": "Fetching active markets..."}
+{"ts": "2026-04-09T00:32:59.396287+00:00", "level": "INFO", "logger": "event_trader_improved.data_client", "msg": "Fetching active markets from Gamma API..."}
+{"ts": "2026-04-09T00:32:59.396373+00:00", "level": "ERROR", "logger": "event_trader_improved.data_client", "msg": "Failed to fetch markets page 1: 'EVDataClient' object has no attribute 'session'"}
+{"ts": "2026-04-09T00:32:59.396452+00:00", "level": "INFO", "logger": "event_trader_improved.data_client", "msg": "Fetched 0 total active markets across 1 pages"}
+{"ts": "2026-04-09T00:32:59.396526+00:00", "level": "INFO", "logger": "event_trader_improved.runtime", "msg": "fetched 0 active markets"}
+{"ts": "2026-04-09T00:32:59.396622+00:00", "level": "INFO", "logger": "event_trader_improved.runtime", "msg": "Scanning for signals..."}
+{"ts": "2026-04-09T00:32:59.396699+00:00", "level": "INFO", "logger": "event_trader_improved.runtime", "msg": "scanner found 0 signals"}

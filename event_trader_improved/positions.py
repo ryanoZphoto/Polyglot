@@ -1,201 +1,92 @@
-"""
-Enhanced position manager with improved exit logic.
-
-Key improvements:
-1. Trailing stop activates on ANY profit (not just after TP)
-2. Time-decay logic tightens stops near event close
-3. Volatility-based trailing stops
-"""
+"""Improved position management with profit locking and aggressive trailing stops."""
 
 import logging
-import time
 from datetime import datetime, timezone
-
-from event_trader.config import EVConfig
-from event_trader.state import EVStateStore
-from event_trader.types import OrderBook
+from .config import ImprovedEVConfig
 
 logger = logging.getLogger(__name__)
 
 
 class PositionManager:
-    """
-    Enhanced position monitoring with better exit triggers.
-    
-    Improvements:
-    - Trailing stop starts at 5% profit (not full TP)
-    - Time decay: tighten stops as event approaches
-    - Volatility-based stops
-    """
-
-    def __init__(self, config: EVConfig, state: EVStateStore):
+    def __init__(self, config: ImprovedEVConfig, bankroll_usd: float):
         self.config = config
-        self.state = state
-
-    def check_exits(
-        self,
-        books: dict[str, OrderBook],
-        api_prices: dict[str, float] | None = None,
-    ) -> list[dict]:
-        """Check all open positions for exit triggers."""
-        exits: list[dict] = []
-        positions = self.state.get_open_positions()
-        prices = api_prices or {}
-
+        self.bankroll_usd = bankroll_usd
+    
+    def calculate_size(self, signal) -> float:
+        """Calculate position size using Kelly or fixed sizing."""
+        if self.config.use_kelly_sizing:
+            # Kelly: f* = (bp - q) / b
+            # Simplified: fraction = edge * kelly_fraction
+            kelly_fraction = signal.edge * self.config.kelly_fraction
+            size = self.bankroll_usd * kelly_fraction
+        else:
+            size = self.config.max_position_size_usd
+        
+        # Risk caps
+        return min(size, self.config.max_position_size_usd)
+    
+    def check_exits(self, positions: list, live_prices: dict) -> list[dict]:
+        """
+        Evaluate all open positions for potential exits.
+        Returns a list of positions that should be closed.
+        """
+        exit_signals = []
+        
         for pos in positions:
             token_id = pos["token_id"]
-            book = books.get(token_id)
-
-            # Get current price
-            current = prices.get(token_id)
-            if current is None and book is not None and book.best_bid is not None:
-                current = book.best_bid
-            if current is None:
+            current_price = live_prices.get(token_id)
+            
+            if current_price is None:
                 continue
+                
+            entry_price = float(pos["entry_price"])
+            high_water = float(pos["high_water_price"] if "high_water_price" in pos.keys() else entry_price)
+            
+            # 1. Update High Water Mark
+            if current_price > high_water:
+                high_water = current_price
+            
+            pnl_pct = (current_price - entry_price) / entry_price if entry_price > 0 else 0
+            
+            exit_reason = None
+            
+            # --- THE GENIUS EXIT LOGIC (Primal Sweet Spot) ---
+            
+            # 1. Take Profit (Hard Target)
+            target = float(pos["target_price"] if "target_price" in pos.keys() else entry_price * 1.2)
+            if current_price >= target:
+                exit_reason = "TAKE_PROFIT"
+            
+            # 2. Stop Loss (Hard Floor)
+            stop = float(pos["stop_loss_price"] if "stop_loss_price" in pos.keys() else entry_price * 0.8)
+            if current_price <= stop:
+                exit_reason = "STOP_LOSS"
+                
+            # 3. BREAK-EVEN PROTECTION (The "Profit Locker")
+            # If we are up by more than aggressive_trailing_activation (e.g. 2%), 
+            # we move the floor to break-even + buffer.
+            if pnl_pct >= self.config.aggressive_trailing_activation:
+                break_even_floor = entry_price + self.config.break_even_buffer
+                if current_price <= break_even_floor:
+                    exit_reason = "PROFIT_LOCK_BREAK_EVEN"
+            
+            # 4. AGGRESSIVE TRAILING (Locking in bigger moves)
+            # If we were up significantly, don't give back more than 50% of the gains
+            gain = high_water - entry_price
+            if gain > (entry_price * 0.05): # If we were up > 5%
+                trailing_floor = high_water - (gain * 0.3) # Give back only 30% of max gain
+                if current_price <= trailing_floor:
+                    exit_reason = "AGGRESSIVE_TRAILING"
 
-            # Calculate P&L
-            entry = pos["entry_price"]
-            size = pos["size"]
-            pnl = (current - entry) * size
-            pnl_pct = (current - entry) / entry if entry > 0 else 0
-
-            # Get tier-specific targets
-            tier = pos.get("tier", "mid")
-            tp_pct, sl_pct = self._get_tier_targets(tier)
-
-            # NEW: Check time decay
-            close_time = pos.get("close_time")
-            if close_time:
-                sl_pct = self._apply_time_decay(sl_pct, close_time)
-
-            # Check take profit
-            if pnl_pct >= tp_pct:
-                exits.append({
-                    "position_id": pos["position_id"],
-                    "token_id": token_id,
-                    "exit_price": current,
-                    "reason": "take_profit",
-                    "pnl": pnl,
+            if exit_reason:
+                exit_signals.append({
+                    "pos": pos,
+                    "reason": exit_reason,
+                    "price": current_price,
                     "pnl_pct": pnl_pct,
+                    "high_water": high_water
                 })
-                continue
-
-            # Check stop loss
-            if pnl_pct <= -sl_pct:
-                exits.append({
-                    "position_id": pos["position_id"],
-                    "token_id": token_id,
-                    "exit_price": current,
-                    "reason": "stop_loss",
-                    "pnl": pnl,
-                    "pnl_pct": pnl_pct,
-                })
-                continue
-
-            # NEW: Improved trailing stop logic
-            # Activates at trailing_activation_pct (default 5%) instead of full TP
-            if pnl_pct >= self.config.trailing_activation_pct:
-                trailing_triggered = self._check_trailing_stop(
-                    pos, current, pnl_pct, tier
-                )
-                if trailing_triggered:
-                    exits.append({
-                        "position_id": pos["position_id"],
-                        "token_id": token_id,
-                        "exit_price": current,
-                        "reason": "trailing_stop",
-                        "pnl": pnl,
-                        "pnl_pct": pnl_pct,
-                    })
-
-        return exits
-
-    def _get_tier_targets(self, tier: str) -> tuple[float, float]:
-        """Get take-profit and stop-loss for tier."""
-        if tier == "longshot":
-            return (
-                self.config.longshot_take_profit_pct,
-                self.config.longshot_stop_loss_pct,
-            )
-        elif tier == "highprob":
-            return (
-                self.config.highprob_take_profit_pct,
-                self.config.highprob_stop_loss_pct,
-            )
-        else:
-            return (
-                self.config.take_profit_pct,
-                self.config.stop_loss_pct,
-            )
-
-    def _apply_time_decay(self, stop_loss_pct: float, close_time: int) -> float:
-        """
-        Tighten stop loss as event approaches close.
         
-        Within time_decay_days of close, use tighter stop.
-        """
-        if close_time <= 0:
-            return stop_loss_pct
+        return exit_signals
 
-        now = int(time.time())
-        seconds_to_close = close_time - now
-        days_to_close = seconds_to_close / 86400
 
-        if days_to_close <= self.config.time_decay_days:
-            # Use tighter stop near close
-            tighter_stop = self.config.time_decay_stop_pct
-            logger.debug(
-                "Time decay: %.1f days to close, tightening stop %.1%% -> %.1%%",
-                days_to_close, stop_loss_pct * 100, tighter_stop * 100
-            )
-            return max(tighter_stop, stop_loss_pct)  # Don't loosen
-
-        return stop_loss_pct
-
-    def _check_trailing_stop(
-        self,
-        pos: dict,
-        current_price: float,
-        current_pnl_pct: float,
-        tier: str,
-    ) -> bool:
-        """
-        Enhanced trailing stop logic.
-        
-        Activates on ANY profit >= trailing_activation_pct.
-        Uses volatility-based cushion.
-        """
-        # Get high-water mark
-        high_water = pos.get("high_water_price", pos["entry_price"])
-        
-        # Update high-water if current is higher
-        if current_price > high_water:
-            self.state.update_position_high_water(pos["position_id"], current_price)
-            high_water = current_price
-
-        # Calculate trailing stop price
-        # Stop = high_water * (1 - trailing_pct)
-        # But use volatility multiplier for better adaptation
-        
-        # Estimate volatility from price movement
-        entry = pos["entry_price"]
-        price_range = high_water - entry
-        estimated_vol = price_range / entry if entry > 0 else 0.10
-
-        # Trailing cushion = max(config trailing %, volatility * multiplier)
-        trailing_pct = max(
-            self.config.trailing_stop_pct,
-            estimated_vol * self.config.volatility_multiplier
-        )
-
-        stop_price = high_water * (1 - trailing_pct)
-
-        # Trigger if current drops below stop
-        if current_price <= stop_price:
-            logger.info(
-                "Trailing stop triggered: current=%.3f <= stop=%.3f (high=%.3f, trail=%.1%%)",
-                current_price, stop_price, high_water, trailing_pct * 100
-            )
-            return True
-
-        return False

@@ -1,0 +1,2 @@
+2026-04-08 17:12:46,085 INFO event_trader_improved.scanner Scanner initialized: max_entry_price=0.4, min_edge=0.01
+2026-04-08 17:12:46,086 INFO event_trader_improved.runtime event trader (IMPROVED) started  mode=dry_run  kelly=True  min_edge=1.0%

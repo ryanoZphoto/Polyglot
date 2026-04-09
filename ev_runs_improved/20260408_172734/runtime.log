@@ -1,0 +1,4 @@
+{"ts": "2026-04-09T00:27:35.152560+00:00", "level": "INFO", "logger": "event_trader_improved.scanner", "msg": "Scanner initialized: max_entry_price=0.40, min_edge=0.05, max_spread=5.00%, min_volume=100"}
+{"ts": "2026-04-09T00:27:35.152879+00:00", "level": "INFO", "logger": "event_trader_improved.positions", "msg": "PositionManager initialized: bankroll=$300.00 kelly=True"}
+{"ts": "2026-04-09T00:27:35.153003+00:00", "level": "INFO", "logger": "event_trader_improved.runtime", "msg": "event trader (IMPROVED) started  mode=dry_run  kelly=True  min_edge=5.0%"}
+{"ts": "2026-04-09T00:27:35.153146+00:00", "level": "INFO", "logger": "event_trader_improved.runtime", "msg": "=== Cycle 1 ==="}

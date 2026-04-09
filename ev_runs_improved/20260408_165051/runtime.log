@@ -1,0 +1,136 @@
+2026-04-08 16:50:52,298 INFO event_trader_improved.runtime event trader (IMPROVED) started  mode=dry_run  kelly=True  min_edge=5.0%
+2026-04-08 16:50:52,775 INFO event_trader.data_client fetched 100 markets across 2 pages
+2026-04-08 16:50:52,775 INFO event_trader_improved.runtime cycle ev_20260408T235052_0d4fc1 (#1): fetched 100 markets in 0.5s
+2026-04-08 16:50:52,776 INFO event_trader_improved.scanner filtered to 100 candidate markets from 100
+2026-04-08 16:51:04,404 INFO event_trader_improved.scanner fetched 200 order books
+2026-04-08 16:51:04,437 INFO event_trader_improved.scanner generated 0 signals with min_edge=0.05
+2026-04-08 16:51:04,437 INFO event_trader_improved.scanner filter breakdown: {'has_position': 0, 'no_asks': 2, 'price_too_high': 198, 'price_too_low': 0, 'quality_fail': 0, 'edge_too_low': 0}
+2026-04-08 16:51:04,438 INFO event_trader_improved.runtime scan: 0 signals found in 11.7s
+2026-04-08 16:51:04,438 INFO event_trader_improved.runtime executed 0 entries in 0.0s
+2026-04-08 16:51:04,438 INFO event_trader_improved.runtime monitored 0 positions, 0 exits in 0.0s
+2026-04-08 16:51:15,943 INFO event_trader.data_client fetched 100 markets across 2 pages
+2026-04-08 16:51:15,944 INFO event_trader_improved.runtime cycle ev_20260408T235115_b2a478 (#2): fetched 100 markets in 0.1s
+2026-04-08 16:51:15,944 INFO event_trader_improved.scanner filtered to 100 candidate markets from 100
+2026-04-08 16:51:26,600 INFO event_trader_improved.scanner fetched 200 order books
+2026-04-08 16:51:26,638 INFO event_trader_improved.scanner generated 0 signals with min_edge=0.05
+2026-04-08 16:51:26,638 INFO event_trader_improved.scanner filter breakdown: {'has_position': 0, 'no_asks': 2, 'price_too_high': 198, 'price_too_low': 0, 'quality_fail': 0, 'edge_too_low': 0}
+2026-04-08 16:51:26,639 INFO event_trader_improved.runtime scan: 0 signals found in 10.7s
+2026-04-08 16:51:26,640 INFO event_trader_improved.runtime executed 0 entries in 0.0s
+2026-04-08 16:51:26,640 INFO event_trader_improved.runtime monitored 0 positions, 0 exits in 0.0s
+2026-04-08 16:51:36,711 INFO event_trader.data_client fetched 100 markets across 2 pages
+2026-04-08 16:51:36,711 INFO event_trader_improved.runtime cycle ev_20260408T235136_a0473e (#3): fetched 100 markets in 0.1s
+2026-04-08 16:51:36,711 INFO event_trader_improved.scanner filtered to 100 candidate markets from 100
+2026-04-08 16:51:48,063 INFO event_trader_improved.scanner fetched 200 order books
+2026-04-08 16:51:48,110 INFO event_trader_improved.scanner generated 0 signals with min_edge=0.05
+2026-04-08 16:51:48,110 INFO event_trader_improved.scanner filter breakdown: {'has_position': 0, 'no_asks': 2, 'price_too_high': 198, 'price_too_low': 0, 'quality_fail': 0, 'edge_too_low': 0}
+2026-04-08 16:51:48,111 INFO event_trader_improved.runtime scan: 0 signals found in 11.4s
+2026-04-08 16:51:48,111 INFO event_trader_improved.runtime executed 0 entries in 0.0s
+2026-04-08 16:51:48,111 INFO event_trader_improved.runtime monitored 0 positions, 0 exits in 0.0s
+2026-04-08 16:51:58,308 INFO event_trader.data_client fetched 100 markets across 2 pages
+2026-04-08 16:51:58,308 INFO event_trader_improved.runtime cycle ev_20260408T235158_331a0f (#4): fetched 100 markets in 0.1s
+2026-04-08 16:51:58,308 INFO event_trader_improved.scanner filtered to 100 candidate markets from 100
+2026-04-08 16:52:08,901 INFO event_trader_improved.scanner fetched 200 order books
+2026-04-08 16:52:08,933 INFO event_trader_improved.scanner generated 0 signals with min_edge=0.05
+2026-04-08 16:52:08,933 INFO event_trader_improved.scanner filter breakdown: {'has_position': 0, 'no_asks': 2, 'price_too_high': 198, 'price_too_low': 0, 'quality_fail': 0, 'edge_too_low': 0}
+2026-04-08 16:52:08,934 INFO event_trader_improved.runtime scan: 0 signals found in 10.6s
+2026-04-08 16:52:08,934 INFO event_trader_improved.runtime executed 0 entries in 0.0s
+2026-04-08 16:52:08,935 INFO event_trader_improved.runtime monitored 0 positions, 0 exits in 0.0s
+2026-04-08 16:52:19,180 INFO event_trader.data_client fetched 100 markets across 2 pages
+2026-04-08 16:52:19,181 INFO event_trader_improved.runtime cycle ev_20260408T235219_256867 (#5): fetched 100 markets in 0.1s
+2026-04-08 16:52:19,181 INFO event_trader_improved.scanner filtered to 100 candidate markets from 100
+2026-04-08 16:52:31,195 INFO event_trader_improved.scanner fetched 200 order books
+2026-04-08 16:52:31,225 INFO event_trader_improved.scanner generated 0 signals with min_edge=0.05
+2026-04-08 16:52:31,225 INFO event_trader_improved.scanner filter breakdown: {'has_position': 0, 'no_asks': 2, 'price_too_high': 198, 'price_too_low': 0, 'quality_fail': 0, 'edge_too_low': 0}
+2026-04-08 16:52:31,227 INFO event_trader_improved.runtime scan: 0 signals found in 12.0s
+2026-04-08 16:52:31,227 INFO event_trader_improved.runtime executed 0 entries in 0.0s
+2026-04-08 16:52:31,227 INFO event_trader_improved.runtime monitored 0 positions, 0 exits in 0.0s
+2026-04-08 16:52:41,297 INFO event_trader.data_client fetched 100 markets across 2 pages
+2026-04-08 16:52:41,298 INFO event_trader_improved.runtime cycle ev_20260408T235241_a4deed (#6): fetched 100 markets in 0.1s
+2026-04-08 16:52:41,298 INFO event_trader_improved.scanner filtered to 100 candidate markets from 100
+2026-04-08 16:52:52,352 INFO event_trader_improved.scanner fetched 200 order books
+2026-04-08 16:52:52,393 INFO event_trader_improved.scanner generated 0 signals with min_edge=0.05
+2026-04-08 16:52:52,394 INFO event_trader_improved.scanner filter breakdown: {'has_position': 0, 'no_asks': 2, 'price_too_high': 198, 'price_too_low': 0, 'quality_fail': 0, 'edge_too_low': 0}
+2026-04-08 16:52:52,395 INFO event_trader_improved.runtime scan: 0 signals found in 11.1s
+2026-04-08 16:52:52,396 INFO event_trader_improved.runtime executed 0 entries in 0.0s
+2026-04-08 16:52:52,396 INFO event_trader_improved.runtime monitored 0 positions, 0 exits in 0.0s
+2026-04-08 16:53:02,591 INFO event_trader.data_client fetched 100 markets across 2 pages
+2026-04-08 16:53:02,591 INFO event_trader_improved.runtime cycle ev_20260408T235302_abbfb8 (#7): fetched 100 markets in 0.2s
+2026-04-08 16:53:02,591 INFO event_trader_improved.scanner filtered to 100 candidate markets from 100
+2026-04-08 16:53:13,548 INFO event_trader_improved.scanner fetched 200 order books
+2026-04-08 16:53:13,577 INFO event_trader_improved.scanner generated 0 signals with min_edge=0.05
+2026-04-08 16:53:13,577 INFO event_trader_improved.scanner filter breakdown: {'has_position': 0, 'no_asks': 2, 'price_too_high': 198, 'price_too_low': 0, 'quality_fail': 0, 'edge_too_low': 0}
+2026-04-08 16:53:13,578 INFO event_trader_improved.runtime scan: 0 signals found in 11.0s
+2026-04-08 16:53:13,578 INFO event_trader_improved.runtime executed 0 entries in 0.0s
+2026-04-08 16:53:13,578 INFO event_trader_improved.runtime monitored 0 positions, 0 exits in 0.0s
+2026-04-08 16:53:23,646 INFO event_trader.data_client fetched 100 markets across 2 pages
+2026-04-08 16:53:23,647 INFO event_trader_improved.runtime cycle ev_20260408T235323_5dc1a9 (#8): fetched 100 markets in 0.1s
+2026-04-08 16:53:23,647 INFO event_trader_improved.scanner filtered to 100 candidate markets from 100
+2026-04-08 16:53:34,364 INFO event_trader_improved.scanner fetched 200 order books
+2026-04-08 16:53:34,393 INFO event_trader_improved.scanner generated 0 signals with min_edge=0.05
+2026-04-08 16:53:34,393 INFO event_trader_improved.scanner filter breakdown: {'has_position': 0, 'no_asks': 2, 'price_too_high': 198, 'price_too_low': 0, 'quality_fail': 0, 'edge_too_low': 0}
+2026-04-08 16:53:34,395 INFO event_trader_improved.runtime scan: 0 signals found in 10.7s
+2026-04-08 16:53:34,395 INFO event_trader_improved.runtime executed 0 entries in 0.0s
+2026-04-08 16:53:34,395 INFO event_trader_improved.runtime monitored 0 positions, 0 exits in 0.0s
+2026-04-08 16:53:44,480 INFO event_trader.data_client fetched 100 markets across 2 pages
+2026-04-08 16:53:44,481 INFO event_trader_improved.runtime cycle ev_20260408T235344_6b8a34 (#9): fetched 100 markets in 0.1s
+2026-04-08 16:53:44,481 INFO event_trader_improved.scanner filtered to 100 candidate markets from 100
+2026-04-08 16:53:55,287 INFO event_trader_improved.scanner fetched 200 order books
+2026-04-08 16:53:55,318 INFO event_trader_improved.scanner generated 0 signals with min_edge=0.05
+2026-04-08 16:53:55,318 INFO event_trader_improved.scanner filter breakdown: {'has_position': 0, 'no_asks': 2, 'price_too_high': 198, 'price_too_low': 0, 'quality_fail': 0, 'edge_too_low': 0}
+2026-04-08 16:53:55,319 INFO event_trader_improved.runtime scan: 0 signals found in 10.8s
+2026-04-08 16:53:55,319 INFO event_trader_improved.runtime executed 0 entries in 0.0s
+2026-04-08 16:53:55,319 INFO event_trader_improved.runtime monitored 0 positions, 0 exits in 0.0s
+2026-04-08 16:54:05,398 INFO event_trader.data_client fetched 100 markets across 2 pages
+2026-04-08 16:54:05,399 INFO event_trader_improved.runtime cycle ev_20260408T235405_772df8 (#10): fetched 100 markets in 0.1s
+2026-04-08 16:54:05,399 INFO event_trader_improved.scanner filtered to 100 candidate markets from 100
+2026-04-08 16:54:16,049 INFO event_trader_improved.scanner fetched 200 order books
+2026-04-08 16:54:16,080 INFO event_trader_improved.scanner generated 0 signals with min_edge=0.05
+2026-04-08 16:54:16,080 INFO event_trader_improved.scanner filter breakdown: {'has_position': 0, 'no_asks': 2, 'price_too_high': 198, 'price_too_low': 0, 'quality_fail': 0, 'edge_too_low': 0}
+2026-04-08 16:54:16,082 INFO event_trader_improved.runtime scan: 0 signals found in 10.7s
+2026-04-08 16:54:16,082 INFO event_trader_improved.runtime executed 0 entries in 0.0s
+2026-04-08 16:54:16,082 INFO event_trader_improved.runtime monitored 0 positions, 0 exits in 0.0s
+2026-04-08 16:54:26,256 INFO event_trader.data_client fetched 100 markets across 2 pages
+2026-04-08 16:54:26,257 INFO event_trader_improved.runtime cycle ev_20260408T235426_a6295f (#11): fetched 100 markets in 0.2s
+2026-04-08 16:54:26,257 INFO event_trader_improved.scanner filtered to 100 candidate markets from 100
+2026-04-08 16:54:37,470 INFO event_trader_improved.scanner fetched 200 order books
+2026-04-08 16:54:37,500 INFO event_trader_improved.scanner generated 0 signals with min_edge=0.05
+2026-04-08 16:54:37,500 INFO event_trader_improved.scanner filter breakdown: {'has_position': 0, 'no_asks': 2, 'price_too_high': 198, 'price_too_low': 0, 'quality_fail': 0, 'edge_too_low': 0}
+2026-04-08 16:54:37,501 INFO event_trader_improved.runtime scan: 0 signals found in 11.2s
+2026-04-08 16:54:37,502 INFO event_trader_improved.runtime executed 0 entries in 0.0s
+2026-04-08 16:54:37,502 INFO event_trader_improved.runtime monitored 0 positions, 0 exits in 0.0s
+2026-04-08 16:54:47,582 INFO event_trader.data_client fetched 100 markets across 2 pages
+2026-04-08 16:54:47,583 INFO event_trader_improved.runtime cycle ev_20260408T235447_5fb325 (#12): fetched 100 markets in 0.1s
+2026-04-08 16:54:47,583 INFO event_trader_improved.scanner filtered to 100 candidate markets from 100
+2026-04-08 16:54:58,499 INFO event_trader_improved.scanner fetched 200 order books
+2026-04-08 16:54:58,530 INFO event_trader_improved.scanner generated 0 signals with min_edge=0.05
+2026-04-08 16:54:58,530 INFO event_trader_improved.scanner filter breakdown: {'has_position': 0, 'no_asks': 2, 'price_too_high': 198, 'price_too_low': 0, 'quality_fail': 0, 'edge_too_low': 0}
+2026-04-08 16:54:58,531 INFO event_trader_improved.runtime scan: 0 signals found in 10.9s
+2026-04-08 16:54:58,532 INFO event_trader_improved.runtime executed 0 entries in 0.0s
+2026-04-08 16:54:58,532 INFO event_trader_improved.runtime monitored 0 positions, 0 exits in 0.0s
+2026-04-08 16:55:08,681 INFO event_trader.data_client fetched 100 markets across 2 pages
+2026-04-08 16:55:08,681 INFO event_trader_improved.runtime cycle ev_20260408T235508_70099c (#13): fetched 100 markets in 0.1s
+2026-04-08 16:55:08,681 INFO event_trader_improved.scanner filtered to 100 candidate markets from 100
+2026-04-08 16:55:19,161 INFO event_trader_improved.scanner fetched 200 order books
+2026-04-08 16:55:19,191 INFO event_trader_improved.scanner generated 0 signals with min_edge=0.05
+2026-04-08 16:55:19,191 INFO event_trader_improved.scanner filter breakdown: {'has_position': 0, 'no_asks': 2, 'price_too_high': 198, 'price_too_low': 0, 'quality_fail': 0, 'edge_too_low': 0}
+2026-04-08 16:55:19,192 INFO event_trader_improved.runtime scan: 0 signals found in 10.5s
+2026-04-08 16:55:19,192 INFO event_trader_improved.runtime executed 0 entries in 0.0s
+2026-04-08 16:55:19,193 INFO event_trader_improved.runtime monitored 0 positions, 0 exits in 0.0s
+2026-04-08 16:55:29,261 INFO event_trader.data_client fetched 100 markets across 2 pages
+2026-04-08 16:55:29,261 INFO event_trader_improved.runtime cycle ev_20260408T235529_58ea26 (#14): fetched 100 markets in 0.1s
+2026-04-08 16:55:29,261 INFO event_trader_improved.scanner filtered to 100 candidate markets from 100
+2026-04-08 16:55:40,753 INFO event_trader_improved.scanner fetched 200 order books
+2026-04-08 16:55:40,784 INFO event_trader_improved.scanner generated 0 signals with min_edge=0.05
+2026-04-08 16:55:40,784 INFO event_trader_improved.scanner filter breakdown: {'has_position': 0, 'no_asks': 2, 'price_too_high': 198, 'price_too_low': 0, 'quality_fail': 0, 'edge_too_low': 0}
+2026-04-08 16:55:40,786 INFO event_trader_improved.runtime scan: 0 signals found in 11.5s
+2026-04-08 16:55:40,786 INFO event_trader_improved.runtime executed 0 entries in 0.0s
+2026-04-08 16:55:40,786 INFO event_trader_improved.runtime monitored 0 positions, 0 exits in 0.0s
+2026-04-08 16:55:50,976 INFO event_trader.data_client fetched 100 markets across 2 pages
+2026-04-08 16:55:50,976 INFO event_trader_improved.runtime cycle ev_20260408T235550_7fa2f6 (#15): fetched 100 markets in 0.1s
+2026-04-08 16:55:50,976 INFO event_trader_improved.scanner filtered to 100 candidate markets from 100
+2026-04-08 16:56:01,742 INFO event_trader_improved.scanner fetched 200 order books
+2026-04-08 16:56:01,786 INFO event_trader_improved.scanner generated 0 signals with min_edge=0.05
+2026-04-08 16:56:01,786 INFO event_trader_improved.scanner filter breakdown: {'has_position': 0, 'no_asks': 2, 'price_too_high': 198, 'price_too_low': 0, 'quality_fail': 0, 'edge_too_low': 0}
+2026-04-08 16:56:01,788 INFO event_trader_improved.runtime scan: 0 signals found in 10.8s
+2026-04-08 16:56:01,788 INFO event_trader_improved.runtime executed 0 entries in 0.0s
+2026-04-08 16:56:01,789 INFO event_trader_improved.runtime monitored 0 positions, 0 exits in 0.0s

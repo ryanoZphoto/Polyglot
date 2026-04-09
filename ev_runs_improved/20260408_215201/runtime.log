@@ -1,0 +1,207 @@
+2026-04-08 21:52:02,321 [INFO] event_trader_improved.runtime: Event Trader (IMPROVED) started | mode=dry_run kelly=True min_edge=1.0%
+2026-04-08 21:52:02,321 [INFO] event_trader_improved.runtime: === Cycle ev_20260408T215202_d73072 (#1) ===
+2026-04-08 21:52:03,600 [INFO] event_trader.data_client: fetched 600 markets across 7 pages
+2026-04-08 21:52:03,604 [INFO] event_trader_improved.scanner: Scan stats: scanned=600 signals=488 arbs=247
+2026-04-08 21:52:03,605 [INFO] event_trader_improved.runtime: Signal #1: [SINGLE] Yes @ $0.011 (edge=50.9%)
+2026-04-08 21:52:03,605 [INFO] event_trader_improved.runtime: Signal #2: [SINGLE] Yes @ $0.011 (edge=50.9%)
+2026-04-08 21:52:03,605 [INFO] event_trader_improved.runtime: Signal #3: [SINGLE] Yes @ $0.011 (edge=50.9%)
+2026-04-08 21:52:03,605 [INFO] event_trader_improved.runtime: DRY_BUY: [SINGLE] Would buy Yes @ $0.011 for $38.21 (edge=50.9%)
+2026-04-08 21:52:03,774 [INFO] event_trader_improved.runtime: DRY_BUY: [SINGLE] Would buy Yes @ $0.011 for $38.21 (edge=50.9%)
+2026-04-08 21:52:03,840 [INFO] event_trader_improved.runtime: DRY_BUY: [SINGLE] Would buy Yes @ $0.011 for $38.21 (edge=50.9%)
+2026-04-08 21:52:03,896 [INFO] event_trader_improved.runtime: DRY_BUY: [SINGLE] Would buy Yes @ $0.011 for $38.21 (edge=50.9%)
+2026-04-08 21:52:03,956 [INFO] event_trader_improved.runtime: DRY_BUY: [SINGLE] Would buy Yes @ $0.011 for $38.21 (edge=50.9%)
+2026-04-08 21:52:03,984 [INFO] event_trader_improved.runtime: DRY_BUY: [SINGLE] Would buy Yes @ $0.011 for $38.21 (edge=50.9%)
+2026-04-08 21:52:04,039 [INFO] event_trader_improved.runtime: DRY_BUY: [SINGLE] Would buy Yes @ $0.011 for $38.21 (edge=50.9%)
+2026-04-08 21:52:04,092 [INFO] event_trader_improved.runtime: DRY_BUY: [SINGLE] Would buy Yes @ $0.011 for $38.21 (edge=50.9%)
+2026-04-08 21:52:04,205 [INFO] event_trader_improved.runtime: DRY_BUY: [SINGLE] Would buy Yes @ $0.011 for $38.21 (edge=50.9%)
+2026-04-08 21:52:04,264 [INFO] event_trader_improved.runtime: DRY_BUY: [SINGLE] Would buy Yes @ $0.011 for $38.21 (edge=50.9%)
+2026-04-08 21:52:04,378 [INFO] event_trader_improved.runtime: DRY_BUY: [SINGLE] Would buy Yes @ $0.011 for $38.21 (edge=50.9%)
+2026-04-08 21:52:04,445 [INFO] event_trader_improved.runtime: DRY_BUY: [SINGLE] Would buy Yes @ $0.011 for $38.21 (edge=50.9%)
+2026-04-08 21:52:04,474 [INFO] event_trader_improved.runtime: DRY_BUY: [SINGLE] Would buy Yes @ $0.011 for $38.21 (edge=50.9%)
+2026-04-08 21:52:04,524 [INFO] event_trader_improved.runtime: DRY_BUY: [SINGLE] Would buy Yes @ $0.011 for $38.21 (edge=50.9%)
+2026-04-08 21:52:04,585 [INFO] event_trader_improved.runtime: DRY_BUY: [SINGLE] Would buy Yes @ $0.011 for $38.21 (edge=50.9%)
+2026-04-08 21:52:04,644 [INFO] event_trader_improved.runtime: DRY_BUY: [SINGLE] Would buy Yes @ $0.011 for $38.21 (edge=50.9%)
+2026-04-08 21:52:04,688 [INFO] event_trader_improved.runtime: DRY_BUY: [SINGLE] Would buy Yes @ $0.011 for $38.21 (edge=50.9%)
+2026-04-08 21:52:04,707 [INFO] event_trader_improved.runtime: DRY_BUY: [SINGLE] Would buy Yes @ $0.011 for $38.17 (edge=50.9%)
+2026-04-08 21:52:04,726 [INFO] event_trader_improved.runtime: DRY_BUY: [SINGLE] Would buy Yes @ $0.011 for $38.17 (edge=50.9%)
+2026-04-08 21:52:04,791 [INFO] event_trader_improved.runtime: DRY_BUY: [SINGLE] Would buy Yes @ $0.011 for $38.17 (edge=50.9%)
+2026-04-08 21:52:04,869 [INFO] event_trader_improved.runtime: DRY_BUY: [SINGLE] Would buy Yes @ $0.011 for $38.17 (edge=50.9%)
+2026-04-08 21:52:04,897 [INFO] event_trader_improved.runtime: DRY_BUY: [SINGLE] Would buy Yes @ $0.011 for $38.17 (edge=50.9%)
+2026-04-08 21:52:04,931 [INFO] event_trader_improved.runtime: DRY_BUY: [SINGLE] Would buy Yes @ $0.011 for $38.17 (edge=50.9%)
+2026-04-08 21:52:04,996 [INFO] event_trader_improved.runtime: DRY_BUY: [SINGLE] Would buy Yes @ $0.011 for $38.14 (edge=50.8%)
+2026-04-08 21:52:05,032 [INFO] event_trader_improved.runtime: DRY_BUY: [SINGLE] Would buy Yes @ $0.011 for $38.14 (edge=50.8%)
+2026-04-08 21:52:05,072 [INFO] event_trader_improved.runtime: DRY_BUY: [SINGLE] Would buy Yes @ $0.011 for $38.14 (edge=50.8%)
+2026-04-08 21:52:05,125 [INFO] event_trader_improved.runtime: DRY_BUY: [SINGLE] Would buy Yes @ $0.011 for $38.14 (edge=50.8%)
+2026-04-08 21:52:05,153 [INFO] event_trader_improved.runtime: DRY_BUY: [SINGLE] Would buy Yes @ $0.011 for $38.14 (edge=50.8%)
+2026-04-08 21:52:05,205 [INFO] event_trader_improved.runtime: DRY_BUY: [SINGLE] Would buy Yes @ $0.011 for $38.14 (edge=50.8%)
+2026-04-08 21:52:05,234 [INFO] event_trader_improved.runtime: DRY_BUY: [SINGLE] Would buy Yes @ $0.011 for $38.14 (edge=50.8%)
+2026-04-08 21:52:05,325 [INFO] event_trader_improved.runtime: Cycle complete: scanned=600 signals=488 executed=30
+2026-04-08 21:52:07,325 [INFO] event_trader_improved.runtime: === Cycle ev_20260408T215207_d73077 (#2) ===
+2026-04-08 21:52:07,720 [INFO] event_trader.data_client: fetched 600 markets across 7 pages
+2026-04-08 21:52:07,721 [INFO] event_trader_improved.runtime: Checking 30 open positions for exits...
+2026-04-08 21:52:07,734 [ERROR] event_trader_improved.runtime: Cycle error #2 (1 consecutive), backing off 20.0s
+Traceback (most recent call last):
+  File "D:\polymart\event_trader_improved\runtime.py", line 147, in run_loop
+    result = run_once(config, client, scanner, pos_mgr, state, cycle_number)
+  File "D:\polymart\event_trader_improved\runtime.py", line 58, in run_once
+    exit_recommendations = pos_mgr.check_exits(updated_positions, live_prices)
+  File "D:\polymart\event_trader_improved\positions.py", line 43, in check_exits
+    high_water = float(pos.get("high_water_price", entry_price))
+                       ^^^^^^^
+AttributeError: 'sqlite3.Row' object has no attribute 'get'
+2026-04-08 21:52:27,739 [INFO] event_trader_improved.runtime: === Cycle ev_20260408T215227_d7308b (#3) ===
+2026-04-08 21:52:28,429 [INFO] event_trader.data_client: fetched 600 markets across 7 pages
+2026-04-08 21:52:28,430 [INFO] event_trader_improved.runtime: Checking 30 open positions for exits...
+2026-04-08 21:52:28,435 [ERROR] event_trader_improved.runtime: Cycle error #3 (2 consecutive), backing off 40.0s
+Traceback (most recent call last):
+  File "D:\polymart\event_trader_improved\runtime.py", line 147, in run_loop
+    result = run_once(config, client, scanner, pos_mgr, state, cycle_number)
+  File "D:\polymart\event_trader_improved\runtime.py", line 58, in run_once
+    exit_recommendations = pos_mgr.check_exits(updated_positions, live_prices)
+  File "D:\polymart\event_trader_improved\positions.py", line 43, in check_exits
+    high_water = float(pos.get("high_water_price", entry_price))
+                       ^^^^^^^
+AttributeError: 'sqlite3.Row' object has no attribute 'get'
+2026-04-08 21:53:08,437 [INFO] event_trader_improved.runtime: === Cycle ev_20260408T215308_d730b4 (#4) ===
+2026-04-08 21:53:09,145 [INFO] event_trader.data_client: fetched 600 markets across 7 pages
+2026-04-08 21:53:09,146 [INFO] event_trader_improved.runtime: Checking 30 open positions for exits...
+2026-04-08 21:53:09,154 [ERROR] event_trader_improved.runtime: Cycle error #4 (3 consecutive), backing off 60.0s
+Traceback (most recent call last):
+  File "D:\polymart\event_trader_improved\runtime.py", line 147, in run_loop
+    result = run_once(config, client, scanner, pos_mgr, state, cycle_number)
+  File "D:\polymart\event_trader_improved\runtime.py", line 58, in run_once
+    exit_recommendations = pos_mgr.check_exits(updated_positions, live_prices)
+  File "D:\polymart\event_trader_improved\positions.py", line 43, in check_exits
+    high_water = float(pos.get("high_water_price", entry_price))
+                       ^^^^^^^
+AttributeError: 'sqlite3.Row' object has no attribute 'get'
+2026-04-08 21:54:09,156 [INFO] event_trader_improved.runtime: === Cycle ev_20260408T215409_d730f1 (#5) ===
+2026-04-08 21:54:09,552 [INFO] event_trader.data_client: fetched 600 markets across 7 pages
+2026-04-08 21:54:09,554 [INFO] event_trader_improved.runtime: Checking 30 open positions for exits...
+2026-04-08 21:54:09,561 [ERROR] event_trader_improved.runtime: Cycle error #5 (4 consecutive), backing off 80.0s
+Traceback (most recent call last):
+  File "D:\polymart\event_trader_improved\runtime.py", line 147, in run_loop
+    result = run_once(config, client, scanner, pos_mgr, state, cycle_number)
+  File "D:\polymart\event_trader_improved\runtime.py", line 58, in run_once
+    exit_recommendations = pos_mgr.check_exits(updated_positions, live_prices)
+  File "D:\polymart\event_trader_improved\positions.py", line 43, in check_exits
+    high_water = float(pos.get("high_water_price", entry_price))
+                       ^^^^^^^
+AttributeError: 'sqlite3.Row' object has no attribute 'get'
+2026-04-08 21:55:29,563 [INFO] event_trader_improved.runtime: === Cycle ev_20260408T215529_d73141 (#6) ===
+2026-04-08 21:55:29,923 [INFO] event_trader.data_client: fetched 600 markets across 7 pages
+2026-04-08 21:55:29,924 [INFO] event_trader_improved.runtime: Checking 30 open positions for exits...
+2026-04-08 21:55:35,792 [ERROR] event_trader_improved.runtime: Cycle error #6 (5 consecutive), backing off 100.0s
+Traceback (most recent call last):
+  File "D:\polymart\event_trader_improved\runtime.py", line 147, in run_loop
+    result = run_once(config, client, scanner, pos_mgr, state, cycle_number)
+  File "D:\polymart\event_trader_improved\runtime.py", line 58, in run_once
+    exit_recommendations = pos_mgr.check_exits(updated_positions, live_prices)
+  File "D:\polymart\event_trader_improved\positions.py", line 43, in check_exits
+    high_water = float(pos.get("high_water_price", entry_price))
+                       ^^^^^^^
+AttributeError: 'sqlite3.Row' object has no attribute 'get'
+2026-04-08 21:57:15,795 [INFO] event_trader_improved.runtime: === Cycle ev_20260408T215715_d731ab (#7) ===
+2026-04-08 21:57:16,191 [INFO] event_trader.data_client: fetched 600 markets across 7 pages
+2026-04-08 21:57:16,192 [INFO] event_trader_improved.runtime: Checking 30 open positions for exits...
+2026-04-08 21:57:16,197 [ERROR] event_trader_improved.runtime: Cycle error #7 (6 consecutive), backing off 120.0s
+Traceback (most recent call last):
+  File "D:\polymart\event_trader_improved\runtime.py", line 147, in run_loop
+    result = run_once(config, client, scanner, pos_mgr, state, cycle_number)
+  File "D:\polymart\event_trader_improved\runtime.py", line 58, in run_once
+    exit_recommendations = pos_mgr.check_exits(updated_positions, live_prices)
+  File "D:\polymart\event_trader_improved\positions.py", line 43, in check_exits
+    high_water = float(pos.get("high_water_price", entry_price))
+                       ^^^^^^^
+AttributeError: 'sqlite3.Row' object has no attribute 'get'
+2026-04-08 21:59:16,199 [INFO] event_trader_improved.runtime: === Cycle ev_20260408T215916_d73224 (#8) ===
+2026-04-08 21:59:16,787 [INFO] event_trader.data_client: fetched 600 markets across 7 pages
+2026-04-08 21:59:16,787 [INFO] event_trader_improved.runtime: Checking 30 open positions for exits...
+2026-04-08 21:59:16,854 [ERROR] event_trader_improved.runtime: Cycle error #8 (7 consecutive), backing off 140.0s
+Traceback (most recent call last):
+  File "D:\polymart\event_trader_improved\runtime.py", line 147, in run_loop
+    result = run_once(config, client, scanner, pos_mgr, state, cycle_number)
+  File "D:\polymart\event_trader_improved\runtime.py", line 58, in run_once
+    exit_recommendations = pos_mgr.check_exits(updated_positions, live_prices)
+  File "D:\polymart\event_trader_improved\positions.py", line 43, in check_exits
+    high_water = float(pos["high_water_price"] if "high_water_price" in pos.keys() else entry_price)
+                       ^^^^^^^
+AttributeError: 'sqlite3.Row' object has no attribute 'get'
+2026-04-08 22:01:36,856 [INFO] event_trader_improved.runtime: === Cycle ev_20260408T220136_d732b0 (#9) ===
+2026-04-08 22:01:37,623 [INFO] event_trader.data_client: fetched 600 markets across 7 pages
+2026-04-08 22:01:37,624 [INFO] event_trader_improved.runtime: Checking 30 open positions for exits...
+2026-04-08 22:01:37,636 [ERROR] event_trader_improved.runtime: Cycle error #9 (8 consecutive), backing off 160.0s
+Traceback (most recent call last):
+  File "D:\polymart\event_trader_improved\runtime.py", line 147, in run_loop
+    return {
+    
+  File "D:\polymart\event_trader_improved\runtime.py", line 58, in run_once
+  File "D:\polymart\event_trader_improved\positions.py", line 43, in check_exits
+    high_water = float(pos["high_water_price"] if "high_water_price" in pos.keys() else entry_price)
+                       ^^^^^^^
+AttributeError: 'sqlite3.Row' object has no attribute 'get'
+2026-04-08 22:04:17,639 [INFO] event_trader_improved.runtime: === Cycle ev_20260408T220417_d73351 (#10) ===
+2026-04-08 22:04:18,404 [INFO] event_trader.data_client: fetched 600 markets across 7 pages
+2026-04-08 22:04:18,405 [INFO] event_trader_improved.runtime: Checking 30 open positions for exits...
+2026-04-08 22:04:18,417 [ERROR] event_trader_improved.runtime: Cycle error #10 (9 consecutive), backing off 180.0s
+Traceback (most recent call last):
+  File "D:\polymart\event_trader_improved\runtime.py", line 147, in run_loop
+    return {
+    
+  File "D:\polymart\event_trader_improved\runtime.py", line 58, in run_once
+  File "D:\polymart\event_trader_improved\positions.py", line 43, in check_exits
+    high_water = float(pos["high_water_price"] if "high_water_price" in pos.keys() else entry_price)
+                       ^^^^^^^
+AttributeError: 'sqlite3.Row' object has no attribute 'get'
+2026-04-08 22:07:18,419 [INFO] event_trader_improved.runtime: === Cycle ev_20260408T220718_d73406 (#11) ===
+2026-04-08 22:07:18,830 [INFO] event_trader.data_client: fetched 600 markets across 7 pages
+2026-04-08 22:07:18,832 [INFO] event_trader_improved.runtime: Checking 30 open positions for exits...
+2026-04-08 22:07:19,933 [ERROR] event_trader_improved.runtime: Cycle error #11 (10 consecutive), backing off 200.0s
+Traceback (most recent call last):
+  File "D:\polymart\event_trader_improved\runtime.py", line 147, in run_loop
+    return {
+    
+  File "D:\polymart\event_trader_improved\runtime.py", line 58, in run_once
+  File "D:\polymart\event_trader_improved\positions.py", line 43, in check_exits
+    high_water = float(pos["high_water_price"] if "high_water_price" in pos.keys() else entry_price)
+                       ^^^^^^^
+AttributeError: 'sqlite3.Row' object has no attribute 'get'
+2026-04-08 22:10:39,935 [INFO] event_trader_improved.runtime: === Cycle ev_20260408T221039_d734cf (#12) ===
+2026-04-08 22:10:40,631 [INFO] event_trader.data_client: fetched 600 markets across 7 pages
+2026-04-08 22:10:40,632 [INFO] event_trader_improved.runtime: Checking 30 open positions for exits...
+2026-04-08 22:10:40,644 [ERROR] event_trader_improved.runtime: Cycle error #12 (11 consecutive), backing off 220.0s
+Traceback (most recent call last):
+  File "D:\polymart\event_trader_improved\runtime.py", line 147, in run_loop
+    return {
+    
+  File "D:\polymart\event_trader_improved\runtime.py", line 58, in run_once
+  File "D:\polymart\event_trader_improved\positions.py", line 43, in check_exits
+    high_water = float(pos["high_water_price"] if "high_water_price" in pos.keys() else entry_price)
+                       ^^^^^^^
+AttributeError: 'sqlite3.Row' object has no attribute 'get'
+2026-04-08 22:14:20,646 [INFO] event_trader_improved.runtime: === Cycle ev_20260408T221420_d735ac (#13) ===
+2026-04-08 22:14:21,201 [INFO] event_trader.data_client: fetched 600 markets across 7 pages
+2026-04-08 22:14:21,202 [INFO] event_trader_improved.runtime: Checking 30 open positions for exits...
+2026-04-08 22:14:27,077 [ERROR] event_trader_improved.runtime: Cycle error #13 (12 consecutive), backing off 240.0s
+Traceback (most recent call last):
+  File "D:\polymart\event_trader_improved\runtime.py", line 147, in run_loop
+    return {
+    
+  File "D:\polymart\event_trader_improved\runtime.py", line 58, in run_once
+  File "D:\polymart\event_trader_improved\positions.py", line 43, in check_exits
+    high_water = float(pos["high_water_price"] if "high_water_price" in pos.keys() else entry_price)
+                       ^^^^^^^
+AttributeError: 'sqlite3.Row' object has no attribute 'get'
+2026-04-08 22:18:27,078 [INFO] event_trader_improved.runtime: === Cycle ev_20260408T221827_d736a3 (#14) ===
+2026-04-08 22:18:27,486 [INFO] event_trader.data_client: fetched 600 markets across 7 pages
+2026-04-08 22:18:27,487 [INFO] event_trader_improved.runtime: Checking 30 open positions for exits...
+2026-04-08 22:18:33,412 [ERROR] event_trader_improved.runtime: Cycle error #14 (13 consecutive), backing off 260.0s
+Traceback (most recent call last):
+  File "D:\polymart\event_trader_improved\runtime.py", line 147, in run_loop
+    return {
+    
+  File "D:\polymart\event_trader_improved\runtime.py", line 58, in run_once
+  File "D:\polymart\event_trader_improved\positions.py", line 43, in check_exits
+    high_water = float(pos["high_water_price"] if "high_water_price" in pos.keys() else entry_price)
+                       ^^^^^^^
+AttributeError: 'sqlite3.Row' object has no attribute 'get'
