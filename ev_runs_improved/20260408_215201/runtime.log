@@ -205,3 +205,16 @@ Traceback (most recent call last):
     high_water = float(pos["high_water_price"] if "high_water_price" in pos.keys() else entry_price)
                        ^^^^^^^
 AttributeError: 'sqlite3.Row' object has no attribute 'get'
+2026-04-08 22:22:53,413 [INFO] event_trader_improved.runtime: === Cycle ev_20260408T222253_d737ad (#15) ===
+2026-04-08 22:22:53,833 [INFO] event_trader.data_client: fetched 600 markets across 7 pages
+2026-04-08 22:22:53,835 [INFO] event_trader_improved.runtime: Checking 30 open positions for exits...
+2026-04-08 22:22:59,920 [ERROR] event_trader_improved.runtime: Cycle error #15 (14 consecutive), backing off 280.0s
+Traceback (most recent call last):
+  File "D:\polymart\event_trader_improved\runtime.py", line 147, in run_loop
+    return {
+    
+  File "D:\polymart\event_trader_improved\runtime.py", line 58, in run_once
+  File "D:\polymart\event_trader_improved\positions.py", line 43, in check_exits
+    high_water = float(pos["high_water_price"] if "high_water_price" in pos.keys() else entry_price)
+                       ^^^^^^^
+AttributeError: 'sqlite3.Row' object has no attribute 'get'
