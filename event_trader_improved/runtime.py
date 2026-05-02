@@ -156,8 +156,12 @@ def run_once(
 def run_loop(
     config: ImprovedEVConfig,
     db_path_override: str | None = None,
+    max_cycles: int | None = None,
 ) -> None:
-    """Main event loop."""
+    """Main event loop.
+
+    Set max_cycles to run a bounded number of cycles (e.g. once-mode).
+    """
     
     client = EVDataClient(config)
     
@@ -201,6 +205,10 @@ def run_loop(
                 )
                 time.sleep(backoff)
                 continue
+
+            if max_cycles is not None and cycle_number >= max_cycles:
+                logger.info("Reached max_cycles=%d; stopping loop", max_cycles)
+                break
             
             # Fast polling if we have positions to monitor, otherwise use config
             poll_time = config.poll_interval_seconds
