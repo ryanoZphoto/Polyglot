@@ -203,6 +203,9 @@ def run_loop(
                     "Cycle error #%d (%d consecutive), backing off %.1fs",
                     cycle_number, consecutive_errors, backoff,
                 )
+                if max_cycles is not None and cycle_number >= max_cycles:
+                    logger.info("Reached max_cycles=%d; stopping loop", max_cycles)
+                    break
                 time.sleep(backoff)
                 continue
 
