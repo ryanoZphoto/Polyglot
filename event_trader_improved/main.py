@@ -1,16 +1,11 @@
 """Entry point for improved event trader."""
 
-import sys
-from pathlib import Path
-from datetime import datetime
-
-# Add parent to path so we can import from event_trader
-sys.path.insert(0, str(Path(__file__).parent.parent))
-
+import argparse
 import json
 import logging
-from datetime import datetime
+import sys
 from dataclasses import asdict, replace
+from datetime import datetime
 from pathlib import Path
 
 # Add parent to path so we can import from event_trader
@@ -18,6 +13,16 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from event_trader_improved.config import ImprovedEVConfig
 from event_trader_improved.runtime import run_loop
+
+
+def _parse_args(argv: list[str] | None = None) -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="Run improved event trader.")
+    parser.add_argument(
+        "--once",
+        action="store_true",
+        help="Run exactly one cycle and exit.",
+    )
+    return parser.parse_args(argv)
 
 
 def _setup_logging(run_dir: Path, log_json: bool):
@@ -50,6 +55,7 @@ def _create_run_dir() -> Path:
 
 def main():
     """Run improved event trader."""
+    args = _parse_args()
     config = ImprovedEVConfig.from_env()
     run_dir = _create_run_dir()
     
@@ -77,7 +83,7 @@ def main():
     print(f"Run directory: {run_dir}")
     print("=" * 60)
     
-    run_loop(config)
+    run_loop(config, max_cycles=1 if args.once else None)
 
 if __name__ == "__main__":
     main()
