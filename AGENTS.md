@@ -9,19 +9,22 @@ Polymarket Trading Bot Suite — four Python trading bots with Streamlit dashboa
 ### Running tests
 
 ```bash
-PYTHONPATH=/workspace pytest
+pytest
 ```
 
-The `PYTHONPATH=/workspace` is **required** because there is no `setup.py` / `pyproject.toml`; the project's packages (`polymarket_bot`, `event_trader`, `event_trader_improved`, `market_maker`) must be importable from the workspace root.
+Pytest now bootstraps the workspace root automatically via the repo-level `conftest.py`, so a plain `pytest` invocation works from `/workspace`. `PYTHONPATH=/workspace` remains acceptable for other tooling, but it is no longer required just to run tests.
 
 ### Running bots (dry_run mode, no credentials needed)
 
 ```bash
-PYTHONPATH=/workspace python3 -m polymarket_bot.main --once   # single cycle
-PYTHONPATH=/workspace python3 -m polymarket_bot.main          # continuous loop
-PYTHONPATH=/workspace python3 -m event_trader.main            # continuous loop (no --once)
-PYTHONPATH=/workspace python3 -m event_trader_improved.main   # continuous loop
-PYTHONPATH=/workspace python3 -m market_maker.main            # continuous loop
+PYTHONPATH=/workspace python3 -m polymarket_bot.main --once            # single cycle
+PYTHONPATH=/workspace python3 -m polymarket_bot.main                   # continuous loop
+PYTHONPATH=/workspace python3 -m event_trader.main --once             # single cycle
+PYTHONPATH=/workspace python3 -m event_trader.main                    # continuous loop
+PYTHONPATH=/workspace python3 -m event_trader_improved.main --once    # single cycle
+PYTHONPATH=/workspace python3 -m event_trader_improved.main           # continuous loop
+PYTHONPATH=/workspace python3 -m market_maker.main --once             # single cycle
+PYTHONPATH=/workspace python3 -m market_maker.main                    # continuous loop
 ```
 
 All bots default to `dry_run` mode — they scan live Polymarket APIs but do not place real orders. Internet access is required for all bots.
@@ -37,7 +40,7 @@ PYTHONPATH=/workspace streamlit run mm_ui.py --server.headless true --server.por
 
 ### Key gotchas
 
-- **PYTHONPATH is always needed**: Every `python -m` or `pytest` invocation needs `PYTHONPATH=/workspace` since the project lacks a proper packaging setup.
+- **Prefer `PYTHONPATH=/workspace` for module commands**: `python -m ...` and Streamlit commands should still be run with `PYTHONPATH=/workspace` in cloud environments. Plain `pytest` now works without it because the test bootstrap injects the repo root during collection.
 - **No linter configured**: There is no linting tool (flake8, ruff, pylint, mypy) in `requirements.txt` or project config. Tests are the primary quality gate.
 - **`event_trader_improved` has no `__init__.py`**: It still works as a runnable package via `__main__.py` conventions, but direct imports from other code may fail.
 - **Bots need internet**: Even in dry_run mode, bots call `gamma-api.polymarket.com` and `clob.polymarket.com`.
